@@ -1,0 +1,6 @@
+feedparser
+praw
+python-dotenv
+pandas
+streamlit
+jinja2
