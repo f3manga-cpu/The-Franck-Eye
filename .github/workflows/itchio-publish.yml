@@ -1,0 +1,99 @@
+name: Publish a product to itch.io
+
+# Reusable from a PRIVATE product repository. Never commit paid files publicly.
+on:
+  workflow_call:
+    inputs:
+      target:
+        description: "itch.io username/project URL slug"
+        required: true
+        type: string
+      channel:
+        description: "e.g. full or demo"
+        required: true
+        type: string
+      release_path:
+        description: "Relative path, e.g. dist/full.zip"
+        required: true
+        type: string
+      dry_run:
+        required: false
+        default: true
+        type: boolean
+    secrets:
+      BUTLER_API_KEY:
+        required: true
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "itch.io username/project URL slug"
+        required: true
+        type: string
+      channel:
+        description: "e.g. full or demo"
+        required: true
+        type: string
+      release_path:
+        description: "Relative path to file or directory"
+        required: true
+        type: string
+      dry_run:
+        description: "Preview only: do not upload"
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate target and release
+        env:
+          ITCH_TARGET: ${{ inputs.target }}
+          ITCH_CHANNEL: ${{ inputs.channel }}
+          RELEASE_PATH: ${{ inputs.release_path }}
+        run: |
+          python3 - <<'PY'
+          import os, pathlib, re, sys
+          target=os.environ['ITCH_TARGET']; channel=os.environ['ITCH_CHANNEL']
+          release=os.environ['RELEASE_PATH']
+          if not re.fullmatch(r'[a-z0-9_-]+/[a-z0-9_-]+', target):
+              sys.exit('Invalid target: use lowercase username/project from itch.io URL')
+          if not re.fullmatch(r'[a-z0-9_-]{1,64}', channel):
+              sys.exit('Invalid channel')
+          path=pathlib.Path(release)
+          if path.is_absolute() or '..' in path.parts or str(path).startswith('.'):
+              sys.exit('Unsafe release path')
+          root=pathlib.Path.cwd().resolve(); artifact=(root/path).resolve()
+          if root not in artifact.parents:
+              sys.exit('Path escapes the checked-out repository')
+          if not artifact.exists() or (artifact.is_file() and artifact.stat().st_size==0):
+              sys.exit('Artifact missing or empty')
+          if artifact.is_dir() and not any(p.is_file() for p in artifact.rglob('*')):
+              sys.exit('Artifact directory empty')
+          print('Release validated; no key or customer data printed')
+          PY
+      - name: Install itch.io butler
+        uses: remarkablegames/setup-butler@v3
+      - name: Preview or publish
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+          ITCH_TARGET: ${{ inputs.target }}
+          ITCH_CHANNEL: ${{ inputs.channel }}
+          RELEASE_PATH: ${{ inputs.release_path }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [ -z "$BUTLER_API_KEY" ]; then
+            echo "Missing BUTLER_API_KEY Actions secret"; exit 1
+          fi
+          if [ "$DRY_RUN" = 'true' ]; then
+            butler push --dry-run "$RELEASE_PATH" "$ITCH_TARGET:$ITCH_CHANNEL"
+            echo "Preview only; nothing published"
+          else
+            butler push --if-changed "$RELEASE_PATH" "$ITCH_TARGET:$ITCH_CHANNEL"
+            echo "Upload command finished; verify on itch.io"
+          fi
