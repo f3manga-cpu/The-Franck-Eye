@@ -41,7 +41,7 @@ def atomic_write(path, content):
     tmp.write_text(content, encoding="utf-8")
     os.replace(tmp, path)
 def clean(s):
-    return re.sub(r"\\s+", " ", s or "").strip()[:400]
+    return re.sub(r"\s+", " ", s or "").strip()[:400]
 def rank(text):
     t = text.lower()
     if any(k in t for k in BLACKLIST):
