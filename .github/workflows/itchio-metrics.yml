@@ -1,0 +1,54 @@
+name: Read private itch.io sales metrics
+
+# Call ONLY from a private repository; never expose sales metrics to a public Actions log.
+on:
+  workflow_call:
+    secrets:
+      ITCH_API_KEY:
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Get seller project performance
+        env:
+          ITCH_API_KEY: ${{ secrets.ITCH_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import collections, json, os, urllib.request
+          key=os.environ.get('ITCH_API_KEY')
+          if not key: raise SystemExit('Missing ITCH_API_KEY')
+          request=urllib.request.Request(
+              'https://api.itch.io/profile/games',
+              headers={'Authorization':'Bearer '+key,'Accept':'application/json',
+                       'User-Agent':'FeelGoodBangers-Metrics/1.0'})
+          with urllib.request.urlopen(request,timeout=20) as response:
+              data=json.load(response)
+          if data.get('errors'):
+              raise SystemExit('itch.io returned an API error')
+          games=data.get('games',[])
+          totals=collections.defaultdict(int)
+          results=[]
+          for g in games:
+              revenues=collections.defaultdict(int)
+              for entry in g.get('earnings',[]):
+                  revenues[entry.get('currency','UNKNOWN')]+=int(entry.get('amount',0))
+              rows={
+                  'title':g.get('title'), 'id':g.get('id'),
+                  'views_all_time':g.get('views_count',0),
+                  'downloads_all_time':g.get('downloads_count',0),
+                  'purchases_all_time':g.get('purchases_count',0),
+                  'earnings_all_time_minor_units':dict(revenues)}
+              results.append(rows)
+              for field in ('views_all_time','downloads_all_time','purchases_all_time'):
+                  totals[field]+=rows[field]
+              for currency, amount in revenues.items():
+                  totals['earnings_'+currency+'_minor_units']+=amount
+          print(json.dumps({'source':'itch.io profile/games','scope':'all-time counters; not reconciled Stripe revenue',
+                            'products':results,'aggregate':dict(totals)},indent=2))
+          PY
