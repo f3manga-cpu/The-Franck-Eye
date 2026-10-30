@@ -6,6 +6,8 @@ Independent marketing measurement, reporting and research support — Lyon, Fran
 
 I turn campaign data, survey results and fragmented KPIs into concise, decision-ready deliverables. My professional background includes market research and advertising effectiveness work in London.
 
+**See an example before ordering:** [Read a complete, explicitly synthetic marketing performance audit (French)](examples/demo-audit-marketing-synthetique.md). This demonstration shows deliverable structure, not actual client results. The paid €59 scope is limited to one channel and up to five KPIs.
+
 ## Fixed-scope services
 
 | Service | Price | Deliverable | Target turnaround* |
