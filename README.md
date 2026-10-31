@@ -2,6 +2,8 @@
 
 **Make sense of your marketing data. Decide what to do next.**
 
+**For agencies:** [White-label reporting support — €59 fixed-scope pilot](offers/renfort-reporting-marque-blanche.md) · [See a fully synthetic deliverable example](examples/demo-audit-marketing-synthetique.md).
+
 Independent marketing measurement, reporting and research support — Lyon, France · Remote worldwide · Français / English.
 
 I turn campaign data, survey results and fragmented KPIs into concise, decision-ready deliverables. My professional background includes market research and advertising effectiveness work in London.
