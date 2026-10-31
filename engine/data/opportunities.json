@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-10-31T12:33:37+00:00",
+  "candidates": [
+    {
+      "id": "8da2fcbc970b410f",
+      "first_seen": "2026-10-31T12:33:36+00:00",
+      "date": "2026-10-06T15:01:32Z",
+      "theme": "payment platform",
+      "title": "Remove revenue tax on Kotlin, Swift, TypeScript and Go based apps",
+      "url": "https://news.ycombinator.com/item?id=49979536",
+      "score": 11,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "a70d2684c50e885d",
+      "first_seen": "2026-10-31T12:33:35+00:00",
+      "date": "2026-10-12T15:43:54Z",
+      "theme": "creator monetization",
+      "title": "Show HN: Cenntre – a creator-first platform for publishing and monetization",
+      "url": "https://www.cenntre.com",
+      "score": 7,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "d1378042d9dc297f",
+      "first_seen": "2026-10-31T12:33:37+00:00",
+      "date": "2026-10-14T15:20:04Z",
+      "theme": "marketplace launch",
+      "title": "IKEA launches UK and Ireland marketplace to buy and sell second-hand furniture",
+      "url": "https://www.dezeen.com/2026/10/07/ikea-uk-ireland-marketplace-buy-sell-second-hand-furniture/",
+      "score": 5,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "75f520315176dd36",
+      "first_seen": "2026-10-31T12:33:36+00:00",
+      "date": "2026-10-28T03:14:26Z",
+      "theme": "digital products",
+      "title": "Show HN: The New Way to Make AI UGC Ads in 2026",
+      "url": "https://www.aivideosugc.com/ai-video-generation",
+      "score": 4,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "421cc8c7608466e6",
+      "first_seen": "2026-10-31T12:33:36+00:00",
+      "date": "2026-10-19T20:48:00Z",
+      "theme": "digital products",
+      "title": "Addressing EU Cyber Resilience Act",
+      "url": "https://news.ycombinator.com/item?id=50157847",
+      "score": 2,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "60894de463677fb7",
+      "first_seen": "2026-10-31T12:33:36+00:00",
+      "date": "2026-10-16T17:31:42Z",
+      "theme": "payment platform",
+      "title": "Anthropic Console overcharged my card 100x due to internationalization input bug",
+      "url": "https://news.ycombinator.com/item?id=50121562",
+      "score": 2,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    }
+  ],
+  "errors": []
+}
