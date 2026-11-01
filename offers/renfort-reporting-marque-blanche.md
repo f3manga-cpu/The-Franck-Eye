@@ -15,7 +15,7 @@ Vous avez déjà les données. Le problème est parfois le temps nécessaire pou
 
 **[Voir un exemple de restitution entièrement fictif](../examples/demo-audit-marketing-synthetique.md)** — l'exemple ne constitue pas un résultat client.
 
-### Pour qui ?
+**Préparer votre export gratuitement :** [outil CSV local (HTML)](../tools/marketing-csv-preflight.html). Téléchargez le fichier HTML et ouvrez-le dans votre navigateur : aucune donnée n'est envoyée. Vérification des colonnes, valeurs manquantes et doublons, sans interprétation marketing.\n\n### Pour qui ?
 
 Agences créatives, social media, acquisition, SEO/SEA et studios web souhaitant absorber ponctuellement un petit reporting ou compléter leur prestation par une lecture analytique.
 
