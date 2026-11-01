@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Marketing CSV Preflight | The Franck Eye</title>
+<meta name="description" content="Check a campaign CSV for empty cells, duplicates and missing key columns locally in your browser. No upload, no signup.">
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#eaf0f8;background:#0b1424}*{box-sizing:border-box}body{margin:0}
+main{max-width:880px;margin:auto;padding:28px 20px 72px}header{border-bottom:1px solid #31415b;padding-bottom:24px}
+h1{font-size:clamp(2rem,5vw,3rem);margin:10px 0}h2{margin-top:32px}.lead{font-size:1.1rem;color:#c1ccdb;line-height:1.6}
+.card{background:#13243c;border:1px solid #334861;border-radius:16px;padding:22px;margin-top:24px}
+label{display:block;font-weight:650;margin:16px 0 7px}input[type=file],select{width:100%;padding:12px;border:1px solid #7286a3;border-radius:8px;background:#0b1424;color:#fff}
+button,.cta{display:inline-block;border:0;background:#e9ba6a;color:#102037;font-weight:750;padding:12px 18px;border-radius:9px;text-decoration:none;cursor:pointer;margin-top:16px}
+.secondary{background:#263d5b;color:#fff;margin-left:8px}button:disabled{opacity:.5;cursor:not-allowed}
+small,.muted{color:#b6c5d8}ul{line-height:1.7}table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border-bottom:1px solid #334861;padding:9px;text-align:left;overflow-wrap:anywhere}th{color:#c5d7ec}
+.pill{display:inline-block;background:#243d5d;padding:7px 11px;border-radius:999px;margin:5px 8px 5px 0}
+.warning{color:#ffd28b}a{color:#ffcd80}footer{margin-top:40px;color:#b6c5d8;font-size:.9rem}
+</style></head><body><main>
+<header><small>THE FRANCK EYE · FREE TOOL</small><h1>Is your marketing CSV ready for analysis?</h1>
+<p class="lead">A 30-second preflight for campaign exports. Check completeness and repeated rows <strong>before</strong> sending data to a consultant. Everything runs in your browser; this tool never uploads your file.</p></header>
+<section class="card"><h2>1. Choose an export</h2>
+<label for="file">CSV file (UTF-8, up to 5 MB)</label><input id="file" type="file" accept=".csv,text/csv">
+<label for="delimiter">Column separator</label><select id="delimiter"><option value="auto">Auto-detect</option><option value=",">Comma (,)</option><option value=";">Semicolon (;)</option><option value="\t">Tab</option></select>
+<button id="analyze">Check file locally</button><button class="secondary" id="clear">Clear</button>
+<p id="status" role="status" aria-live="polite"></p></section>
+<section id="results" class="card" hidden><h2>2. Preflight results</h2><div id="summary"></div>
+<h3>Columns and missing values</h3><div style="overflow-x:auto"><table><thead><tr><th>Column</th><th>Empty</th><th>Empty %</th></tr></thead><tbody id="columns"></tbody></table></div>
+<h3>Review before sharing</h3><ul id="notes"></ul>
+<button id="copy">Copy summary</button><p class="muted">This is a structural check, not a marketing performance audit. It does not validate attribution, causality, tracking implementation, or metric definitions.</p></section>
+<section class="card"><h2>3. Need the interpretation?</h2>
+<p>Get a concise, human-reviewed performance diagnosis: one marketing channel, up to five KPIs, up to 2,000 rows, and a 3–4-page PDF with findings and recommended actions. Delivery target: 3 business days after an agreed, complete brief.</p>
+<a class="cta" href="https://buy.stripe.com/4gM9AUe0O9nE8YE2FM43S00" rel="noopener noreferrer">Order a €59 marketing audit</a>
+<p><small>Questions or a non-standard brief? Email <a href="mailto:f3.manga@gmail.com?subject=Marketing%20audit%20brief">f3.manga@gmail.com</a> before ordering. Never send customer identifiers, passwords or sensitive data.</small></p></section>
+<footer>Independent analytics service · Lyon / remote · Français / English. No file is transferred to The Franck Eye. Data stays in your browser session.</footer>
+</main><script>
+"use strict";
+const $=id=>document.getElementById(id);
+const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function parseCSV(input,delimiter){
+  const rows=[];let row=[],field="",quoted=false;
+  for(let i=0;i<input.length;i++){const c=input[i];
+    if(quoted){if(c==='"'&&input[i+1]==='"'){field+='"';i++;}else if(c==='"'){quoted=false;}else{field+=c;}}
+    else if(c==='"'&&field===""){quoted=true;}
+    else if(c===delimiter){row.push(field);field="";}
+    else if(c==='\n'||c==='\r'){if(c==='\r'&&input[i+1]==='\n')i++;row.push(field);field="";if(row.some(x=>x.trim()!==""))rows.push(row);row=[];}
+    else{field+=c;}
+  }
+  if(quoted)throw Error("Unclosed quoted CSV field.");
+  row.push(field);if(row.some(x=>x.trim()!==""))rows.push(row);
+  return rows;
+}
+function guessDelimiter(text){const line=text.split(/\r?\n/).slice(0,3).join("\n");return [",",";","\t"].map(d=>({d,n:(line.match(new RegExp(d==="\t"?"\\t":d===","?",":";","g"))||[]).length})).sort((a,b)=>b.n-a.n)[0].d;}
+let report="";
+$("analyze").addEventListener("click",async()=>{
+  $("results").hidden=true;const file=$("file").files[0];if(!file){$("status").textContent="Choose a CSV file first.";return;}
+  if(file.size>5*1024*1024){$("status").textContent="Please use a CSV smaller than 5 MB.";return;}
+  try{
+    const text=(await file.text()).replace(/^\uFEFF/,"");const delimiter=$("delimiter").value==="auto"?guessDelimiter(text):$("delimiter").value;
+    const rows=parseCSV(text,delimiter);if(rows.length<2)throw Error("At least one header and one data row are required.");
+    const headers=rows[0].map((h,i)=>h.trim()||"Unnamed column "+(i+1));const data=rows.slice(1);
+    const mismatches=data.filter(r=>r.length!==headers.length).length;
+    const empty=headers.map((_,i)=>data.filter(r=>!(r[i]||"").trim()).length);
+    const seen=new Set();let duplicates=0;
+    for(const row of data){const key=JSON.stringify(row.map(v=>v.trim()));if(seen.has(key))duplicates++;else seen.add(key);}
+    const notes=[];
+    if(mismatches)notes.push(mismatches+" row(s) have a different number of fields than the header.");
+    if(duplicates)notes.push(duplicates+" exact duplicate row(s) detected (not necessarily erroneous).");
+    if(empty.some(n=>n))notes.push("Some cells are empty. Confirm whether missing values mean zero, not tracked, or not applicable.");
+    if(headers.some(h=>/unnamed/i.test(h)))notes.push("Some columns have no header.");
+    if(!headers.some(h=>/date|day|period|week|month|jour|semaine|mois/i.test(h)))notes.push("No obvious date/period column. Confirm reporting period.");
+    if(!notes.length)notes.push("No obvious structural issues detected. KPI definitions and tracking accuracy still require review.");
+    $("summary").innerHTML='<span class="pill">'+data.length+' data rows</span><span class="pill">'+headers.length+' columns</span><span class="pill">'+duplicates+' duplicates</span><span class="pill">'+mismatches+' uneven rows</span>';
+    $("columns").innerHTML=headers.map((h,i)=>'<tr><td>'+escapeHTML(h)+'</td><td>'+empty[i]+'</td><td>'+(100*empty[i]/data.length).toFixed(1)+'%</td></tr>').join("");
+    $("notes").innerHTML=notes.map(n=>'<li>'+escapeHTML(n)+'</li>').join("");
+    report="Marketing CSV preflight\nRows: "+data.length+"\nColumns: "+headers.length+"\nDuplicate rows: "+duplicates+"\nUneven rows: "+mismatches+"\n"+headers.map((h,i)=>h+": "+empty[i]+" missing").join("\n")+"\nNotes:\n"+notes.join("\n");
+    $("results").hidden=false;$("status").textContent="Completed locally. No file uploaded.";
+  }catch(e){$("status").textContent="Could not analyze: "+e.message;}
+});
+$("clear").addEventListener("click",()=>{$("file").value="";$("results").hidden=true;$("status").textContent="Cleared.";report="";});
+$("copy").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(report);$("status").textContent="Summary copied.";}catch(e){$("status").textContent="Copy not available in this browser.";}});</script></body></html>
