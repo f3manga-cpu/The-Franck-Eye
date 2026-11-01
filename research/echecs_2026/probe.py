@@ -22,3 +22,12 @@ for k,u in urls.items():
   print("TR_EXAMPLES",json.dumps(sample[:7],ensure_ascii=False))
   print("TEXT_PREVIEW",soup.get_text(' ',strip=True)[-1600:])
  except Exception as e:print("ERROR",type(e).__name__,str(e))
+
+print("PAGER START")
+s=bs4.BeautifulSoup(requests.get(urls["committee"],timeout=25).text,"html.parser")
+for a in s.find_all('a',href=True):
+  href=a.get("href","")
+  if "__doPostBack" in href or "Page" in href or "ListeTournois" in href:
+    print("PAGER",repr(a.get_text(' ',strip=True)),repr(href[:200]))
+for hidden in s.select('input[type="hidden"]'):
+  print("HIDDEN",hidden.get("name"),len(str(hidden.get("value",""))))
