@@ -1,0 +1,40 @@
+name: Aggregate government chess subsidies
+on:
+  push:
+    branches:
+      - research/echecs-ecosystem-2026
+    paths:
+      - research/echecs_2026/quick_state.py
+      - .github/workflows/echecs-state.yml
+  workflow_dispatch:
+jobs:
+  state:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/echecs-ecosystem-2026
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check requests
+      - run: python research/echecs_2026/quick_state.py
+      - name: Store computed public results in research branch
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add research/echecs_2026/state_results/
+          if ! git diff --cached --quiet; then
+            git commit -m "Data: public state chess beneficiaries and totals (2023)"
+            git push origin HEAD:research/echecs-ecosystem-2026
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: echecs-state-results
+          path: research/echecs_2026/state_results/
+          if-no-files-found: warn
+          retention-days: 30
