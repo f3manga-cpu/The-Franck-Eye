@@ -251,6 +251,7 @@ summary={
  "generated_utc":datetime.now(timezone.utc).isoformat(),
  "method":"government full-annex plus bounded FFE tournament sample; separated graph layers",
  "public_state_rows_parsed":len(rows),
+ "state_payment_year":2023,
  "government_state_chess_matched_rows":len(chess_rows),
  "local_related_grant_measures":len(grants)-len(chess_rows),
  "number_funding_measure_rows":len(grants),
@@ -275,5 +276,10 @@ summary={
 (OUT/"summary.json").write_text(json.dumps(summary,indent=2,ensure_ascii=False),encoding="utf-8")
 (OUT/"source_manifest.json").write_text(json.dumps(manifest,indent=2,ensure_ascii=False),encoding="utf-8")
 (OUT/"limitations.txt").write_text("\n".join(summary["limitations"]+warnings[:1000]),encoding="utf-8")
-nx.write_graphml(simple,OUT/"network.graphml")
+clean=nx.Graph()
+for n,d in simple.nodes(data=True):
+    clean.add_node(n,**{k:v for k,v in d.items() if v is not None})
+for u,v,d in simple.edges(data=True):
+    clean.add_edge(u,v,**{k:v for k,v in d.items() if v is not None})
+nx.write_graphml(clean,OUT/"network.graphml")
 print(json.dumps({k:v for k,v in summary.items() if not isinstance(v,list)},ensure_ascii=False,indent=2))
