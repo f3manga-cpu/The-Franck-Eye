@@ -1,0 +1,30 @@
+name: Research chess public data and graph
+on:
+  push:
+    branches:
+      - research/echecs-ecosystem-2026
+    paths:
+      - research/echecs_2026/analyze.py
+      - .github/workflows/echecs-graph.yml
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check requests beautifulsoup4 networkx
+      - run: python research/echecs_2026/analyze.py
+      - name: Upload analysis artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: echecs-public-data-graph
+          path: research/echecs_2026/results/
+          if-no-files-found: warn
+          retention-days: 30
