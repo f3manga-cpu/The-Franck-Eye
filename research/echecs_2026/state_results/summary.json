@@ -1,0 +1,822 @@
+{
+  "raw_rows": 112857,
+  "chess_matched_rows": 117,
+  "unique_chess_beneficiaries": 90,
+  "sum_matched_euros_2023": 435351.85,
+  "top": [
+    {
+      "siren_or_name": "450072335",
+      "name": "COMITE DEPARTEMENTAL JEU D ECHECS \nDROME",
+      "rows": 2,
+      "total_euros": 31304.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "424135473",
+      "name": "LIGUE CORSE DES ECHECS",
+      "rows": 2,
+      "total_euros": 30000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "404874448",
+      "name": "MARSEILLE ECHECS / MARSEILLE ECHECS",
+      "rows": 4,
+      "total_euros": 29764.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "419692058",
+      "name": "L ECHIQUIER CHALONNAIS",
+      "rows": 2,
+      "total_euros": 27380.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "878034313",
+      "name": "CAISSARGUES CHESS CLUB",
+      "rows": 2,
+      "total_euros": 20400.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "784206534",
+      "name": "FEDERATION FRANCAISE DES ECHECS",
+      "rows": 3,
+      "total_euros": 18130.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "893267062",
+      "name": "CARRE CLAY   CHESS BOXING CLUB DE \nVILLIERS LE BEL",
+      "rows": 2,
+      "total_euros": 18090.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "432820280",
+      "name": "ASSOCIATION CERGY-PONTOISE ECHECS / CERGY PONTOISE ECHECS",
+      "rows": 2,
+      "total_euros": 12164.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "448130070",
+      "name": "COMITE DEPARTEMENTAL DU JEU D \nECHECS / COMITE DEPARTEMENTAL DU JEU D ECHECS",
+      "rows": 3,
+      "total_euros": 11600.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "791928328",
+      "name": "MARSEILLE PASSION ECHECS",
+      "rows": 1,
+      "total_euros": 9960.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "882869696",
+      "name": "FOULAYRONNES ECHECS / FOULAYRONNES ECHECS",
+      "rows": 2,
+      "total_euros": 9664.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "423405117",
+      "name": "SOUTIEN PERSONNAL CONTRE ECHEC \nSCOLAIRE",
+      "rows": 2,
+      "total_euros": 9000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "428211684",
+      "name": "LA FARLEDE   TOULON ECHECS",
+      "rows": 1,
+      "total_euros": 9000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "519520282",
+      "name": "ASSOCIATION PREVENTION ECHEC \nSCOLAIRE",
+      "rows": 1,
+      "total_euros": 8300.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "447858911",
+      "name": "COMITE DEP DU JEU D ECHECS DES P O",
+      "rows": 1,
+      "total_euros": 8000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "398806174",
+      "name": "CERCLE ECHECS BESANCON TOUR PRENDS\n GARDE / CERCLE ECHECS BESANCON TOUR PRENDS \nGARDE",
+      "rows": 2,
+      "total_euros": 7500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "437612187",
+      "name": "CLUB D ECHECS DE CRETEIL   THOMAS DU \nBOURGNEUF",
+      "rows": 2,
+      "total_euros": 7000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "420702466",
+      "name": "CERCLE D ECHECS DE NANTES",
+      "rows": 1,
+      "total_euros": 7000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "379070154",
+      "name": "ECHIQUIER NICOIS",
+      "rows": 1,
+      "total_euros": 6550.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "904644903",
+      "name": "L ECHIQUIER D EXCELLENCE",
+      "rows": 1,
+      "total_euros": 6000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "442588844",
+      "name": "ASS ECHIQUIER HAUT ALPIN DE GAP",
+      "rows": 2,
+      "total_euros": 5500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "423397926",
+      "name": "ECHIQUIER DU NORD",
+      "rows": 2,
+      "total_euros": 5245.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "897590154",
+      "name": "GENERATION MIRACLE   CLUB D ECHECS DE\n LA COURNEUVE 93",
+      "rows": 1,
+      "total_euros": 5000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "411528565",
+      "name": "L ECHIQUIER GRENOBLOIS",
+      "rows": 1,
+      "total_euros": 5000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "448359729",
+      "name": "L ECHIQUIER ANGEVIN",
+      "rows": 3,
+      "total_euros": 4900.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "451171581",
+      "name": "ECHIQUIER SURGERIEN",
+      "rows": 2,
+      "total_euros": 4404.6,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "448215467",
+      "name": "L ECHIQUIER DIEPPOIS",
+      "rows": 1,
+      "total_euros": 4400.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "439517046",
+      "name": "ASSOC GRASSE ECHECS",
+      "rows": 1,
+      "total_euros": 4331.25,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "892949009",
+      "name": "LES ECHECS   VERS LA REUSSITE",
+      "rows": 1,
+      "total_euros": 4000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "451148589",
+      "name": "ASSOC L ECHIQUIER TRESSOIS",
+      "rows": 1,
+      "total_euros": 4000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "841893456",
+      "name": "CLUB D ECHECS DES QUATRE CANTONS",
+      "rows": 1,
+      "total_euros": 4000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "392382503",
+      "name": "ECHIQUIER D AZUR FREJUS SAINT RAPHAEL",
+      "rows": 1,
+      "total_euros": 3500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "825192016",
+      "name": "ECHECS ET MAT HURIN",
+      "rows": 1,
+      "total_euros": 3500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "809620628",
+      "name": "NOMAD ECHECS CLUB",
+      "rows": 1,
+      "total_euros": 3400.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "419339510",
+      "name": "ASS USO ECHECS",
+      "rows": 1,
+      "total_euros": 3360.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "891164105",
+      "name": "ECHECS SUD BASSE TERRE",
+      "rows": 1,
+      "total_euros": 3000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "448374231",
+      "name": "L ECHIQUIER TOURANGEAU",
+      "rows": 1,
+      "total_euros": 3000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "391676160",
+      "name": "ECHIQUIER CLUB LE MANS",
+      "rows": 1,
+      "total_euros": 2595.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "845368604",
+      "name": "REZE ECHECS",
+      "rows": 1,
+      "total_euros": 2500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "518569561",
+      "name": "AVINKHA CLUB D ECHECS",
+      "rows": 1,
+      "total_euros": 2500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "510465719",
+      "name": "L ECHIQUIER DRACENOIS",
+      "rows": 2,
+      "total_euros": 2495.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "340519511",
+      "name": "ASSOCIATION CANNES ECHECS",
+      "rows": 1,
+      "total_euros": 2400.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "450478052",
+      "name": "ECHIQUIER VICQUOIS",
+      "rows": 1,
+      "total_euros": 2200.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "808274062",
+      "name": "CLUB D ECHECS CAISSA DE CARCES",
+      "rows": 1,
+      "total_euros": 2100.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "402965990",
+      "name": "CERCLE D ECHECS PHILIDOR",
+      "rows": 1,
+      "total_euros": 2000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "824687479",
+      "name": "LIGUE PROVENCE ALPES COTE D AZUR DES \nECHECS",
+      "rows": 1,
+      "total_euros": 2000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "439380254",
+      "name": "ECHIQUIER DE L ARMAGNAC",
+      "rows": 2,
+      "total_euros": 2000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "829235993",
+      "name": "CLUB D ECHECS DE SEGRE",
+      "rows": 1,
+      "total_euros": 2000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "489900621",
+      "name": "L ECHIQUIER FERTOIS",
+      "rows": 1,
+      "total_euros": 2000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "393288501",
+      "name": "COMITE DEPARTEMENTAL DU JEU D ECHECS\n CHARENTE MARITIME",
+      "rows": 1,
+      "total_euros": 2000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "447775594",
+      "name": "ECHIQUIER QUIMPEROIS",
+      "rows": 1,
+      "total_euros": 2000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "443700174",
+      "name": "ROYAL ROUVIER CHESS CLUB R2C2",
+      "rows": 1,
+      "total_euros": 2000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "414064451",
+      "name": "ECHIQUIER NIORTAIS",
+      "rows": 1,
+      "total_euros": 1800.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "508159464",
+      "name": "CLUB D  ECHECS LA TOUR INFERNALE",
+      "rows": 1,
+      "total_euros": 1700.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "452492960",
+      "name": "CLUB D ECHECS DES TROIS PAYS",
+      "rows": 1,
+      "total_euros": 1600.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "449503531",
+      "name": "ECHIQUIER MONTELAIS",
+      "rows": 2,
+      "total_euros": 1575.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "801720384",
+      "name": "LE MALBODUIM CHESS CLUB",
+      "rows": 2,
+      "total_euros": 1550.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "830042685",
+      "name": "L ECHIQUIER CRAONNAIS",
+      "rows": 2,
+      "total_euros": 1534.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "512631565",
+      "name": "ACADEMIE D ECHECS PHILIDOR",
+      "rows": 1,
+      "total_euros": 1500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "845322551",
+      "name": "CLUB D ECHECS DE BISCHHEIM",
+      "rows": 1,
+      "total_euros": 1500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "508228244",
+      "name": "LA ROCHELLE ECHECS",
+      "rows": 1,
+      "total_euros": 1500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "447724857",
+      "name": "CERCLE D ECHECS RISCLOIS",
+      "rows": 1,
+      "total_euros": 1500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "480805449",
+      "name": "ESBARRES BONNENCONTRE ECHECS",
+      "rows": 1,
+      "total_euros": 1500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "445379670",
+      "name": "COMITE DU GERS DU JEU D ECHECS",
+      "rows": 1,
+      "total_euros": 1500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "399808682",
+      "name": "CERCLE D ECHECS DE BISCHWILLER",
+      "rows": 1,
+      "total_euros": 1500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "422260430",
+      "name": "ECHIQUIER MEDOCAIN",
+      "rows": 1,
+      "total_euros": 1500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "400103768",
+      "name": "ECHIQUIER GUINGAMPAIS",
+      "rows": 1,
+      "total_euros": 1500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "494836109",
+      "name": "COMITE DEPARTEMENTAL DU JEU D ECHECS\n DE COTE D OR",
+      "rows": 1,
+      "total_euros": 1500.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "491169108",
+      "name": "L ECHIQUIER BRISSAGOL",
+      "rows": 1,
+      "total_euros": 1200.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "534836606",
+      "name": "EMERAUDE ECHECS",
+      "rows": 1,
+      "total_euros": 1200.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "398384123",
+      "name": "ECHIQUIER CARCASSONNAIS",
+      "rows": 1,
+      "total_euros": 1018.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "801277153",
+      "name": "CLUB D ECHECS DE SAINT DIE DES VOSGES",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "449191766",
+      "name": "COMITE DEP D ECHECS MAINE ET LOIRE",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "838920510",
+      "name": "L ECHIQUIER UNVERROIS",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "441553823",
+      "name": "ECHIQUIER CENTRE VAUCLUSE",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "447949280",
+      "name": "CERCLE ECHIQUIER PERTUISIEN",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "448417626",
+      "name": "COMITE VAUCLUSIEN DU JEU D ECHECS",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "441248622",
+      "name": "ECHIQUIER POITEVIN",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "922918073",
+      "name": "CLUB D ECHECS DE NERIS LES BAINS",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "510943178",
+      "name": "LYON ECHECS PASSION 64",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "399194026",
+      "name": "ECHIQUIER BRIOCHIN",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "812032563",
+      "name": "TREGOR ECHECS",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "794457101",
+      "name": "SAINT JEAN PLA DE CORTS ECHECS",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "390477099",
+      "name": "ASSOC CORSICA CHESS CLUB",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "441182573",
+      "name": "POITIERS MIGNE ECHECS",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "479652877",
+      "name": "ASSO L ECHIQUIER NOSTRADAMUS",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "518251632",
+      "name": "ECHECS EN TET",
+      "rows": 1,
+      "total_euros": 1000.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "392640207",
+      "name": "CLUB D ECHECS LEO LAGRANGE LES TOURS\n DE",
+      "rows": 1,
+      "total_euros": 700.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "394725444",
+      "name": "CLUB ECHECS CAEN ALEKHINE",
+      "rows": 1,
+      "total_euros": 252.0,
+      "programmes": [
+        ""
+      ]
+    },
+    {
+      "siren_or_name": "424033108",
+      "name": "CLUB ECHIQUEEN CUERSOIS",
+      "rows": 1,
+      "total_euros": 86.0,
+      "programmes": [
+        ""
+      ]
+    }
+  ],
+  "source_url": "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/plf25-donnees-de-l-annexe-jaune-effort-financier-de-l-etat-en-faveur-des-associations/exports/csv?use_labels=true",
+  "underlying_year_of_payments": 2023,
+  "publication": 2024,
+  "warning": "Text match on beneficiary denomination only. Not a complete FFE sector total; excludes multisport clubs with no chess term."
+}
