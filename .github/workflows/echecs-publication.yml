@@ -25,7 +25,8 @@ jobs:
         run: |
           mkdir -p /tmp/atlas-corpus
           gh run download 41310532057 -R f3manga-cpu/The-Franck-Eye -n historical-chess-people-places-network -D /tmp/atlas-corpus
-          cp -a /tmp/atlas-corpus/research/echecs_2026/atlas_v3/results research/echecs_2026/atlas_v3/
+          mkdir -p research/echecs_2026/atlas_v3
+          cp -a /tmp/atlas-corpus/research/echecs_2026/atlas_v3/results research/echecs_2026/atlas_v3/results
           mkdir -p docs/echecs-atlas
           cp -a /tmp/atlas-corpus/docs/echecs-atlas/index.html docs/echecs-atlas/index.html
       - name: Sanitize labels and group same-month same-city tournament references
