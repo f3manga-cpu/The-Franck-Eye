@@ -1,0 +1,43 @@
+name: Build FFE historical participation atlas
+on:
+  push:
+    branches: [research/echecs-ecosystem-2026]
+    paths: [research/echecs_2026/atlas_v3.py, research/echecs_2026/atlas_site.py, .github/workflows/echecs-v3.yml]
+  workflow_dispatch:
+jobs:
+  build-atlas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    permissions:
+      contents: write
+    env:
+      ATLAS_EVENTS: "360"
+      ATLAS_ROSTERS: "135"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/echecs-ecosystem-2026
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4 networkx
+      - run: python -u research/echecs_2026/atlas_v3.py
+      - name: Create independent interactive website
+        run: python research/echecs_2026/atlas_site.py
+      - name: Persist reproducible data and viewer
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add research/echecs_2026/atlas_v3/results/ docs/echecs-atlas/
+          if ! git diff --cached --quiet; then
+            git commit -m "Data: historical chess activity graph and interactive atlas"
+            git push origin HEAD:research/echecs-ecosystem-2026
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: historical-chess-people-places-network
+          path: |
+            research/echecs_2026/atlas_v3/results/
+            docs/echecs-atlas/
+          retention-days: 30
