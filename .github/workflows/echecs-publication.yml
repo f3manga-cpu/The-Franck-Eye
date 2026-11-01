@@ -1,0 +1,100 @@
+name: Publish chess atlas from verified run
+on:
+  push:
+    branches: [research/echecs-ecosystem-2026]
+    paths: [.github/workflows/echecs-publication.yml]
+  workflow_dispatch:
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    permissions:
+      actions: read
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/echecs-ecosystem-2026
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install networkx
+      - name: Download actual processed FFE corpus and site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/atlas-corpus
+          gh run download 41310532057 -R f3manga-cpu/The-Franck-Eye -n historical-chess-people-places-network -D /tmp/atlas-corpus
+          cp -a /tmp/atlas-corpus/research/echecs_2026/atlas_v3/results research/echecs_2026/atlas_v3/
+          mkdir -p docs/echecs-atlas
+          cp -a /tmp/atlas-corpus/docs/echecs-atlas/index.html docs/echecs-atlas/index.html
+      - name: Sanitize labels and group same-month same-city tournament references
+        run: |
+          python - <<'PY'
+          import json,re,pathlib,collections
+          import networkx as nx
+          r=pathlib.Path('research/echecs_2026/atlas_v3/results')
+          f=pathlib.Path('docs/echecs-atlas/index.html')
+          src=f.read_text(encoding='utf-8')
+          m=re.search(r'(<script id="atlas-data" type="application/json">)(.*?)(</script>)',src,re.S)
+          if not m:raise Exception('missing embedded dataset')
+          d=json.loads(m.group(2))
+          for e in d['events']:
+            for k in ('arbiter','organizer'):
+              e[k]=re.split(r'\b(?:Adresse|Contact|Courriel|E-mail|Téléphone|Telephone)\s*:',e.get(k,''),maxsplit=1,flags=re.I)[0].strip()
+            if e['ref']==70947:e.update({'title':'Open d’Aix-en-Provence 2026 — Trophée Dole','town':'AIX-EN-PROVENCE','dept':'13'})
+            if e['ref'] in (70779,66882) and not e['town']:e.update({'town':'PORTICCIO','dept':'2A'})
+          ev={e['ref']:e for e in d['events']}
+          def ep(ref):
+            e=ev.get(ref,{})
+            return str((e.get('year'),e.get('town'),(e.get('date') or '')[:7])) if e else str(ref)
+          co=[]
+          for p in d['pairs']:
+            if any(x in {'CLUB:','ARBITER:','ORGANIZER:','PERSON:'} for x in (p['a'],p['b'])):continue
+            if re.search(r'ADRESSE|CONTACT|COURRIEL|TELEPHONE|GMAIL',p['a']+' '+p['b']):continue
+            p['episodes']=len(set(ep(ref) for ref in p['refs']))
+            if p['episodes']>=2:co.append(p)
+          co.sort(key=lambda p:(-p['episodes'],-p['n']))
+          d['pairs']=co
+          P=nx.Graph()
+          for p in co:P.add_edge(p['a'],p['b'],weight=p['episodes'])
+          labels={}
+          for p in d['players']:labels['PERSON:'+p['key']]=(p['name'],'adult_player')
+          for c in d['delegations']:labels['CLUB:'+c['club_key']]=(c['club'],'club')
+          cs=[]
+          if P.number_of_edges():
+            for i,comm in enumerate(nx.community.louvain_communities(P,seed=42,weight='weight')):
+              if len(comm)<3:continue
+              sub=P.subgraph(comm)
+              members=sorted([{'id':x,'label':labels.get(x,(x,''))[0],'type':labels.get(x,('', ''))[1],'links':sub.degree(x)} for x in comm],key=lambda x:-x['links'])
+              cs.append({'id':i,'size':len(comm),'edges':sub.number_of_edges(),'members':members[:75]})
+          d['communities']=sorted(cs,key=lambda x:-x['size'])
+          d['summary']['repeated_pairs_after_episode_dedup']=len(co)
+          d['summary']['clusters_after_episode_dedup']=len(cs)
+          encoded=json.dumps(d,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
+          src=src[:m.start(2)]+encoded+src[m.end(2):]
+          src=src.replace('["Paires récurrentes",m.repeated_pairs||0]','["Relations entre manifestations",m.repeated_pairs_after_episode_dedup||0]')
+          src=src.replace('+(weight.get(p.a)||0)+p.n','+(weight.get(p.a)||0)+p.episodes').replace('+(weight.get(p.b)||0)+p.n','+(weight.get(p.b)||0)+p.episodes').replace('n:p.n}','n:p.episodes}')
+          src=src.replace("'+p.n+' événements</b>","'+p.episodes+' manifestations · '+p.n+' fiches FFE</b>")
+          src=src.replace('n.r>12','n.r>15')
+          f.write_text(src,encoding='utf-8')
+          (r/'events.json').write_text(json.dumps(d['events'],ensure_ascii=False),encoding='utf-8')
+          (r/'coappearances.json').write_text(json.dumps(co,ensure_ascii=False),encoding='utf-8')
+          (r/'communities.json').write_text(json.dumps(d['communities'],ensure_ascii=False),encoding='utf-8')
+          (r/'summary.json').write_text(json.dumps(d['summary'],ensure_ascii=False),encoding='utf-8')
+          (r/'typed_evidence_graph.graphml').unlink(missing_ok=True)
+          print('PUBLISHED',len(d['events']),len(co),len(cs))
+          PY
+      - name: Commit public atlas to research branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add docs/echecs-atlas/ research/echecs_2026/atlas_v3/results/
+          git commit -m 'Publish sourced chess competition network atlas'
+          git push origin HEAD:research/echecs-ecosystem-2026
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: atlas-echecs-publication
+          path: docs/echecs-atlas/index.html
+          retention-days: 30
