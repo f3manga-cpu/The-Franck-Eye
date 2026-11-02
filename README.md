@@ -8,7 +8,9 @@ Independent marketing measurement, reporting and research support — Lyon, Fran
 
 I turn campaign data, survey results and fragmented KPIs into concise, decision-ready deliverables. My professional background includes market research and advertising effectiveness work in London.
 
-**Free, private CSV preflight:** [Download the one-file browser tool](tools/marketing-csv-preflight.html) (save the HTML file and open it locally; no upload, account or installation). It checks missing cells, duplicate rows and inconsistent CSV structure before you commission an audit. This is not a performance diagnosis.\n\n**See an example before ordering:** [Read a complete, explicitly synthetic marketing performance audit (French)](examples/demo-audit-marketing-synthetique.md). This demonstration shows deliverable structure, not actual client results. The paid €59 scope is limited to one channel and up to five KPIs.
+**Free, private CSV preflight:** [Download the one-file browser tool](tools/marketing-csv-preflight.html) (save the HTML file and open it locally; no upload, account or installation). It checks missing cells, duplicate rows and inconsistent CSV structure before you commission an audit. This is not a performance diagnosis.
+
+**See an example before ordering:** [Read a complete, explicitly synthetic marketing performance audit (French)](examples/demo-audit-marketing-synthetique.md). This demonstration shows deliverable structure, not actual client results. The paid €59 scope is limited to one channel and up to five KPIs.
 
 ## Fixed-scope services
 
