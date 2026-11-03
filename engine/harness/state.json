@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "last_controller_check": "2026-11-03",
+  "objective": "attributable_verified_net_cash",
+  "spend_ceiling_eur": 0,
+  "active_experiment": "prevol_facture_20261103",
+  "experiments": [
+    {
+      "id": "prevol_facture_20261103",
+      "source": "independent B2B data-readiness hypothesis",
+      "state": "distributed",
+      "offer": "CSV data-quality preflight and fixed-scope cleaning",
+      "channel": "targeted_accountancy_outreach",
+      "buyer_exposure_claims": {
+        "email_sent": 14,
+        "delivered": null,
+        "opened": null,
+        "qualified_replies": null
+      },
+      "stripe_checkout": "https://buy.stripe.com/dRm5kEf4S57o2Agdkq43S03",
+      "offer_url": "https://github.com/f3manga-cpu/The-Franck-Eye/tree/main/lab/prevol-facture",
+      "purchases_verified": 0,
+      "attributable_gross_eur": 0,
+      "attributable_net_eur": null,
+      "net_unknown_reason": "No attributed Stripe fee, refund, payout reconciliation yet",
+      "notes": "No external buyer conversion established. Publishing a GitHub file is not an indexed buyer-facing listing.",
+      "next_gate": "Verify buyer response and identify at least one platform with native buyer intent; do not send more unsegmented outreach",
+      "decision_due": "2026-11-10"
+    },
+    {
+      "id": "comeup_buyer_intent_20261102",
+      "state": "prepared",
+      "offer": "marketing audit",
+      "channel": "ComeUp",
+      "offer_url": "https://github.com/f3manga-cpu/The-Franck-Eye/blob/main/offers/comeup-audit-campagne-ready-to-list.md",
+      "purchases_verified": 0,
+      "attributable_gross_eur": 0,
+      "notes": "Not listed, no seller onboarding verified; do not count as distributed"
+    }
+  ],
+  "historical_stripe_physical_payments": "EXCLUDED",
+  "last_confirmed_attributable_gross_eur": 0,
+  "agent_runtime": "ChatGPT scheduled controller; optional API Agents SDK disabled",
+  "warnings": [
+    "This file is a sanitized public coordination snapshot, not Stripe's source of truth",
+    "Projected revenue is always omitted"
+  ]
+}
