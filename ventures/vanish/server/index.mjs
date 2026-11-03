@@ -49,7 +49,7 @@ db.exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_wall_slot ON inscriptions(slot) W
 const security={
  'cache-control':'no-store','x-content-type-options':'nosniff','referrer-policy':'strict-origin-when-cross-origin',
  'x-frame-options':'DENY','permissions-policy':'camera=(), microphone=(), geolocation=()',
- 'content-security-policy':"default-src 'self'; script-src 'self' 'sha256-YcEzl5p9qZnwK+ln5QbNb4aDzdGGHpMyH2Jk1iI4vkU=' 'sha256-PaaIxaJQJxmwDLGE53Q8iuwZxV1bbHEUwsEze2Mq2F0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+ 'content-security-policy':"default-src 'self'; script-src 'self' 'sha256-Jpb4PEONEaPcNnA3xPxX6eH62V98z2Dx4tSKLoDRFZQ='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
 };
 const send=(res,status,payload,kind='application/json; charset=utf-8')=>{res.writeHead(status,{...security,'content-type':kind});res.end(kind.startsWith('application/json')?JSON.stringify(payload):payload);};
 const fail=(res,code,msg)=>send(res,code,{error:msg});
