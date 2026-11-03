@@ -6,7 +6,7 @@ VANISH is a full-screen cinematic entry followed by a claimable shared wall. It 
 
 - **Local demo:** `npm start`, open `http://localhost:3000/?preview=1`. No payments can occur without explicitly configured secrets and flags.
 - **Public exhibition (safe):** deploy on Render using `NODE_ENV=production`, `ACCEPT_REAL_PAYMENTS=false`, `LEGAL_APPROVED=false`. The public will see the door and wall; purchase is disabled.
-- **Live sales (not approved here):** requires durable storage, reviewed merchant/consumer terms and tax handling, test-mode Stripe end-to-end, live server Stripe secrets, signed webhook URL, verified fulfillment and real iPhone/Android testing. Enable only after all prerequisites, then set `ACCEPT_REAL_PAYMENTS=true`.
+- **Live sales (not approved here):** requires durable storage, reviewed merchant/consumer terms and tax handling, test-mode Stripe end-to-end, live server Stripe secrets, signed webhook URL, verified fulfillment and real iPhone/Android testing. Enable only after all prerequisites, then set `DURABLE_STORAGE_CONFIRMED=true`, `ACCEPT_REAL_PAYMENTS=true`.
 
 Existing Stripe live catalog: `prod_VYTYlWYcQ8YMSS`, USD one-time `price_1UXMbHJglFhP7gGVTdQ9mD67` ($9,999). These are catalog identifiers, not credentials.
 
@@ -26,7 +26,7 @@ A free Render web service has ephemeral storage: **never enable paid transaction
 
 ### Stripe
 
-To enable in an approved durable production environment, add server-side `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_ID`, `ADMIN_TOKEN`, `PUBLIC_ORIGIN`, `LEGAL_APPROVED=true`, `ACCEPT_REAL_PAYMENTS=true`. Never put these in source, browser, logs or .env committed to Git. Webhook event subscriptions: `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `charge.refunded`. The app verifies signed webhook payloads and paid session status, and enforces one finite moment per paid session and one submitted inscription.
+To enable in an approved durable production environment, add server-side `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_ID`, `ADMIN_TOKEN`, `PUBLIC_ORIGIN`, `LEGAL_APPROVED=true`, `DURABLE_STORAGE_CONFIRMED=true`, `ACCEPT_REAL_PAYMENTS=true`. Never put these in source, browser, logs or .env committed to Git. Webhook event subscriptions: `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `charge.refunded`. The app verifies signed webhook payloads and paid session status, and enforces one finite moment per paid session and one submitted inscription.
 
 ## Visual QA
 

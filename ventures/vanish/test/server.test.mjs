@@ -57,3 +57,16 @@ test('a verified buyer can leave only one handwritten mark',async()=>{
  const pub=await fetch(base+'/api/receipt/'+j.receiptId).then(r=>r.json());assert.deepEqual(pub.strokes,[[[100,500],[900,500]]]);
  }finally{db.prepare('DELETE FROM inscriptions WHERE order_id=?').run(o.id);db.prepare('DELETE FROM orders WHERE id=?').run(o.id);await new Promise(res=>server.close(res));}
 });
+
+test('paid buyer is allocated a new slot if the selected wall space is already claimed',async()=>{
+ const pay=(id)=>registerPayment({id,object:'checkout.session',mode:'payment',payment_status:'paid',currency:'usd',amount_total:999900,metadata:{product:'vanish-one-moment'}});
+ const a=pay('cs_test_'+crypto.randomBytes(12).toString('hex'));
+ const b=pay('cs_test_'+crypto.randomBytes(12).toString('hex'));
+ db.prepare('UPDATE orders SET started_at=? WHERE id IN (?,?)').run(Date.now()-15000,a.id,b.id);
+ await new Promise(res=>server.listen(0,'127.0.0.1',res));const url=`http://127.0.0.1:${server.address().port}`;
+ const write=async(o,txt)=>fetch(url+'/api/experience/inscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({sessionId:o.session_id,slot:600,text:txt})}).then(async r=>({status:r.status,data:await r.json()}));
+ try{const first=await write(a,'FIRST');const second=await write(b,'SECOND');assert.equal(first.status,201);assert.equal(second.status,201);assert.notEqual(first.data.inscription.slot,second.data.inscription.slot);
+  const pre=await fetch(url+'/mark/'+second.data.receiptId);assert.equal(pre.status,200); // proof link works prior to moderation
+  assert.equal((await fetch(url+'/api/receipt/'+second.data.receiptId).then(r=>r.json())).text,null);
+ }finally{for(const o of [a,b]){db.prepare('DELETE FROM inscriptions WHERE order_id=?').run(o.id);db.prepare('DELETE FROM orders WHERE id=?').run(o.id);}await new Promise(res=>server.close(res));}
+});

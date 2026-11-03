@@ -15,7 +15,7 @@ const priceId=process.env.STRIPE_PRICE_ID||'price_1UXMbHJglFhP7gGVTdQ9mD67';
 const adminToken=process.env.ADMIN_TOKEN||'';
 const isProduction=process.env.NODE_ENV==='production';
 const legalApproved=process.env.LEGAL_APPROVED==='true';
-const checkoutEnabled=Boolean(process.env.ACCEPT_REAL_PAYMENTS==='true'&&stripeKey&&stripeWebhookSecret&&legalApproved&&priceId&&(origin.startsWith('https://')||!isProduction));
+const checkoutEnabled=Boolean(process.env.ACCEPT_REAL_PAYMENTS==='true'&&process.env.DURABLE_STORAGE_CONFIRMED==='true'&&adminToken.length>=24&&stripeKey&&stripeWebhookSecret&&legalApproved&&priceId&&(origin.startsWith('https://')||!isProduction));
 const preview=!isProduction;
 const imageAlt='VANISH — an ephemeral digital moment and a trace on the shared wall';
 const amount=999900;
@@ -49,7 +49,7 @@ db.exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_wall_slot ON inscriptions(slot) W
 const security={
  'cache-control':'no-store','x-content-type-options':'nosniff','referrer-policy':'strict-origin-when-cross-origin',
  'x-frame-options':'DENY','permissions-policy':'camera=(), microphone=(), geolocation=()',
- 'content-security-policy':"default-src 'self'; script-src 'self' 'sha256-YcEzl5p9qZnwK+ln5QbNb4aDzdGGHpMyH2Jk1iI4vkU=' 'sha256-Qj7ASeLTtatS/POhvVwi+EtZF/3gMpiyEgQmViJ/JOk='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+ 'content-security-policy':"default-src 'self'; script-src 'self' 'sha256-YcEzl5p9qZnwK+ln5QbNb4aDzdGGHpMyH2Jk1iI4vkU=' 'sha256-PaaIxaJQJxmwDLGE53Q8iuwZxV1bbHEUwsEze2Mq2F0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
 };
 const send=(res,status,payload,kind='application/json; charset=utf-8')=>{res.writeHead(status,{...security,'content-type':kind});res.end(kind.startsWith('application/json')?JSON.stringify(payload):payload);};
 const fail=(res,code,msg)=>send(res,code,{error:msg});
@@ -162,8 +162,16 @@ const server=http.createServer(async(req,res)=>{
   const o=db.prepare('SELECT * FROM orders WHERE session_id=?').get(data.sessionId);
   if(!o||o.status!=='paid'||o.started_at==null||now()<o.started_at+12000)return fail(res,403,'Not available yet.');
   if(db.prepare('SELECT id FROM inscriptions WHERE order_id=?').get(o.id))return fail(res,409,'Inscription already submitted.');
-  try{db.prepare('INSERT INTO inscriptions (order_id,slot,body,strokes,submitted_at) VALUES (?,?,?,?,?)').run(o.id,slot,mark,JSON.stringify(strokes),now());}
-  catch(e){if(e.code?.startsWith('SQLITE_CONSTRAINT'))return fail(res,409,'That space has already been claimed. Choose another.');throw e;}
+  // A space may be claimed while a buyer completes checkout. Never strand a paid buyer:
+  // automatically allocate the next unclaimed space rather than failing fulfillment.
+  let assigned=slot;
+  try{db.prepare('INSERT INTO inscriptions (order_id,slot,body,strokes,submitted_at) VALUES (?,?,?,?,?)').run(o.id,assigned,mark,JSON.stringify(strokes),now());}
+  catch(e){
+   if(!(e.code==='ERR_SQLITE_ERROR' && (e.errcode===2067||e.errcode===1555)))throw e;
+   if(db.prepare('SELECT id FROM inscriptions WHERE order_id=?').get(o.id))return fail(res,409,'Inscription already submitted.');
+   assigned=db.prepare('SELECT COALESCE(MAX(slot),0)+1 AS n FROM inscriptions').get().n;
+   db.prepare('INSERT INTO inscriptions (order_id,slot,body,strokes,submitted_at) VALUES (?,?,?,?,?)').run(o.id,assigned,mark,JSON.stringify(strokes),now());
+  }
   return send(res,201,view(o));
  }
  if(p.startsWith('/api/receipt/')&&req.method==='GET'){
@@ -187,8 +195,7 @@ const server=http.createServer(async(req,res)=>{
  if(p.startsWith('/mark/')&&req.method==='GET'){
   const rid=p.slice('/mark/'.length);if(!receiptGood(rid))return fail(res,404,'Not found');
   const o=db.prepare('SELECT * FROM orders WHERE receipt_id=? AND status=?').get(rid,'paid');
-  const mark=o&&db.prepare("SELECT body FROM inscriptions WHERE order_id=? AND status='visible'").get(o.id);
-  if(!mark)return fail(res,404,'Not found');
+  if(!o)return fail(res,404,'Not found');
   const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const title=`${serial(o)} — VANISH`;
   const html=fs.readFileSync(path.join(root,'index.html'),'utf8').replace(/<title>[^<]*<\/title>/,`<title>${esc(title)}</title>`).replace('</head>',`<meta name="robots" content="noindex,follow"><meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="A moment happened here."><meta property="og:url" content="${origin}/mark/${rid}"></head>`);
