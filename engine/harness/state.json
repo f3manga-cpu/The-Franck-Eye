@@ -24,8 +24,8 @@
       "attributable_gross_eur": 0,
       "attributable_net_eur": null,
       "net_unknown_reason": "No attributed Stripe fee, refund, payout reconciliation yet",
-      "notes": "No external buyer conversion established. Publishing a GitHub file is not an indexed buyer-facing listing. Inbox verification revealed one contact gated by Mailinblack human confirmation; no bypass performed. Outbound delivery remains unverified.",
-      "next_gate": "Verify buyer response and identify at least one platform with native buyer intent; do not send more unsegmented outreach",
+      "notes": "14 emails sent historically, delivery unknown; no additional outreach today. Underwriter retained experiment to 2026-11-10 stop date; Stripe full live list has no payment after 2026-10-13.",
+      "next_gate": "Check qualified buyer response; by 2026-11-10 stop or pivot if no verified exposure. Upwork buyer-posted work is conditional research, not an active second experiment.",
       "decision_due": "2026-11-10"
     },
     {
@@ -45,5 +45,13 @@
   "warnings": [
     "This file is a sanitized public coordination snapshot, not Stripe's source of truth",
     "Projected revenue is always omitted"
-  ]
+  ],
+  "last_confirmed_attributable_net_cash_eur": 0,
+  "last_underwriting_report": "engine/harness/controller-2026-11-03.md",
+  "next_channel_candidate": {
+    "name": "Upwork buyer-posted FR localization",
+    "stage": "research_only",
+    "gate": "Verify existing account and zero-cost Connects before one targeted proposal",
+    "qualified_buyer_exposures": 0
+  }
 }
