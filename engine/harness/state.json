@@ -15,7 +15,8 @@
         "email_sent": 14,
         "delivered": null,
         "opened": null,
-        "qualified_replies": null
+        "qualified_replies": null,
+        "mailinblack_challenges": 1
       },
       "stripe_checkout": "https://buy.stripe.com/dRm5kEf4S57o2Agdkq43S03",
       "offer_url": "https://github.com/f3manga-cpu/The-Franck-Eye/tree/main/lab/prevol-facture",
@@ -23,7 +24,7 @@
       "attributable_gross_eur": 0,
       "attributable_net_eur": null,
       "net_unknown_reason": "No attributed Stripe fee, refund, payout reconciliation yet",
-      "notes": "No external buyer conversion established. Publishing a GitHub file is not an indexed buyer-facing listing.",
+      "notes": "No external buyer conversion established. Publishing a GitHub file is not an indexed buyer-facing listing. Inbox verification revealed one contact gated by Mailinblack human confirmation; no bypass performed. Outbound delivery remains unverified.",
       "next_gate": "Verify buyer response and identify at least one platform with native buyer intent; do not send more unsegmented outreach",
       "decision_due": "2026-11-10"
     },
