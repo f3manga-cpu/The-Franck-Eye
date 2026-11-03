@@ -98,6 +98,49 @@ body,.app{background:#090c10}#fallback{background-position:center 48%}
 .wall-slot.occupied:has(canvas) span{position:absolute;bottom:2px;max-width:95%;z-index:2;font-size:10px}
 .wall-slot:focus-visible{outline:2px solid #d8a866;outline-offset:-3px}
 @media(max-width:640px){#signature{max-height:21vh}.wall-slot canvas{height:69%}}
+
+/* VANISH — the visitor discovers a physical wall rather than a marketplace grid. */
+.app[data-scene="gallery"] #veil{background:linear-gradient(180deg,#0706069e 0%,transparent 22%,transparent 73%,#030202d9 100%)}
+.gallery{padding:9vh 12px 12vh;perspective:1500px}
+.wall-stage{
+ width:min(1100px,95vw);height:min(73vh,760px);min-height:320px;padding:0;
+ background:radial-gradient(ellipse at 51% 20%,rgba(227,173,102,.16),transparent 46%),
+ repeating-linear-gradient(123deg,transparent 0 32px,rgba(226,188,134,.014) 33px,transparent 34px 99px),
+ linear-gradient(112deg,rgba(14,14,15,.93) 0%,rgba(29,25,25,.92) 36%,rgba(12,13,16,.96) 100%);
+ border:0;outline:1px solid rgba(220,178,127,.11);box-shadow:0 70px 180px #000e,inset 0 0 130px 15px #000b;
+ overflow:hidden;transform:rotateX(.75deg);animation:wall-approach 1.7s cubic-bezier(.2,.9,.17,1) both
+}
+.wall-stage:before{inset:0;border:0;background:
+ linear-gradient(96deg,transparent 0%,rgba(250,202,146,.018) 25%,transparent 46%,rgba(255,189,98,.025) 72%,transparent),
+ repeating-linear-gradient(0deg,transparent 0px,transparent 87px,rgba(231,201,163,.025) 88px,transparent 90px);
+ mix-blend-mode:screen;pointer-events:none}
+.wall-stage:after{inset:0;box-shadow:inset 0 0 170px 65px #010101ad,inset 0 15px 70px #080404e3;pointer-events:none}
+.wall-chiaroscuro{position:absolute;inset:0;pointer-events:none;z-index:1;
+ background:radial-gradient(ellipse 19% 44% at 50% 6%,rgba(234,179,105,.10),transparent 100%),
+ linear-gradient(90deg,rgba(0,0,0,.48),transparent 31%,transparent 71%,rgba(0,0,0,.52));
+ box-shadow:inset 0 1px #c8a07532}
+.wall-continuum{position:absolute;inset:0;z-index:2;overflow:hidden;
+ background:radial-gradient(ellipse 26% 5% at 50% 2%,rgba(239,176,110,.16),transparent),
+ radial-gradient(ellipse at 50% 90%,rgba(154,78,58,.06),transparent 70%)}
+.wall-continuum:after{content:'';position:absolute;pointer-events:none;left:50%;top:10%;bottom:12%;width:1px;background:linear-gradient(transparent,rgba(230,179,116,.055),transparent)}
+.wall-base{inset:auto 4% 0;height:1px;background:linear-gradient(90deg,transparent,#ad75465e,transparent)}
+.wall-inscription{position:absolute;display:flex;flex-direction:column;justify-content:center;align-items:center;min-width:82px;min-height:58px;max-width:190px;
+ padding:4px 8px;transform:translate(-50%,-50%);text-decoration:none;text-align:center;z-index:4;
+ color:#ecd6b7;text-shadow:0 2px 8px #000,0 0 18px #ac754355;
+ animation:trace-appear 2.2s cubic-bezier(.15,.72,.25,1) both;animation-delay:calc(var(--reveal-index)*.065s);
+ transition:filter .35s,transform .35s}
+.wall-inscription:hover,.wall-inscription:focus-visible{filter:brightness(1.4);transform:translate(-50%,-50%) scale(1.06)}
+.wall-inscription span{font:italic 400 clamp(12px,1.2vw,19px)/1.2 Georgia,serif;max-width:190px;overflow-wrap:anywhere}
+.wall-inscription small{font:8px/1.5 system-ui,sans-serif;letter-spacing:.24em;opacity:.40;margin-top:8px}
+.wall-inscription canvas{width:clamp(90px,12vw,150px);height:auto;max-height:76px;display:block;object-fit:contain}
+.gallery-footer{bottom:max(22px,env(safe-area-inset-bottom))}
+.gallery-footer .primary-quiet{min-width:120px;border:0;border-bottom:1px solid rgba(219,173,117,.43);background:rgba(8,8,9,.35);backdrop-filter:blur(8px);box-shadow:none;padding:13px 17px 11px;letter-spacing:.35em}
+.wall-pages{z-index:10;bottom:16px}
+@keyframes wall-approach{from{opacity:0;filter:blur(10px);transform:translateZ(-100px) scale(.92)}to{opacity:1;filter:blur(0);transform:translateZ(0) scale(1)}}
+@keyframes trace-appear{from{opacity:0;filter:blur(5px)}to{opacity:1;filter:blur(0)}}
+@media(max-width:640px){.gallery{padding:11vh 8px 16vh}.wall-stage{width:94vw;height:min(64vh,590px);min-height:280px}.wall-inscription{min-width:70px;max-width:104px;padding:4px}.wall-inscription span{font-size:12px}.wall-inscription canvas{width:94px;max-height:47px}}
+@media(max-height:620px){.wall-stage{height:57vh;min-height:225px}.gallery{padding-top:11vh;padding-bottom:19vh}}
+@media(prefers-reduced-motion:reduce){.wall-stage,.wall-inscription{animation:none!important}}
 </style>
 </head>
 <body>
@@ -116,8 +159,8 @@ body,.app{background:#090c10}#fallback{background-position:center 48%}
 </section>
 <section id="gallery" class="scene gallery" aria-label="The wall" inert>
  <div class="wall-stage">
-  <div class="wall-head"><span class="wall-crest" aria-hidden="true">✧</span><span class="wall-title">VANISH</span><span class="wall-crest" aria-hidden="true">✧</span></div>
-  <div id="wall" class="wall-grid" aria-label="Verified inscriptions"></div>
+  <div class="wall-chiaroscuro" aria-hidden="true"></div>
+  <div id="wall" class="wall-continuum" aria-label="Traces left by verified visitors"></div>
   <div class="wall-base" aria-hidden="true"><span></span></div><div id="wallPages" class="wall-pages hidden"><button id="wallPrev" type="button" aria-label="Previous wall page">‹</button><span id="wallPage">01</span><button id="wallNext" type="button" aria-label="Next wall page">›</button></div>
  </div>
  <div class="gallery-footer">
@@ -287,15 +330,30 @@ door.addEventListener('touchend',()=>{if(touchStart){touchStart=null;enter();}},
 window.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;window.VanishFilm?.set({pointerX:(e.clientX/Math.max(1,innerWidth)-.5)*2,pointerY:(e.clientY/Math.max(1,innerHeight)-.5)*2});},{passive:true});
 window.addEventListener('keydown',e=>{if(scene==='entrance'&&(e.key==='Enter'||e.key===' ')){enter();}});
 function drawWall(marks=[],busy=[]){
- wall.replaceChildren();wallBusy=busy;const count=innerWidth<641?18:30;const arr=Array.isArray(marks)?marks:[];
- for(let i=0;i<count;i++){
-  const slot=(wallPage-1)*count+i+1;const m=arr.find(x=>x.slot===slot);const reserved=busy.includes(slot);
-  const tile=document.createElement(m?'a':'button');tile.className='wall-slot'+(m?' occupied':'')+(reserved&&!m?' reserved':'')+(selectedSlot===slot?' selected':'');
-  tile.dataset.slot=slot;tile.style.setProperty('--slot-i',String(i));
-  if(m){if(m.strokes?.length){const c=document.createElement('canvas');c.width=440;c.height=180;tile.append(c);requestAnimationFrame(()=>renderSignature(c,m.strokes));}const span=document.createElement('span');span.textContent=m.text;tile.append(span);const small=document.createElement('small');small.textContent=m.serial;tile.append(small);tile.href='/mark/'+encodeURIComponent(m.receiptId);tile.setAttribute('aria-label','View verified mark '+m.serial);}
-  else{tile.type='button';tile.disabled=reserved;tile.setAttribute('aria-label',reserved?'Space '+slot+' claimed':'Choose space '+slot);tile.addEventListener('click',()=>{selectedSlot=slot;document.querySelectorAll('.wall-slot').forEach(t=>t.classList.toggle('selected',Number(t.dataset.slot)===slot));chime(196,.017,.45);$('#toDecision').textContent='Enter';});}
-  wall.append(tile);
+ wall.replaceChildren();wallBusy=busy;
+ // A visitor encounters a wall, not a seat map. Coordinates are distributed in
+ // a non-repeating spatial composition. Only verified, reviewed inscriptions appear.
+ const arr=Array.isArray(marks)?marks:[];
+ const per=innerWidth<641?18:30;
+ const pageStart=(wallPage-1)*per+1,pageEnd=wallPage*per;
+ for(const m of arr.filter(m=>m.slot>=pageStart&&m.slot<=pageEnd)){
+   const j=m.slot-pageStart;
+   const phi=(j*2.399963229728653)%6.28318530718;
+   const rad=.13+.82*Math.sqrt((j+.5)/per);
+   const x=50+Math.cos(phi)*rad*41;
+   const y=50+Math.sin(phi)*rad*34;
+   const mark=document.createElement('a');mark.className='wall-inscription';
+   mark.style.left=x+'%';mark.style.top=y+'%';
+   mark.style.setProperty('--reveal-index',String(j));
+   mark.href='/mark/'+encodeURIComponent(m.receiptId);
+   mark.setAttribute('aria-label','Visit verified inscription '+m.serial);
+   if(m.strokes?.length){const c=document.createElement('canvas');c.width=440;c.height=180;mark.append(c);requestAnimationFrame(()=>renderSignature(c,m.strokes));}
+   if(m.text){const span=document.createElement('span');span.textContent=m.text;mark.append(span);}
+   const serial=document.createElement('small');serial.textContent=m.serial;mark.append(serial);
+   wall.append(mark);
  }
+ const count=arr.length;
+ wall.classList.toggle('has-traces',count>0);
 }
 async function loadWall(){
  if(preview||localPreview){drawWall(demoMarks,[]);return;}
@@ -303,7 +361,7 @@ async function loadWall(){
  catch{drawWall([],[]);}
 }
 $('#wallPrev').addEventListener('click',()=>{wallPage=Math.max(1,wallPage-1);loadWall();});$('#wallNext').addEventListener('click',()=>{if(wallHasNext){wallPage++;loadWall();}});
-$('#toDecision').addEventListener('click',()=>{if(selectedSlot)try{sessionStorage.setItem('vanish-selected-slot',String(selectedSlot));}catch{}chime(124,.022,.8);show('decision');});
+$('#toDecision').addEventListener('click',()=>{chime(124,.022,.8);show('decision');});
 $('#back').addEventListener('click',()=>show('gallery'));
 function displayError(t){$('#payNote').textContent=t;}
 $('#buy').addEventListener('click',async()=>{
@@ -324,8 +382,8 @@ $('#markText').addEventListener('input',()=>{$('#remaining').textContent=String(
 $('#markForm').addEventListener('submit',async e=>{
  e.preventDefault();$('#markError').textContent='';const text=$('#markText').value.trim();if((!text&&!strokes.length)||[...text].length>64)return;
  const b=$('#submitMark');b.disabled=true;
- if(preview){selectedSlot=selectedSlot||1;demoMarks=[{slot:selectedSlot,serial:'V-PREVIEW',receiptId:'',text,strokes:strokes.map(s=>s.slice()),preview:true},...demoMarks.filter(m=>m.slot!==selectedSlot)].slice(0,100);drawWall(demoMarks);order={serial:'V-PREVIEW',inscription:{body:text,strokes:strokes.map(s=>s.slice()),status:'preview',slot:selectedSlot}};showResult(order);return;}
- try{const r=await fetch('/api/experience/inscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({sessionId,text,strokes,slot:selectedSlot||1})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Unable to save');order=d;showResult(d);}catch(ex){$('#markError').textContent=ex.message;b.disabled=false;}
+ if(preview){selectedSlot=demoMarks.length+1;demoMarks=[{slot:selectedSlot,serial:'V-PREVIEW',receiptId:'',text,strokes:strokes.map(s=>s.slice()),preview:true},...demoMarks.filter(m=>m.slot!==selectedSlot)].slice(0,100);drawWall(demoMarks);order={serial:'V-PREVIEW',inscription:{body:text,strokes:strokes.map(s=>s.slice()),status:'preview',slot:selectedSlot}};showResult(order);return;}
+ try{const r=await fetch('/api/experience/inscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({sessionId,text,strokes,slot:null})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Unable to save');order=d;showResult(d);}catch(ex){$('#markError').textContent=ex.message;b.disabled=false;}
 });
 $('#skipMark').addEventListener('click',()=>showResult(order||{serial:'V-PREVIEW'}));
 function showResult(data){show('post');$('#startBox').classList.add('hidden');$('#moment').classList.add('hidden');$('#inscribeBox').classList.add('hidden');$('#resultBox').classList.remove('hidden');$('#resultSerial').textContent=data.serial||'V-PREVIEW';$('#resultMark').textContent=data.inscription?.body||'';paintTo($('#resultSignature'),data.inscription?.strokes);$('#resultStatus').textContent=data.inscription?.status==='pending'?'Your inscription is saved. It will appear on the wall after review.':data.inscription?.status==='preview'?'Preview only. No payment or public inscription was made.':'A moment, then a trace.';
@@ -342,7 +400,7 @@ async function init(){
   try{const r=await fetch('/api/receipt/'+encodeURIComponent(query.get('receipt')||location.pathname.split('/').at(-1)));const d=await r.json();if(!r.ok)throw new Error();$('#publicSerial').textContent=d.serial;$('#publicText').textContent=d.text||'';paintTo($('#publicSignature'),d.strokes);show('publicReceipt');}catch{show('entrance');}return;
  }
  if(query.has('session_id')){
-  sessionId=query.get('session_id');try{selectedSlot=Number(sessionStorage.getItem('vanish-selected-slot'))||null;}catch{selectedSlot=null;}try{const r=await fetch('/api/payment?session_id='+encodeURIComponent(sessionId));const d=await r.json();if(!r.ok||d.status!=='paid')throw new Error(d.error||'Payment not verified');order=d;
+  sessionId=query.get('session_id');selectedSlot=null;try{const r=await fetch('/api/payment?session_id='+encodeURIComponent(sessionId));const d=await r.json();if(!r.ok||d.status!=='paid')throw new Error(d.error||'Payment not verified');order=d;
    if(d.inscription){showResult(d);}
    else if(d.started){if(d.expired)showInscription();else runMoment(d.expiresAt);}
    else showAfter();
