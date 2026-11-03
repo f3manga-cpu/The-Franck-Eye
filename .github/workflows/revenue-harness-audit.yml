@@ -1,5 +1,11 @@
 name: Revenue harness independent audit
 on:
+  push:
+    paths:
+      - 'engine/harness/state.json'
+      - 'engine/harness/audit.py'
+      - 'engine/harness/tests/**'
+      - '.github/workflows/revenue-harness-audit.yml'
   schedule:
     - cron: '25 8 * * *'
   workflow_dispatch:
