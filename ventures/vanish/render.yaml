@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: vanish-experience
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server/index.mjs
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LEGAL_APPROVED
+        value: "false"
+      - key: ACCEPT_REAL_PAYMENTS
+        value: "false"
+      - key: STRIPE_PRICE_ID
+        value: price_1UXMbHJglFhP7gGVTdQ9mD67

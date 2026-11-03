@@ -1,0 +1,6 @@
+{
+ "name":"vanish-cinema","version":"1.0.0","private":true,"type":"module",
+ "engines":{"node":">=22.13.0"},
+ "scripts":{"start":"node server/index.mjs","dev":"node --watch server/index.mjs","test":"node --test test/*.test.mjs"},
+ "description":"VANISH — cinematic finite digital experience and verified wall inscription."
+}
