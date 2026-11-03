@@ -400,11 +400,24 @@ async function init(){
   try{const r=await fetch('/api/receipt/'+encodeURIComponent(query.get('receipt')||location.pathname.split('/').at(-1)));const d=await r.json();if(!r.ok)throw new Error();$('#publicSerial').textContent=d.serial;$('#publicText').textContent=d.text||'';paintTo($('#publicSignature'),d.strokes);show('publicReceipt');}catch{show('entrance');}return;
  }
  if(query.has('session_id')){
-  sessionId=query.get('session_id');selectedSlot=null;try{const r=await fetch('/api/payment?session_id='+encodeURIComponent(sessionId));const d=await r.json();if(!r.ok||d.status!=='paid')throw new Error(d.error||'Payment not verified');order=d;
-   if(d.inscription){showResult(d);}
-   else if(d.started){if(d.expired)showInscription();else runMoment(d.expiresAt);}
-   else showAfter();
-  }catch(e){show('decision');displayError(e.message);}return;
+  sessionId=query.get('session_id');selectedSlot=null;
+  show('decision');displayError('Confirming your purchase…');
+  let confirmed=false;
+  // A payment redirect is not proof of payment. Wait for the signed Stripe webhook.
+  for(let attempt=0;attempt<24;attempt++){
+   try{const r=await fetch('/api/payment?session_id='+encodeURIComponent(sessionId),{cache:'no-store'});const d=await r.json();
+    if(r.ok && d.status==='paid'){
+     order=d;confirmed=true;
+     if(d.inscription)showResult(d);
+     else if(d.started){if(d.expired)showInscription();else runMoment(d.expiresAt);}
+     else showAfter();
+     break;
+    }
+   }catch{}
+   await new Promise(done=>setTimeout(done,1500));
+  }
+  if(!confirmed){show('decision');displayError('Verification is still pending. Keep your checkout confirmation and return here. Please do not pay twice.');}
+  return;
  }
  if(query.has('cancel')){show('decision');displayError('Payment canceled.');}
  if(!cfg.checkoutEnabled&&!preview){$('#buy').disabled=true;displayError('Purchases are not active yet.');}
