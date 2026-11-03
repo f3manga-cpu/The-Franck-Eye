@@ -104,6 +104,11 @@ const server=http.createServer(async(req,res)=>{
  try{
  const u=new URL(req.url,origin),p=u.pathname;
 
+ if(p==='/og-preview.webp' && (req.method==='GET'||req.method==='HEAD')){
+  const card=Buffer.from(fs.readFileSync(path.join(root,'og-image.b64'),'utf8'),'base64');
+  res.writeHead(200,{...security,'content-type':'image/webp','content-length':card.length,'cache-control':'public,max-age=86400'});
+  return req.method==='HEAD'?res.end():res.end(card);
+ }
  if(p==='/health'&&req.method==='GET')return send(res,200,{ok:true,checkoutEnabled,wall:true});
  if(p==='/healthz'&&req.method==='GET')return send(res,200,{status:'ok',storage:'sqlite',checkoutEnabled});
  if(p==='/robots.txt'&&req.method==='GET')return send(res,200,`User-agent: *\nDisallow: /api/\nDisallow: /admin.html\nDisallow: /mark/\nSitemap: ${origin}/sitemap.xml\n`,'text/plain; charset=utf-8');
@@ -206,7 +211,9 @@ const server=http.createServer(async(req,res)=>{
  if(!file.startsWith(root+path.sep))return fail(res,403,'Forbidden');
  let stat;try{stat=fs.statSync(file);}catch{return fail(res,404,'Not found');}if(!stat.isFile())return fail(res,404,'Not found');
  res.writeHead(200,{...security,'content-type':mime[path.extname(file)]||'application/octet-stream','cache-control':p==='/'?'no-cache':'public,max-age=3600'});
- if(req.method==='HEAD')return res.end();fs.createReadStream(file).pipe(res);
+ if(req.method==='HEAD')return res.end();
+  if(p==='/'||p==='/index.html'){let html=fs.readFileSync(file,'utf8');html=html.replace('content="/assets/portal.webp"', 'content="'+origin+'/og-preview.webp"');html=html.replace('</head>', '<link rel="canonical" href="'+origin+'/"><meta property="og:url" content="'+origin+'/"></head>');return res.end(html); }
+  fs.createReadStream(file).pipe(res);
  }catch(e){console.error(e);return fail(res,e.status||500,e.status===413?'Request too large':'Request could not be completed');}
 });
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))server.listen(port,()=>console.log(`VANISH on ${origin} — checkout ${checkoutEnabled?'ENABLED':'disabled'} / preview ${preview}`));
