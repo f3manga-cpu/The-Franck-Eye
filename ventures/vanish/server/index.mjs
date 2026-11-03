@@ -11,11 +11,12 @@ const port=Number(process.env.PORT||3000);
 const origin=process.env.PUBLIC_ORIGIN||`http://localhost:${port}`;
 const stripeKey=process.env.STRIPE_SECRET_KEY||'';
 const stripeWebhookSecret=process.env.STRIPE_WEBHOOK_SECRET||'';
+const stripePaymentLink=process.env.STRIPE_PAYMENT_LINK_URL||'';
 const priceId=process.env.STRIPE_PRICE_ID||'price_1UXMbHJglFhP7gGVTdQ9mD67';
 const adminToken=process.env.ADMIN_TOKEN||'';
 const isProduction=process.env.NODE_ENV==='production';
 const legalApproved=process.env.LEGAL_APPROVED==='true';
-const checkoutEnabled=Boolean(process.env.ACCEPT_REAL_PAYMENTS==='true'&&process.env.DURABLE_STORAGE_CONFIRMED==='true'&&adminToken.length>=24&&stripeKey&&stripeWebhookSecret&&legalApproved&&priceId&&(origin.startsWith('https://')||!isProduction));
+const checkoutEnabled=Boolean(process.env.ACCEPT_REAL_PAYMENTS==='true'&&process.env.DURABLE_STORAGE_CONFIRMED==='true'&&adminToken.length>=24&&(stripeKey||/^https:\/\/buy\.stripe\.com\/[A-Za-z0-9]+$/.test(stripePaymentLink))&&stripeWebhookSecret&&legalApproved&&priceId&&(origin.startsWith('https://')||!isProduction));
 const preview=!isProduction;
 const imageAlt='VANISH — an ephemeral digital moment and a trace on the shared wall';
 const amount=999900;
@@ -49,7 +50,7 @@ db.exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_wall_slot ON inscriptions(slot) W
 const security={
  'cache-control':'no-store','x-content-type-options':'nosniff','referrer-policy':'strict-origin-when-cross-origin',
  'x-frame-options':'DENY','permissions-policy':'camera=(), microphone=(), geolocation=()',
- 'content-security-policy':"default-src 'self'; script-src 'self' 'sha256-Jpb4PEONEaPcNnA3xPxX6eH62V98z2Dx4tSKLoDRFZQ='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+ 'content-security-policy':"default-src 'self'; script-src 'self' 'sha256-d6sOvZXv2BbNlc6dJY/4XcXRHJGkyBFiQA4/+T82Jis='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
 };
 const send=(res,status,payload,kind='application/json; charset=utf-8')=>{res.writeHead(status,{...security,'content-type':kind});res.end(kind.startsWith('application/json')?JSON.stringify(payload):payload);};
 const fail=(res,code,msg)=>send(res,code,{error:msg});
@@ -124,6 +125,7 @@ const server=http.createServer(async(req,res)=>{
  if(p==='/api/checkout'&&req.method==='POST'){
   if(!checkoutEnabled)return fail(res,503,'Purchasing is not currently available.');
   if(!allow(req.socket.remoteAddress||''))return fail(res,429,'Try again later.');
+  if(!stripeKey && stripePaymentLink)return send(res,200,{url:stripePaymentLink});
   const s=await stripe('checkout/sessions',{method:'POST',params:{
    mode:'payment', 'line_items[0][price]':priceId,'line_items[0][quantity]':'1',
    'metadata[product]':'vanish-one-moment',
