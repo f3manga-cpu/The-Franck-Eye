@@ -392,7 +392,7 @@ function displayError(t){$('#payNote').textContent=t;}
 $('#buy').addEventListener('click',async()=>{
  const btn=$('#buy');btn.disabled=true;displayError('');
  if(preview){order={serial:'V-PREVIEW',receiptId:null};show('post');showAfter();return;}
- try{const r=await fetch('/api/checkout',{method:'POST',headers:{'content-type':'application/json'},body:'{}'});const d=await r.json();if(!r.ok)throw new Error(d.error||'Checkout unavailable');if(!/^https:\/\/checkout\.stripe\.com\//.test(d.url))throw new Error('Invalid checkout address');location.assign(d.url);}catch(e){displayError(e.message);btn.disabled=false;}
+ try{const r=await fetch('/api/checkout',{method:'POST',headers:{'content-type':'application/json'},body:'{}'});const d=await r.json();if(!r.ok)throw new Error(d.error||'Checkout unavailable');if(!/^https:\/\/(?:checkout|buy)\.stripe\.com\//.test(d.url))throw new Error('Invalid checkout address');location.assign(d.url);}catch(e){displayError(e.message);btn.disabled=false;}
 });
 function showAfter(){show('post');$('#startBox').classList.remove('hidden');$('#moment').classList.add('hidden');$('#inscribeBox').classList.add('hidden');$('#resultBox').classList.add('hidden');}
 function showInscription(){clearTimeout(tickTimer);show('post');$('#startBox').classList.add('hidden');$('#moment').classList.add('hidden');$('#inscribeBox').classList.remove('hidden');$('#resultBox').classList.add('hidden');}
