@@ -1,0 +1,32 @@
+name: Independent buyer intent discovery
+on:
+  schedule:
+    - cron: '47 6,14 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: buyer-intent-discovery
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test scanner
+        run: python -m unittest discover -s engine/tests -p 'test_buyer_intent.py' -v
+      - name: Search independent public buyer requests
+        run: python engine/buyer_intent.py
+      - name: Publish sanitized public research data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add engine/data/buyer_intent.json engine/data/BUYER_INTENT.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh independent public buyer intent"
+            git push
+          fi
