@@ -8,7 +8,7 @@ import re
 import urllib.parse
 import urllib.request
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "engine/data/buyer_intent.json"
 REPORT = ROOT / "engine/data/BUYER_INTENT.md"
 QUERIES = [
