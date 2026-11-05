@@ -1,21 +1,15 @@
 # Buyer-intent discovery
 
-Run: 2026-11-05T02:01:41.359411+00:00
+Run: 2026-11-05T02:02:23.553261+00:00
 
 **Unverified public research; no paid customer has been established.**
 
 | Score | Open request | Posted budget |
 |---:|---|---|
-| 6 | [[Bounty 💰 Bounty Seguro ($$250): 💰 Bounty Seguro ($$250): [Bounty 💰 Bounty Seguro](https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4168) | $250 |
-| 6 | [[Bounty USDC-quoted pairs not having the correct marketcap displayed in tools](https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4107) | $100 |
-| 6 | [USDC-quoted pairs not having the correct marketcap displayed in tools](https://github.com/blake-guthrie/GLASS/issues/1) | $100 |
 | 6 | [Bounty $50: recipe for RTX 2080 Ti 11 GB](https://github.com/sybil-solutions/local-ai-registry/issues/217) | $50 |
 | 6 | [Bounty: end-to-end test copperhead create (brief → clean full run) + findings report](https://github.com/copperheadhq/copperhead/issues/66) | $50 |
-| 6 | [[Bounty 💰 Bounty Seguro ($$250): [Bounty Preserve RFC 7239 `Forwarded` host author](https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4152) | $250 |
 | 5 | [[$35 BOUNTY [TypeScript Add single-flight token refresh handling](https://github.com/shaiananvari8/zeroeye/issues/1) | $35 |
 | 5 | [Advanced Discord Features ($500)](https://github.com/Spectral-Finance/lux/issues/56) | $500 |
-| 5 | [Discord Signals System ($500)](https://github.com/Spectral-Finance/lux/issues/54) | $500 |
-| 5 | [PancakeSwap Integration and Yield Farming $750](https://github.com/Spectral-Finance/lux/issues/79) | $750 |
 | 5 | [[BOUNTY $80 Notifications — 统一通知中心 (Gotify + Apprise)](https://github.com/illbnm/homelab-stack/issues/13) | $80 |
 | 5 | [[BOUNTY $130 Database Layer — PostgreSQL + Redis + MariaDB 共享实例](https://github.com/illbnm/homelab-stack/issues/11) | $130 |
 | 5 | [[BOUNTY $150 Backup & DR — 自动备份 + 灾难恢复](https://github.com/illbnm/homelab-stack/issues/12) | $150 |
@@ -30,4 +24,10 @@ Run: 2026-11-05T02:01:41.359411+00:00
 | 5 | [[BOUNTY $300 SSO — Authentik 统一身份认证](https://github.com/illbnm/homelab-stack/issues/9) | $300 |
 | 5 | [[BOUNTY $250 Robustness — 国内网络适配 + 环境鲁棒性](https://github.com/illbnm/homelab-stack/issues/8) | $250 |
 | 5 | [[BOUNTY $200 Testing — 自动化测试套件](https://github.com/illbnm/homelab-stack/issues/14) | $200 |
-| 5 | [[Bounty [Bounty: $75 Website: accessibility and motion-preference fixes for the landing](https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1900) | $75 |
+| 5 | [LLM Provider Abstraction Layer $600](https://github.com/Spectral-Finance/lux/issues/99) | $600 |
+| 5 | [[BOUNTY $50 SKILL: Generate a structured CHANGELOG from git history](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1) | $50 |
+| 5 | [[BOUNTY $75 TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2) | $75 |
+| 5 | [[BOUNTY $100 HOOK: Pre-tool-use hook that blocks destructive bash commands](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3) | $100 |
+| 5 | [[BOUNTY $150 AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4) | $150 |
+| 5 | [[BOUNTY $200 WORKFLOW: n8n + Claude Code — automated weekly dev summary](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5) | $200 |
+| 5 | [Frantic bounty #97: Your first bounty is on the house ($10 back when it clears, first five)](https://github.com/auscaster/frantic-board/issues/277) | $10 |

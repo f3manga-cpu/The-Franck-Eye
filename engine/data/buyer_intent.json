@@ -1,38 +1,8 @@
 {
-  "updated_at": "2026-11-05T02:01:41.359411+00:00",
+  "updated_at": "2026-11-05T02:02:23.553261+00:00",
   "source": "public GitHub issue search",
   "proven_sales": 0,
   "candidates": [
-    {
-      "id": "5380f19e9190c40d",
-      "title": "[Bounty] 💰 Bounty Seguro ($$250): 💰 Bounty Seguro ($$250): [Bounty] 💰 Bounty Seguro",
-      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4168",
-      "updated_at": "2026-11-04T06:00:26Z",
-      "budget_mentioned": "$250",
-      "score": 6,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "17f836e020f26f86",
-      "title": "[Bounty] USDC-quoted pairs not having the correct marketcap displayed in tools",
-      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4107",
-      "updated_at": "2026-11-04T06:00:29Z",
-      "budget_mentioned": "$100",
-      "score": 6,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "d3008c59a58434ca",
-      "title": "USDC-quoted pairs not having the correct marketcap displayed in tools",
-      "url": "https://github.com/blake-guthrie/GLASS/issues/1",
-      "updated_at": "2026-11-04T06:37:58Z",
-      "budget_mentioned": "$100",
-      "score": 6,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
     {
       "id": "9e753b008294acaa",
       "title": "Bounty $50: recipe for RTX 2080 Ti 11 GB",
@@ -54,16 +24,6 @@
       "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
     },
     {
-      "id": "d466a942cd3a8823",
-      "title": "[Bounty] 💰 Bounty Seguro ($$250): [Bounty] Preserve RFC 7239 `Forwarded` host author",
-      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4152",
-      "updated_at": "2026-11-04T21:07:50Z",
-      "budget_mentioned": "$250",
-      "score": 6,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
       "id": "16e7e497d286402d",
       "title": "[$35 BOUNTY] [TypeScript] Add single-flight token refresh handling",
       "url": "https://github.com/shaiananvari8/zeroeye/issues/1",
@@ -79,26 +39,6 @@
       "url": "https://github.com/Spectral-Finance/lux/issues/56",
       "updated_at": "2026-11-04T08:41:37Z",
       "budget_mentioned": "$500",
-      "score": 5,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "830b6d6e656004cd",
-      "title": "Discord Signals System ($500)",
-      "url": "https://github.com/Spectral-Finance/lux/issues/54",
-      "updated_at": "2026-11-04T08:49:25Z",
-      "budget_mentioned": "$500",
-      "score": 5,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "b07ad0894a80e1d7",
-      "title": "PancakeSwap Integration and Yield Farming $750",
-      "url": "https://github.com/Spectral-Finance/lux/issues/79",
-      "updated_at": "2026-11-04T11:41:27Z",
-      "budget_mentioned": "$750",
       "score": 5,
       "state": "unverified_public_lead",
       "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
@@ -244,76 +184,6 @@
       "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
     },
     {
-      "id": "cdd672d8af7705e6",
-      "title": "[Bounty] [Bounty: $75] Website: accessibility and motion-preference fixes for the landing",
-      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1900",
-      "updated_at": "2026-11-04T21:03:20Z",
-      "budget_mentioned": "$75",
-      "score": 5,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "8472e39266c5b6c1",
-      "title": "[Bounty] [Bounty: $75] Unit tests for src/errors.ts and a public export surface snapshot",
-      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1903",
-      "updated_at": "2026-11-04T21:03:52Z",
-      "budget_mentioned": "$75",
-      "score": 5,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "bc6b484e3a01d6d7",
-      "title": "[Bounty] [Bounty: $105] Stop silently pricing Fast Transfers at zero when Iris returns no",
-      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1914",
-      "updated_at": "2026-11-04T21:04:24Z",
-      "budget_mentioned": "$105",
-      "score": 5,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "15ba38c7011b4065",
-      "title": "[Bounty] [Bounty: $105] Tolerate transient Iris failures in getAttestation and resolveBur",
-      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1913",
-      "updated_at": "2026-11-04T21:04:55Z",
-      "budget_mentioned": "$105",
-      "score": 5,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "1b6881c67c488942",
-      "title": "[Bounty] [Bounty: $125] Add structured progress callbacks to transfer()",
-      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1910",
-      "updated_at": "2026-11-04T21:05:37Z",
-      "budget_mentioned": "$125",
-      "score": 5,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "1af965f6988c3506",
-      "title": "[Bounty] [Bounty: $90] Add ESLint with typescript-eslint and wire it into CI",
-      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1905",
-      "updated_at": "2026-11-04T21:06:06Z",
-      "budget_mentioned": "$90",
-      "score": 5,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "7479cd4e63e141b3",
-      "title": "[Bounty] [Bounty: $125] Add AbortSignal support across transfer, completeMint, and attest",
-      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1911",
-      "updated_at": "2026-11-04T21:06:36Z",
-      "budget_mentioned": "$125",
-      "score": 5,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
       "id": "0069fb56381beb14",
       "title": "LLM Provider Abstraction Layer $600",
       "url": "https://github.com/Spectral-Finance/lux/issues/99",
@@ -438,16 +308,6 @@
       "title": "[EASY BOUNTY: 2 RTC] Add a RustChain Badge to Any Project README",
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/13949",
       "updated_at": "2026-11-04T23:24:00Z",
-      "budget_mentioned": null,
-      "score": 3,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "eca459156decbd8b",
-      "title": "[BOUNTY] Cosmos Ecosystem Comms Sprint: 4-week content rhythm (750 LTD)",
-      "url": "https://github.com/INDIGOAZUL/la-tanda-web/issues/269",
-      "updated_at": "2026-11-04T23:55:38Z",
       "budget_mentioned": null,
       "score": 3,
       "state": "unverified_public_lead",
@@ -664,36 +524,6 @@
       "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
     },
     {
-      "id": "46622921a545c4fd",
-      "title": "CODE_PATCH_VERIFY: evaluation material and a comparator module",
-      "url": "https://github.com/telegraphprotocol/bounties/issues/110",
-      "updated_at": "2026-11-04T23:42:24Z",
-      "budget_mentioned": null,
-      "score": 1,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "968707f214f02591",
-      "title": "MINING_HASHPRICE_VERIFY: evaluation material and a comparator module",
-      "url": "https://github.com/telegraphprotocol/bounties/issues/103",
-      "updated_at": "2026-11-05T00:01:44Z",
-      "budget_mentioned": null,
-      "score": 1,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "63d26fd7863c5e97",
-      "title": "EMAIL_SECURITY: evaluation material and an evaluator adapter",
-      "url": "https://github.com/telegraphprotocol/bounties/issues/119",
-      "updated_at": "2026-11-05T00:01:56Z",
-      "budget_mentioned": null,
-      "score": 1,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
       "id": "75337180b50a7f26",
       "title": "Savannah v18 staging — owner-approved A1–A7 setup and non-paid S1 only",
       "url": "https://github.com/deanstewartdev-hub/Project-Savannah/issues/28",
@@ -704,50 +534,10 @@
       "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
     },
     {
-      "id": "b9bd26b6b729e000",
-      "title": "CRYPTO_PRICE: evaluation material and a comparator module",
-      "url": "https://github.com/telegraphprotocol/bounties/issues/143",
-      "updated_at": "2026-11-05T00:46:23Z",
-      "budget_mentioned": null,
-      "score": 1,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "daea372497e4f619",
-      "title": "CURRENCY_EXCHANGE: evaluation material and a comparator module",
-      "url": "https://github.com/telegraphprotocol/bounties/issues/149",
-      "updated_at": "2026-11-05T00:46:53Z",
-      "budget_mentioned": null,
-      "score": 1,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "5f790ec627ea6a19",
-      "title": "STOCK_PRICE: evaluation material and a comparator module",
-      "url": "https://github.com/telegraphprotocol/bounties/issues/167",
-      "updated_at": "2026-11-05T00:47:20Z",
-      "budget_mentioned": null,
-      "score": 1,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
       "id": "1e95d7154bc0c64e",
       "title": "Agent-operator invitation: scope a first paid source-change and evidence-handover pilot",
       "url": "https://github.com/Albertito-AI/policykit/issues/12",
       "updated_at": "2026-11-05T01:15:01Z",
-      "budget_mentioned": null,
-      "score": 1,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "4e1eb80c049c259c",
-      "title": "5 USDC bounty: best public agent-facing guide or demo for Agent Bounty Feed (deadline 2026-11-12)",
-      "url": "https://github.com/dailydollar-bot/agent-bounty-feed/issues/3",
-      "updated_at": "2026-11-05T01:42:09Z",
       "budget_mentioned": null,
       "score": 1,
       "state": "unverified_public_lead",
@@ -768,16 +558,6 @@
       "title": "[LIVE] Verified NIM bounty board",
       "url": "https://github.com/Saidur-droid/MergeEarn/issues/33",
       "updated_at": "2026-11-05T01:47:06Z",
-      "budget_mentioned": null,
-      "score": 1,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "24fb95aa70c616d0",
-      "title": "LOAN_INTEREST_RATE_QUOTE: evaluation material and a comparator module",
-      "url": "https://github.com/telegraphprotocol/bounties/issues/162",
-      "updated_at": "2026-11-05T01:48:38Z",
       "budget_mentioned": null,
       "score": 1,
       "state": "unverified_public_lead",
@@ -834,16 +614,6 @@
       "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
     },
     {
-      "id": "49a34c1f86f9c598",
-      "title": "[RADAR] Superteam agent-eligible work",
-      "url": "https://github.com/markabramov1993/arbitr/issues/1",
-      "updated_at": "2026-11-04T23:56:12Z",
-      "budget_mentioned": null,
-      "score": 0,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
       "id": "1e0efec3e3c76bb6",
       "title": "Security issue",
       "url": "https://github.com/usmannasir/cyberpanel/issues/1994",
@@ -884,36 +654,6 @@
       "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
     },
     {
-      "id": "008522b7abcf41e2",
-      "title": "[BOUNTY] Medium: paraloom validator withdraw-unbonded passes uninitialized ATA to WithdrawUnbondedStake, aborting on-chain with AccountNotInitialized and locking unbonded SOL",
-      "url": "https://github.com/paraloom-labs/paraloom-core/issues/1323",
-      "updated_at": "2026-11-05T00:33:09Z",
-      "budget_mentioned": null,
-      "score": 0,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "0ed7a9fa1f8a02e4",
-      "title": "[NP-B54F2FB2A6] USDC rehearsal one: add the first verified text fixture",
-      "url": "https://github.com/hellonearportal-dotcom/test/issues/1",
-      "updated_at": "2026-11-05T00:48:06Z",
-      "budget_mentioned": null,
-      "score": 0,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "f8ca0716d4f95d72",
-      "title": "[NP-53074A116E] USDC rehearsal two: add the second verified text fixture",
-      "url": "https://github.com/hellonearportal-dotcom/test/issues/2",
-      "updated_at": "2026-11-05T00:49:06Z",
-      "budget_mentioned": null,
-      "score": 0,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
       "id": "1e968ca11499d608",
       "title": "[player hnejdu] Princess Leia has both the Bounty ring and the Yoda ring. The rules state a lead",
       "url": "https://github.com/johnchampaign/star-wars-rebellion/issues/830",
@@ -934,30 +674,10 @@
       "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
     },
     {
-      "id": "ba66ef2803f25437",
-      "title": "Revenue reset: prioritize verified cashflow over infrastructure",
-      "url": "https://github.com/me-fake-you/clearsheet-offers/issues/3",
-      "updated_at": "2026-11-05T01:55:31Z",
-      "budget_mentioned": null,
-      "score": 0,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
       "id": "176b8063921f02d9",
       "title": "M21-B: faithful reduced-round Poseidon system generation",
       "url": "https://github.com/mfaulk/zeebra/issues/93",
       "updated_at": "2026-11-05T02:00:21Z",
-      "budget_mentioned": null,
-      "score": 0,
-      "state": "unverified_public_lead",
-      "limitations": "Verify buyer, budget, eligibility, delivery scope, competition, escrow and payout timing before proceeding."
-    },
-    {
-      "id": "fe419152dadb3cd3",
-      "title": "A2: Ethereum Foundation cryptanalysis challenges — authoritative parameters and objectives",
-      "url": "https://github.com/mfaulk/zeebra/issues/71",
-      "updated_at": "2026-11-05T02:01:31Z",
       "budget_mentioned": null,
       "score": 0,
       "state": "unverified_public_lead",
