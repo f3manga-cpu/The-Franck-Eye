@@ -1,5 +1,10 @@
 name: Independent buyer intent discovery
 on:
+  push:
+    paths:
+      - 'engine/buyer_intent.py'
+      - 'engine/tests/test_buyer_intent.py'
+      - '.github/workflows/buyer-intent-discovery.yml'
   schedule:
     - cron: '47 6,14 * * *'
   workflow_dispatch:
