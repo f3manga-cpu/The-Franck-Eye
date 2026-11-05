@@ -18,7 +18,7 @@ QUERIES = [
 ]
 PRICE = re.compile(r"(?:(?:[$€£]\s?\d{2,6}(?:[,.]\d{2})?|\b\d{2,6}\s?(?:USD|EUR|GBP)\b))", re.I)
 PAYMENT = re.compile(r"\b(?:bounty|paid task|paid issue|reward|payment|commission|budget)\b", re.I)
-STOP = re.compile(r"\b(?:casino|gambling|crypto pump|airdrop|token launch|exploit|phishing|adult content)\b", re.I)
+STOP = re.compile(r"\b(?:casino|gambling|crypto pump|airdrop|token launch|exploit|phishing|adult content|USDC|crypto|pancakeswap|yield farming|tokenomics|discord signals)\b", re.I)
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent":"FranckEyeResearch/1.0", "Accept":"application/vnd.github+json"})
@@ -32,7 +32,7 @@ def classify(issue, now):
     body = str(issue.get("body") or "")[:6000]
     labels = [(v.get("name", "") if isinstance(v, dict) else str(v)).lower() for v in issue.get("labels", [])]
     content = title + " " + body
-    if not title or STOP.search(content):
+    if not title or STOP.search(content) or "/bounty-plaza/" in issue.get("html_url", "").lower():
         return None
     price = PRICE.search(content)
     if not (PAYMENT.search(content) or any("bounty" in label or "paid" in label for label in labels)):
