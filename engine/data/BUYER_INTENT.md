@@ -1,33 +1,33 @@
 # Buyer-intent discovery
 
-Run: 2026-11-06T14:38:21.957943+00:00
+Run: 2026-11-06T20:36:59.234584+00:00
 
 **Unverified public research; no paid customer has been established.**
 
 | Score | Open request | Posted budget |
 |---:|---|---|
+| 6 | [[ Bounty $3k  [ Research  Collect and compare AI-generated AGI architecture proposals](https://github.com/aLexzzz430/Cognitive-OS/issues/5) | 000 USD |
 | 5 | [[BOUNTY Support Play Integrity over remote DroidGuard + Server/Guide [$85](https://github.com/microg/GmsCore/issues/2851) | $85 |
 | 5 | [[BOUNTY $300 SSO — Authentik 统一身份认证](https://github.com/illbnm/homelab-stack/issues/9) | $300 |
-| 5 | [[BOUNTY WearOS Support [$2340](https://github.com/microg/GmsCore/issues/2843) | $2340 |
 | 5 | [Upload/Download Conflicts](https://github.com/shanalikhan/code-settings-sync/issues/396) | $80.00 |
-| 5 | [[Bug bounty Swap with AMOUNT_ALL ('ALL') crashes in normalizeAmountAll and SwapBuilder.amount() double-scales bigint amounts](https://github.com/paraspell/xcm-tools/issues/2304) | $10 |
-| 5 | [[Bounty $750 Fix sharded softmax on offset core grids](https://github.com/tenstorrent/tt-metal/issues/64575) | $750 |
-| 5 | [Frantic bounty #97: Your first bounty is on the house ($10 back when it clears, first five)](https://github.com/auscaster/frantic-board/issues/277) | $10 |
-| 4 | [Paid funnel v2: the ten changes most likely to convert a paid subscription, in order (Starter tier, task-cap gate, in-app upgrade prompts, Stripe-first checkout)](https://github.com/recoupable/app/issues/2044) | $20 |
-| 4 | [AO-COMMERCIAL-001 · Validate Ad Orientem Plus and Communities Pro economics before billing](https://github.com/Fulcanelli13/ad-orientem/issues/2568) | $29.99 |
-| 3 | [CODEX READY REMEDIATION QUEUE](https://github.com/Donh91/Investering-Framework-Archive-v1/issues/643) | 05 USD |
+| 5 | [[BOUNTY WearOS Support [$2340](https://github.com/microg/GmsCore/issues/2843) | $2340 |
+| 5 | [[ T3 Code  Implement automatic token refresh in ACP client with Effect retry](https://github.com/UnsafeLabs/Bounty-Hunters/issues/829) | $500 |
+| 5 | [[ T3 Code  Add system tray icon with context menu and status indicator](https://github.com/UnsafeLabs/Bounty-Hunters/issues/859) | $90 |
+| 4 | [Know when a plan session starts spending money: paid usage is read, held at your limit and counted](https://github.com/windoliver/deepbuild/issues/1526) | $10 |
+| 3 | [[Bug bounty SDK: getTransferInfo ignores the amount in xcmFee.balanceAfter on native transfers and reports sufficient: true when the fee can't be paid](https://github.com/paraspell/xcm-tools/issues/2443) | Unknown |
+| 3 | [chore(security): penetration testing externo — auditoría de seguridad antes del lanzamiento](https://github.com/ayelenleclerc/BizCode/issues/194) | 15000 USD |
+| 3 | [Zcash Privacy Developers Residency - December 2026](https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/531) | $50,00 |
+| 3 | [[DIRECT Generate deterministic inventory replenishment plans](https://github.com/NSPG13/agent-bounties/issues/872) | Unknown |
 | 2 | [Frantic bounty #136: Add a newly launched startup to Stompstart](https://github.com/auscaster/frantic-board/issues/476) | Unknown |
 | 2 | [Frantic bounty #120: Add a valuable startup offer to Sourcey](https://github.com/auscaster/frantic-board/issues/330) | Unknown |
-| 2 | [Frantic bounty #99: Write honestly about your Frantic run (receipt required)](https://github.com/auscaster/frantic-board/issues/279) | Unknown |
-| 2 | [Contribution: fix(consensus): sync transaction fees in TransactionPoolStatusUpdate::apply (tari-project/tari-ootle#3311)](https://github.com/tari-project/special_contributions/issues/494) | Unknown |
-| 2 | [Contribution: fix(storage,consensus): remove missing transaction from all parked local blocks (tari-project/tari-ootle#3335)](https://github.com/tari-project/special_contributions/issues/495) | Unknown |
-| 2 | [Contribution: fix(state_store_rocksdb): include pending block_diffs in locked substate lookup (tari-project/tari-ootle#3336)](https://github.com/tari-project/special_contributions/issues/496) | Unknown |
-| 2 | [Contribution: fix(epoch_oracles): stop real-time ticker at initial_epoch and emit DoneForNow at epoch 0 (tari-project/tari-ootle#3355)](https://github.com/tari-project/special_contributions/issues/497) | Unknown |
 | 2 | [Maintaining Macros](https://github.com/Reqrefusion/FreeCAD-Documentation-Project/issues/332) | Unknown |
-| 2 | [Contribution: fix(engine): harden spend-script bound args, base scope refs, and restricted frames (tari-project/tari-ootle#3309)](https://github.com/tari-project/special_contributions/issues/498) | Unknown |
-| 2 | [Contribution: fix(epoch_manager): preserve historical validator deactivations and emit epoch change on hash correction (tari-project/tari-ootle#3307)](https://github.com/tari-project/special_contributions/issues/499) | Unknown |
+| 2 | [Frantic bounty #99: Write honestly about your Frantic run (receipt required)](https://github.com/auscaster/frantic-board/issues/279) | Unknown |
+| 2 | [[ Dev  Write unit tests for every source file in the repository](https://github.com/UnsafeLabs/Bounty-Hunters/issues/330) | Unknown |
+| 2 | [POST /api/reviews endpoint missing authentication middleware (reissue via #743)](https://github.com/SecureBananaLabs/bug-bounty/issues/2776) | Unknown |
+| 2 | [bounty-watch 2026-11-06: 0 new, 2 resumed, 4 watchlist changes](https://github.com/abdulsalam-create/bounty-watch/issues/225) | Unknown |
+| 2 | [test_models: add a test that fuzzes the tx messages](https://github.com/commaai/openpilot/issues/32425) | Unknown |
+| 2 | [BOUNTY: integrate AWS Comprehend as a utility to redact data](https://github.com/arakoodev/EdgeChains/issues/290) | Unknown |
+| 2 | [BOUNTY: add support for Google Palm2 API in javascript/typescript](https://github.com/arakoodev/EdgeChains/issues/279) | Unknown |
 | 2 | [Frantic bounty #145: Install NitroMTA and send one real email to proof@nitromta.com](https://github.com/auscaster/frantic-board/issues/574) | Unknown |
-| 1 | [DeepSeek calibration: isolated #379 role-policy fixture (Chat-coordinated)](https://github.com/mbelinkie/vera-script-to-timeline/issues/427) | Unknown |
-| 1 | [New lead takeover: account/session transition after #517; source-only holds](https://github.com/afewell-hh/labapp/issues/518) | Unknown |
-| 1 | [38. [payment Invoice-ийг paid болгох үйлдлийг atomic болгож, POS руу нэг л удаа мэдэгддэг болгосон.](https://github.com/erxes/erxes/issues/10379) | Unknown |
-| 1 | [[payment Invoice-ийг paid болгох үйлдлийг atomic болгож, POS руу нэг л удаа мэдэгддэг болгосон](https://github.com/erxes/erxes/issues/10382) | Unknown |
+| 1 | [Orchard O11 · Bills](https://github.com/maxwellmattryan/eden/issues/78) | Unknown |
+| 1 | [Make the standard Task workflow capability-aware, repairable, and recoverable](https://github.com/PakhomovAlexander/afactory/issues/712) | Unknown |
