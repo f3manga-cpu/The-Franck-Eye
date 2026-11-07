@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T14:18:19+00:00",
+  "updated_at": "2026-11-07T13:04:07+00:00",
   "candidates": [
     {
       "id": "8da2fcbc970b410f",
@@ -68,6 +68,18 @@
       "theme": "payment platform",
       "title": "Anthropic Console overcharged my card 100x due to internationalization input bug",
       "url": "https://news.ycombinator.com/item?id=50121562",
+      "score": 2,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "56199557e260ab45",
+      "first_seen": "2026-11-07T13:04:05+00:00",
+      "date": "2026-11-06T19:05:15Z",
+      "theme": "digital products",
+      "title": "AMD CEO saying it's a \"data center first\" company and PC sales will plummet",
+      "url": "https://www.techradar.com/computing/gpu/amd-ceo-enrages-gamers-by-saying-its-now-a-data-center-first-company-and-predicts-pc-sales-will-plummet-by-a-double-digit-percentage-in-2027",
       "score": 2,
       "status": "research_only",
       "evidence": "HN submission; commercial terms and revenue NOT verified",
