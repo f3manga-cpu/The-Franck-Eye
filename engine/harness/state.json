@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "last_controller_check": "2026-11-06",
+  "last_controller_check": "2026-11-07",
   "objective": "attributable_verified_net_cash",
   "spend_ceiling_eur": 0,
   "active_experiment": "prevol_facture_20261103",
@@ -12,7 +12,7 @@
       "offer": "CSV data-quality preflight and fixed-scope cleaning",
       "channel": "targeted_accountancy_outreach",
       "buyer_exposure_claims": {
-        "email_sent": 14,
+        "email_sent": 15,
         "delivered": null,
         "opened": null,
         "qualified_replies": 0,
@@ -24,8 +24,8 @@
       "attributable_gross_eur": 0,
       "attributable_net_eur": null,
       "net_unknown_reason": "No attributed Stripe fee, refund, payout reconciliation yet",
-      "notes": "Gmail searched 2026-11-06: no substantive commercial replies found; two automated Mailinblack challenges, not buyer interest. Historical 14 emails sent, delivery unknown. Live Stripe payment intents 5, latest 2026-10-13, all unrelated. Existing Stripe balance negative €259.27, not attributable experiment cash. No additional outreach or orders. Stop/pivot review remains 2026-11-10.",
-      "next_gate": "Confirm actual delivery/engagement or relevant buyer response before more outreach. 2026-11-10 stop/pivot if no qualified interest. Public bounty #66 is assigned, not an available verified buyer; other scout bounties require payment legitimacy verification.",
+      "notes": "2026-11-07: one personalized follow-up sent to a previously contacted, independently verified relevant B2B organization; sent not delivered, opened or accepted. No substantive commercial replies; two historical Mailinblack challenges not counted as interest. Scout 2026-11-07 independently reviewed: three channels rejected for lack of accessible buyer and/or slow payout. Live Stripe five historical unrelated PaymentIntents, no new attributed charge; negative available balance remains unrelated. No orders. Stop/pivot 2026-11-10.",
+      "next_gate": "Await reply to one verified relevant prospect; do not send another follow-up. Verify actual buyer need and scope before any payment or order. Stop/pivot CSV experiment on 2026-11-10 if no qualified interest.",
       "decision_due": "2026-11-10"
     },
     {
