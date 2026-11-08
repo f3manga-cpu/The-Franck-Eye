@@ -1,33 +1,33 @@
 # Buyer-intent discovery
 
-Run: 2026-11-07T19:04:06.441397+00:00
+Run: 2026-11-08T13:52:58.385129+00:00
 
 **Unverified public research; no paid customer has been established.**
 
 | Score | Open request | Posted budget |
 |---:|---|---|
+| 6 | [[Bounty $750 feat(validator): support custom step_size in verify_sequence_gap](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/20) | $750 |
 | 6 | [[Bounty: $50 slugify() leaves double and trailing hyphens](https://github.com/maaltarifi97-maker/aioa-playground/issues/1) | $50 |
-| 5 | [[BOUNTY $150 AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4) | $150 |
-| 5 | [[Bounty $800 refactor(validator): handle legacy sequence key alias in verify_sequence_gap](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/47) | $800 |
-| 5 | [[Bounty $750 Fix remaining sharded scale_mask_softmax mask handling issues](https://github.com/tenstorrent/tt-metal/issues/64647) | $750 |
-| 5 | [[Bounty $500 perf(ledger): optimize 64-frame checkpoint boundary arithmetic in compute_checkpoint_boundary](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/9) | $500 |
-| 5 | [[Bounty $550 feat(cli): add JSON sequence gap serializer in src/cli/format_report.py](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/8) | $550 |
-| 5 | [[Bounty $400 fix(validator): handle missing seq key in verify_sequence_gap header dicts](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/7) | $400 |
-| 5 | [parse_duration drops the days (d) unit](https://github.com/tine1117/oss-hunter-livefire/issues/1) | $50 |
-| 4 | [[BOUNTY huge important bounty bounty bounty](https://github.com/Trauma-Station/Trauma-Station/issues/5225) | $10000 |
+| 5 | [[BOUNTY $100 HOOK: Pre-tool-use hook that blocks destructive bash commands](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3) | $100 |
+| 5 | [Bug bounty 100 usd to whoever makes my landing page responsive for mobile](https://github.com/iii123iii/Crystal-PDF/issues/3) | 100 usd |
+| 5 | [[BOUNTY $50 SKILL: Generate a structured CHANGELOG from git history](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1) | $50 |
+| 5 | [[Bounty $850 ci(workflow): synchronize contributor check job IDs across GitHub Actions workflows](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/21) | $850 |
+| 5 | [[Bounty $350 docs(validator): add docstring usage examples for verify_sequence_gap in src/ledger_validator.py](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/16) | $350 |
+| 5 | [[Bounty $900 perf(validator): replace floor division with bitwise mask in compute_checkpoint_boundary](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/44) | $900 |
+| 5 | [[Bounty $450 refactor(validator): extract checkpoint divisor constant in src/ledger_validator.py](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/5) | $450 |
+| 5 | [[$16 BOUNTY [Rust Deprecate legacy public functions](https://github.com/cuentaprueba244w-dotcom/TentOfTrials/issues/4) | $16 |
+| 5 | [[$18 BOUNTY [Rust Add serde rename_all snake_case to protocol types](https://github.com/cuentaprueba244w-dotcom/TentOfTrials/issues/14) | $18 |
+| 5 | [Frantic bounty #97: Your first bounty is on the house ($10 back when it clears, first five)](https://github.com/auscaster/frantic-board/issues/277) | $10 |
+| 3 | [[MICRO-BOUNTY: 0.1 RTC Why did you choose to work on an Elyan Labs repo?](https://github.com/Scottcjn/rustchain-bounties/issues/16863) | Unknown |
 | 3 | [CODEX READY REMEDIATION QUEUE](https://github.com/Donh91/Investering-Framework-Archive-v1/issues/643) | 05 USD |
-| 3 | [[BOUNTY: 5 RTC Create a YouTube or BoTTube video tutorial about any Elyan Labs project](https://github.com/Scottcjn/rustchain-bounties/issues/2180) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4488) | Unknown |
+| 3 | [🧟 Toyol Radar — calon ganjaran untuk disahkan](https://github.com/ilhamraduanbis-source/toyol-digital/issues/1) | 10 USD |
 | 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4571) | Unknown |
 | 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4572) | Unknown |
-| 3 | [[bounty Run-133: C1 factorization is assumed by its assigned theorem](https://github.com/jdhart81/viridis-canon/issues/152) | $50 |
-| 2 | [[BOUNTY: 7 RTC 60-Second RustChain Explainer Video](https://github.com/Scottcjn/rustchain-bounties/issues/1114) | Unknown |
-| 2 | [[BOUNTY Upload 5 Original Videos to BoTTube — 17 RTC](https://github.com/Scottcjn/rustchain-bounties/issues/446) | Unknown |
-| 2 | [[BOUNTY: 1 RTC Upload 3 original videos to BoTTube](https://github.com/Scottcjn/rustchain-bounties/issues/2141) | Unknown |
-| 2 | [[EASY BOUNTY: 3 RTC Upload Your First BoTTube Video](https://github.com/Scottcjn/rustchain-bounties/issues/1100) | Unknown |
-| 2 | [[ONBOARD: 3 RTC Upload Your First Video to BoTTube](https://github.com/Scottcjn/rustchain-bounties/issues/2788) | Unknown |
-| 2 | [[BOTTUBE: 5 RTC Create a 3-Video Series on Any Tech Topic](https://github.com/Scottcjn/rustchain-bounties/issues/2793) | Unknown |
-| 2 | [[BOTTUBE: 3 RTC Make a Video Response to an Existing Video](https://github.com/Scottcjn/rustchain-bounties/issues/2797) | Unknown |
-| 2 | [[EASY BOUNTY: 1 RTC Follow 5 BoTTube Creators](https://github.com/Scottcjn/rustchain-bounties/issues/1097) | Unknown |
-| 2 | [[EASY BOUNTY: 1 RTC Upvote 10 BoTTube Videos](https://github.com/Scottcjn/rustchain-bounties/issues/1096) | Unknown |
-| 2 | [[BOTTUBE: 1 RTC Upvote 10 Videos + Pick Your Favorite](https://github.com/Scottcjn/rustchain-bounties/issues/2792) | Unknown |
+| 2 | [[BOUNTY: 7 RTC Consistent error handling + exit codes in wallet balance check script (Rustchain#7889)](https://github.com/Scottcjn/rustchain-bounties/issues/16253) | Unknown |
+| 2 | [[BOUNTY: 8 RTC rustchain-mcp: document + test streaming/long-running tool behavior (answers rustchain-mcp#231)](https://github.com/Scottcjn/rustchain-bounties/issues/16255) | Unknown |
+| 2 | [[BOUNTY: 12 RTC Windows headless miner: stop infinite retry of rejected headers, surface server diagnostic (Rustchain#7368)](https://github.com/Scottcjn/rustchain-bounties/issues/16252) | Unknown |
+| 2 | [[radar SN open bounty 2026-10-27T04:52](https://github.com/relayhop/sn-monetization-runtime/issues/1342) | Unknown |
+| 2 | [[radar SN open bounty 2026-10-26T23:46](https://github.com/relayhop/sn-monetization-runtime/issues/1341) | Unknown |
+| 2 | [Contribution: fix(transaction): charge invocation floor on stealth template functions and merge workspace keys (tari-project/tari-ootle#3486)](https://github.com/tari-project/special_contributions/issues/519) | Unknown |
+| 2 | [[Bounty $1,000 fix(validator): correct checkpoint boundary calculation for seq=256 in compute_checkpoint_boundary](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/46) | Unknown |
+| 2 | [Frantic bounty #145: Install NitroMTA and send one real email to proof@nitromta.com](https://github.com/auscaster/frantic-board/issues/574) | Unknown |
