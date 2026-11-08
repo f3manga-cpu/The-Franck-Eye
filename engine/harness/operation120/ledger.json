@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "experiment": "Operation 120",
+  "timezone": "Europe/Paris",
+  "start": "2026-11-08T15:14:56+01:00",
+  "deadline": "2026-11-08T17:14:56+01:00",
+  "evidence_policy": "All private buyer addresses, bank details, live payment identifiers and account credentials are excluded.",
+  "events": [
+    {
+      "time": "2026-11-08T15:14:56+01:00",
+      "type": "start",
+      "state": "verified",
+      "outcome": "experiment clock established"
+    },
+    {
+      "time": "2026-11-08T15:22:45+01:00",
+      "type": "external_commercial_offer_sent",
+      "state": "verified_gmail_SENT",
+      "buyer_category": "public indie-game freelance request",
+      "offered_price": {
+        "amount": 60,
+        "currency": "GBP"
+      },
+      "buyer_reply": "not_observed",
+      "payment": "not_observed"
+    },
+    {
+      "time": "2026-11-08T15:28:03+01:00",
+      "type": "external_followup_sent",
+      "state": "verified_gmail_SENT",
+      "buyer_category": "previously contacted local communications buyer",
+      "offered_price": {
+        "amount": 149,
+        "currency": "EUR",
+        "tax": "HT"
+      },
+      "buyer_reply": "not_observed",
+      "payment": "not_observed"
+    },
+    {
+      "time": "2026-11-08T15:30:00+01:00",
+      "type": "shared_operating_brief",
+      "state": "published",
+      "public_path": "engine/harness/operation120/BRIEF.md"
+    },
+    {
+      "time": "2026-11-08T15:35:00+01:00",
+      "type": "engineering_demonstrator",
+      "state": "created_and_formula_checked",
+      "deliverable": "macro-free Excel maintenance tracker; example data only",
+      "customer_fulfillment": false
+    },
+    {
+      "time": "2026-11-08T15:36:00+01:00",
+      "type": "buyer_posted_marketplace_lead",
+      "state": "qualified_not_contacted",
+      "buyer_category": "Excel-based maintenance planner request publicly posted today",
+      "indicative_quote_eur": 190,
+      "contact_requires_user_login": true
+    },
+    {
+      "time": "2026-11-08T15:39:00+01:00",
+      "type": "independent_demand_comparison",
+      "state": "published",
+      "public_path": "engine/harness/scout-2026-11-08.md",
+      "mechanisms": 3
+    }
+  ],
+  "checkpoint_15_min": {
+    "distinct_new_buyers_contacted": 1,
+    "previously_contacted_buyers_followed_up": 1,
+    "external_commercial_messages_sent": 2,
+    "external_substantive_responses_observed": 0,
+    "attributed_new_paid_transactions_observed": 0,
+    "gross_attributable_new_eur_observed": 0,
+    "verified_new_bank_receipts_eur": null,
+    "bank_receipts_explanation": "No direct access to BoursoBank transaction statements; user must verify exact amount and timestamp.",
+    "direct_expenses_eur": 0,
+    "codex_cli_installed": true,
+    "codex_process_running": "unverified",
+    "remote_pc_connected": false,
+    "notes": "The generic Excel sample is a technical prototype only, not customer order or delivered sale."
+  }
+}
