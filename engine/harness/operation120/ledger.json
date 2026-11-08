@@ -64,6 +64,19 @@
       "state": "published",
       "public_path": "engine/harness/scout-2026-11-08.md",
       "mechanisms": 3
+    },
+    {
+      "time": "2026-11-08T15:48:00+01:00",
+      "type": "external_commercial_offer_sent",
+      "state": "verified_gmail_SENT",
+      "buyer_category": "public UK consultancy infographic solicitation",
+      "offered_price": {
+        "amount": 70,
+        "currency": "GBP"
+      },
+      "buyer_reply": "not_observed",
+      "payment": "not_observed",
+      "note": "2 editable information-design diagrams, customer requested illustrations; explicitly no invented hand-drawn portfolio"
     }
   ],
   "checkpoint_15_min": {
@@ -80,5 +93,27 @@
     "codex_process_running": "unverified",
     "remote_pc_connected": false,
     "notes": "The generic Excel sample is a technical prototype only, not customer order or delivered sale."
+  },
+  "checkpoint_30_min": {
+    "timestamp": "2026-11-08T15:44:56+01:00",
+    "messages_sent_since_start": 2,
+    "first_external_action_latency_seconds": 469,
+    "new_buyers_contacted": 1,
+    "existing_buyer_followups": 1,
+    "external_responses_observed": 0,
+    "payable_orders_observed": 0,
+    "pending_processor_payments_observed": 0,
+    "bank_cash_receipts_eur": null,
+    "direct_expenses_eur": 0,
+    "delivered_tested_product_prototypes": 1,
+    "status": "not_yet_successful",
+    "notes": "Marketplace bid blocked by published reply count; Codex session not verified running; bank unreadable by current connectors."
+  },
+  "last_observed": {
+    "time": "2026-11-08T15:48:48+01:00",
+    "confirmed_new_messages_sent": 3,
+    "observed_substantive_replies": 0,
+    "observed_new_charges": 0,
+    "bank_cash_verified": null
   }
 }
