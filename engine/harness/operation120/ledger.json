@@ -127,6 +127,36 @@
       "cached_spreadsheet_errors": 0,
       "key_kpis_match": true,
       "notes": "LibreOffice headless import/export succeeded; Excel UI and user acceptance not yet tested"
+    },
+    {
+      "time": "2026-11-08T16:32:00+01:00",
+      "type": "external_relevant_application_sent",
+      "state": "verified_gmail_SENT_with_pdf_attachment",
+      "buyer_category": "France-located digital analytics consulting role",
+      "offered_price": null,
+      "customer_reply": "none_observed",
+      "bank_cash": "unverified"
+    },
+    {
+      "time": "2026-11-08T16:38:00+01:00",
+      "type": "buyer_marketplace_identified",
+      "state": "buyer_observed_not_contacted",
+      "buyer_category": "Lyon parent seeking maths/physics tuition",
+      "channel": "Free direct-contact website requires Google signup",
+      "revenue": false,
+      "notes": "Opened registration in browser; operator sign-in approval not evidenced"
+    },
+    {
+      "time": "2026-11-08T16:43:20+01:00",
+      "type": "independent_evidence_recheck",
+      "state": "verified",
+      "sent_messages_total": 5,
+      "buyer_replies_observed": 0,
+      "stripe_available_eur": -259.27,
+      "stripe_pending_eur": 0,
+      "bank_access": "unavailable",
+      "codex_demo": "published",
+      "notes": "Browser remains on registration page; no buyer interaction from marketplace verified"
     }
   ],
   "checkpoint_15_min": {
@@ -177,5 +207,23 @@
     "direct_expenses_eur": 0,
     "technical_sample_prepared": true,
     "codex_running": true
+  },
+  "checkpoint_90_min": {
+    "timestamp": "2026-11-08T16:44:56+01:00",
+    "sent_personalized_external_commercial_messages": 5,
+    "new_buyers_contacted": 4,
+    "existing_buyer_followups": 1,
+    "customer_substantive_replies_observed": 0,
+    "initiated_payment_confirmed": 0,
+    "new_paid_transactions_confirmed": 0,
+    "settled_bank_cash_eur": null,
+    "settled_bank_cash_reason": "No direct BoursoBank account read permission; requires user's bank transaction evidence",
+    "direct_financial_spend_eur": 0,
+    "engineering_deliverables_published": 1,
+    "codex_validation_checks_passed": 51,
+    "libreoffice_headless_compatibility_test_passed": true,
+    "qualified_buyer_requests_contact_blocked": 2,
+    "experiment_success": "not demonstrated",
+    "minutes_remaining": 30
   }
 }
