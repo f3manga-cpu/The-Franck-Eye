@@ -77,6 +77,56 @@
       "buyer_reply": "not_observed",
       "payment": "not_observed",
       "note": "2 editable information-design diagrams, customer requested illustrations; explicitly no invented hand-drawn portfolio"
+    },
+    {
+      "time": "2026-11-08T16:03:08+01:00",
+      "type": "remote_pc_reconnected",
+      "state": "confirmed",
+      "platform": "Desktop Commander 0.3.1",
+      "source": "direct authorized device check"
+    },
+    {
+      "time": "2026-11-08T16:05:52+01:00",
+      "type": "codex_engineering_started",
+      "state": "verified_running",
+      "source": "remote live codex-cli 0.154.0 ps inspection"
+    },
+    {
+      "time": "2026-11-08T16:10:00+01:00",
+      "type": "external_hiring_application_sent",
+      "state": "verified_gmail_SENT",
+      "buyer_category": "French-speaking B2B data process mapping assignment",
+      "offered_price": null,
+      "customer_response": "not_observed"
+    },
+    {
+      "time": "2026-11-08T16:16:00+01:00",
+      "type": "codex_engineering_completed",
+      "state": "verified_local_files",
+      "deliverable": "6-tab preventive-maintenance XLSX, HTML demo, instructions, tests",
+      "validation_checks_passed": 51,
+      "formula_cells": 2228,
+      "customer_delivery": false
+    },
+    {
+      "time": "2026-11-08T16:19:00+01:00",
+      "type": "public_github_publication",
+      "state": "verified",
+      "files": [
+        "engine/harness/operation120/demo/Preventif_Demo.xlsx",
+        "engine/harness/operation120/demo/APERCU.html",
+        "engine/harness/operation120/demo/README.md"
+      ],
+      "note": "Sample workbook fictional only; no buyer sale or fulfilled contract"
+    },
+    {
+      "time": "2026-11-08T16:21:00+01:00",
+      "type": "independent_libreoffice_test",
+      "state": "verified_local_recalculation",
+      "formula_count": 2228,
+      "cached_spreadsheet_errors": 0,
+      "key_kpis_match": true,
+      "notes": "LibreOffice headless import/export succeeded; Excel UI and user acceptance not yet tested"
     }
   ],
   "checkpoint_15_min": {
@@ -110,10 +160,22 @@
     "notes": "Marketplace bid blocked by published reply count; Codex session not verified running; bank unreadable by current connectors."
   },
   "last_observed": {
-    "time": "2026-11-08T15:48:48+01:00",
-    "confirmed_new_messages_sent": 3,
-    "observed_substantive_replies": 0,
-    "observed_new_charges": 0,
-    "bank_cash_verified": null
+    "timestamp": "2026-11-08T16:26:00+01:00",
+    "external_messages_sent": 4,
+    "new_paid_transactions": 0,
+    "bank_cash_receipts_eur": null,
+    "bank_access": "no direct read capability"
+  },
+  "checkpoint_60_min": {
+    "timestamp": "2026-11-08T16:14:56+01:00",
+    "external_messages_sent": 4,
+    "new_buyer_contacted": 3,
+    "existing_buyer_followups": 1,
+    "substantive_replies_observed": 0,
+    "attributable_new_payments_observed": 0,
+    "bank_cash_receipts_eur": null,
+    "direct_expenses_eur": 0,
+    "technical_sample_prepared": true,
+    "codex_running": true
   }
 }
