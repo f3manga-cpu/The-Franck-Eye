@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "last_controller_check": "2026-11-07",
+  "last_controller_check": "2026-11-08",
   "objective": "attributable_verified_net_cash",
   "spend_ceiling_eur": 0,
   "active_experiment": "prevol_facture_20261103",
@@ -24,8 +24,8 @@
       "attributable_gross_eur": 0,
       "attributable_net_eur": null,
       "net_unknown_reason": "No attributed Stripe fee, refund, payout reconciliation yet",
-      "notes": "2026-11-07: one personalized follow-up sent to a previously contacted, independently verified relevant B2B organization; sent not delivered, opened or accepted. No substantive commercial replies; two historical Mailinblack challenges not counted as interest. Scout 2026-11-07 independently reviewed: three channels rejected for lack of accessible buyer and/or slow payout. Live Stripe five historical unrelated PaymentIntents, no new attributed charge; negative available balance remains unrelated. No orders. Stop/pivot 2026-11-10.",
-      "next_gate": "Await reply to one verified relevant prospect; do not send another follow-up. Verify actual buyer need and scope before any payment or order. Stop/pivot CSV experiment on 2026-11-10 if no qualified interest.",
+      "notes": "2026-11-08: no substantive commercial replies after prior single follow-up; no new outbound. Apollo zero deals/sequences. Scout ProZ EN-FR editing request not qualified due to low outsourcer rating and unverified buyer/budget/payment. Stripe five unrelated historical successful payments, zero attributable sales, available balance negative from historical activity. Stop/pivot decision remains 2026-11-10.",
+      "next_gate": "Await substantive buyer response or qualify a new independent demand channel with confirmed free contact, scope and payout; do not re-contact prior follow-up recipient. Stop/pivot 2026-11-10.",
       "decision_due": "2026-11-10"
     },
     {
@@ -47,7 +47,7 @@
     "Projected revenue is always omitted"
   ],
   "last_confirmed_attributable_net_cash_eur": 0,
-  "last_underwriting_report": "engine/harness/controller-2026-11-06.md",
+  "last_underwriting_report": "engine/harness/controller-2026-11-08.md",
   "next_channel_candidate": {
     "name": "Upwork buyer-posted FR localization",
     "stage": "research_only",
