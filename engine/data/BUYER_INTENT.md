@@ -1,33 +1,33 @@
 # Buyer-intent discovery
 
-Run: 2026-11-08T13:52:58.385129+00:00
+Run: 2026-11-08T19:10:46.962157+00:00
 
 **Unverified public research; no paid customer has been established.**
 
 | Score | Open request | Posted budget |
 |---:|---|---|
-| 6 | [[Bounty $750 feat(validator): support custom step_size in verify_sequence_gap](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/20) | $750 |
 | 6 | [[Bounty: $50 slugify() leaves double and trailing hyphens](https://github.com/maaltarifi97-maker/aioa-playground/issues/1) | $50 |
-| 5 | [[BOUNTY $100 HOOK: Pre-tool-use hook that blocks destructive bash commands](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3) | $100 |
-| 5 | [Bug bounty 100 usd to whoever makes my landing page responsive for mobile](https://github.com/iii123iii/Crystal-PDF/issues/3) | 100 usd |
-| 5 | [[BOUNTY $50 SKILL: Generate a structured CHANGELOG from git history](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1) | $50 |
+| 6 | [Automate Bug Detection and Reviews](https://github.com/SecureBananaLabs/bug-bounty/issues/11398) | $800 |
 | 5 | [[Bounty $850 ci(workflow): synchronize contributor check job IDs across GitHub Actions workflows](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/21) | $850 |
-| 5 | [[Bounty $350 docs(validator): add docstring usage examples for verify_sequence_gap in src/ledger_validator.py](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/16) | $350 |
-| 5 | [[Bounty $900 perf(validator): replace floor division with bitwise mask in compute_checkpoint_boundary](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/44) | $900 |
-| 5 | [[Bounty $450 refactor(validator): extract checkpoint divisor constant in src/ledger_validator.py](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/5) | $450 |
-| 5 | [[$16 BOUNTY [Rust Deprecate legacy public functions](https://github.com/cuentaprueba244w-dotcom/TentOfTrials/issues/4) | $16 |
-| 5 | [[$18 BOUNTY [Rust Add serde rename_all snake_case to protocol types](https://github.com/cuentaprueba244w-dotcom/TentOfTrials/issues/14) | $18 |
+| 5 | [[BOUNTY $50 SKILL: Generate a structured CHANGELOG from git history](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1) | $50 |
+| 5 | [[BOUNTY $75 TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2) | $75 |
+| 5 | [[BOUNTY $100 HOOK: Pre-tool-use hook that blocks destructive bash commands](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3) | $100 |
 | 5 | [Frantic bounty #97: Your first bounty is on the house ($10 back when it clears, first five)](https://github.com/auscaster/frantic-board/issues/277) | $10 |
-| 3 | [[MICRO-BOUNTY: 0.1 RTC Why did you choose to work on an Elyan Labs repo?](https://github.com/Scottcjn/rustchain-bounties/issues/16863) | Unknown |
-| 3 | [CODEX READY REMEDIATION QUEUE](https://github.com/Donh91/Investering-Framework-Archive-v1/issues/643) | 05 USD |
-| 3 | [🧟 Toyol Radar — calon ganjaran untuk disahkan](https://github.com/ilhamraduanbis-source/toyol-digital/issues/1) | 10 USD |
+| 5 | [[Bounty $500 perf(ledger): optimize 64-frame checkpoint boundary arithmetic in compute_checkpoint_boundary](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/9) | $500 |
+| 5 | [Discord Core Prisms, Lenses and Beams Implementation ($2000)](https://github.com/Spectral-Finance/lux/issues/57) | $2000 |
 | 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4571) | Unknown |
 | 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4572) | Unknown |
-| 2 | [[BOUNTY: 7 RTC Consistent error handling + exit codes in wallet balance check script (Rustchain#7889)](https://github.com/Scottcjn/rustchain-bounties/issues/16253) | Unknown |
-| 2 | [[BOUNTY: 8 RTC rustchain-mcp: document + test streaming/long-running tool behavior (answers rustchain-mcp#231)](https://github.com/Scottcjn/rustchain-bounties/issues/16255) | Unknown |
-| 2 | [[BOUNTY: 12 RTC Windows headless miner: stop infinite retry of rejected headers, surface server diagnostic (Rustchain#7368)](https://github.com/Scottcjn/rustchain-bounties/issues/16252) | Unknown |
-| 2 | [[radar SN open bounty 2026-10-27T04:52](https://github.com/relayhop/sn-monetization-runtime/issues/1342) | Unknown |
+| 3 | [[BOUNTY: 35 RTC + 10/defect Audit the payout pipeline for silent-success failures](https://github.com/Scottcjn/rustchain-bounties/issues/16471) | Unknown |
 | 2 | [[radar SN open bounty 2026-10-26T23:46](https://github.com/relayhop/sn-monetization-runtime/issues/1341) | Unknown |
-| 2 | [Contribution: fix(transaction): charge invocation floor on stealth template functions and merge workspace keys (tari-project/tari-ootle#3486)](https://github.com/tari-project/special_contributions/issues/519) | Unknown |
-| 2 | [[Bounty $1,000 fix(validator): correct checkpoint boundary calculation for seq=256 in compute_checkpoint_boundary](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/46) | Unknown |
-| 2 | [Frantic bounty #145: Install NitroMTA and send one real email to proof@nitromta.com](https://github.com/auscaster/frantic-board/issues/574) | Unknown |
+| 2 | [Point the README install steps and badges at hanzo.ai/lz4/v4](https://github.com/hanzo-go/lz4/issues/1) | Unknown |
+| 2 | [improve design of waitlist submitted state on landing page](https://github.com/bountydotnew/bounty.new/issues/231) | Unknown |
+| 2 | [Verify the June SEC county response provenance against the recovered current file](https://github.com/aadarwal/swarmstatus-bounties/issues/13) | Unknown |
+| 2 | [🏭 Bounty T2: Animated Landing Page Hero Background](https://github.com/SolFoundry/solfoundry/issues/850) | Unknown |
+| 2 | [[Slice D Standards crosswalk: W3C PROV-O, QIF (ISO 23952), STEP AP242 (ISO 10303-242)](https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/19) | Unknown |
+| 2 | [B1. Find an error, or suggest an improvement [25.6 ULT](https://github.com/ULCproject/ulcproject.github.io/issues/1) | Unknown |
+| 2 | [🏭 Bounty T1: Getting Started Tutorial Blog Post](https://github.com/SolFoundry/solfoundry/issues/830) | Unknown |
+| 2 | [Undo Move mechanic [bounty: 222 XTR](https://github.com/FreezingMoon/AncientBeast/issues/2704) | Unknown |
+| 2 | [MCP server: no error shown when the configured port is already in use](https://github.com/tari-project/universe/issues/3492) | Unknown |
+| 2 | [[BOUNTY: 35 RTC Harden x86 vintage-arch reward validation (anti-spoof)](https://github.com/Scottcjn/rustchain-bounties/issues/16271) | Unknown |
+| 2 | [indicate selected ability when targeting [bounty: 14 XTR](https://github.com/FreezingMoon/AncientBeast/issues/2537) | Unknown |
+| 2 | [Add current judge-flow screenshots to README](https://github.com/Saidur-droid/MergeEarn/issues/69) | Unknown |
