@@ -10,6 +10,8 @@ Maximize legitimate NEW buyer revenue actually credited to designated bank befor
 - Bank destination verified privately from attachment page 2. DO NOT copy bank details here.
 - The legacy CSV-cleaning offer has 15 prior outbound, zero replies and zero recorded attributed sales; keep it separate from OP120.
 - One new individualized, genuine outreach to a small game studio hiring a social media freelancer, quoting GBP 60 for a paid 24-hour trial, was sent via Gmail during OP120. Buyer response/payment not verified.
+- One individualized single follow-up on an independently advertised local paid communications role, referencing an existing EUR 149 diagnostic offer sent five days prior, has now been sent. No additional follow-up planned.
+- Private sent invoices 001-004 checked: historical amounts have been acknowledged as paid. Do NOT count as new income or collections in Operation 120.
 - Public live-job sources: Reddit hiring boards and ProZ; many hide contact information or have delayed platform payout. No paid lead should be assumed until verified.
 
 ## Codex responsibilities
@@ -20,8 +22,9 @@ Maximize legitimate NEW buyer revenue actually credited to designated bank befor
 - No expense, no commitment, no sending messages or deployment without existing explicit authorization; ask human to approve any consequential step requiring it.
 
 ## Truthful result counters — initial
-- New external targeted proposals sent: 1
+- New external targeted communications sent: 2 (one original, one prior-thread follow-up)
 - Genuine replies observed: 0
 - New paid transactions observed: 0
 - Bank settled new revenue: unverified (bank connector unavailable)
+- 15-minute review: no observed buyer response or transaction; remote desktop still offline on last check; user-directed Codex/local command execution is not verified.
 - Build/deployment: not yet verified
