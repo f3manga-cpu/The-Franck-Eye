@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T13:26:47+00:00",
+  "updated_at": "2026-11-09T16:23:04+00:00",
   "candidates": [
     {
       "id": "8da2fcbc970b410f",
@@ -44,6 +44,18 @@
       "theme": "digital products",
       "title": "Show HN: The New Way to Make AI UGC Ads in 2026",
       "url": "https://www.aivideosugc.com/ai-video-generation",
+      "score": 4,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "867933b74a7b272d",
+      "first_seen": "2026-11-09T16:23:03+00:00",
+      "date": "2026-11-09T14:42:01Z",
+      "theme": "payment platform",
+      "title": "Show HN: Kiosk, a first-class AI assistants' intefrace to online services",
+      "url": "https://kiosk.tech/",
       "score": 4,
       "status": "research_only",
       "evidence": "HN submission; commercial terms and revenue NOT verified",
