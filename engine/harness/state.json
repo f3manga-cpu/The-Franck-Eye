@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "last_controller_check": "2026-11-08",
+  "last_controller_check": "2026-11-09",
   "objective": "attributable_verified_net_cash",
   "spend_ceiling_eur": 0,
   "active_experiment": "prevol_facture_20261103",
@@ -24,8 +24,8 @@
       "attributable_gross_eur": 0,
       "attributable_net_eur": null,
       "net_unknown_reason": "No attributed Stripe fee, refund, payout reconciliation yet",
-      "notes": "2026-11-08: no substantive commercial replies after prior single follow-up; no new outbound. Apollo zero deals/sequences. Scout ProZ EN-FR editing request not qualified due to low outsourcer rating and unverified buyer/budget/payment. Stripe five unrelated historical successful payments, zero attributable sales, available balance negative from historical activity. Stop/pivot decision remains 2026-11-10.",
-      "next_gate": "Await substantive buyer response or qualify a new independent demand channel with confirmed free contact, scope and payout; do not re-contact prior follow-up recipient. Stop/pivot 2026-11-10.",
+      "notes": "2026-11-09: Gmail checked: zero substantive positive CSV buyer replies; separate independently sourced paid social-media trial received explicit rejection (buyer hired another provider), no follow-up sent. Apollo zero deals/sequences. Scout's GitHub bounties require speculative implementation and unverified payout; Freelancer bid/payment gates and ProZ Chinese-language requirements disqualify for urgent execution. Existing free CSV diagnostic and €49 checkout inspected, not changed or newly distributed. Stripe five historical unrelated successful payment intents; no attributable charges, fees, refunds or payouts; available EUR -259.27, pending zero. 2026-11-10 stop/pivot decision unchanged.",
+      "next_gate": "By 2026-11-10 close or revise CSV outreach if no substantive buyer response; only pursue buyer-posted offers after verified free contact, ability to fulfill and payment mechanism. Do not re-contact rejected paid-trial buyer or previously final-followed-up CSV prospect.",
       "decision_due": "2026-11-10"
     },
     {
@@ -47,7 +47,7 @@
     "Projected revenue is always omitted"
   ],
   "last_confirmed_attributable_net_cash_eur": 0,
-  "last_underwriting_report": "engine/harness/controller-2026-11-08.md",
+  "last_underwriting_report": "engine/harness/controller-2026-11-09.md",
   "next_channel_candidate": {
     "name": "Upwork buyer-posted FR localization",
     "stage": "research_only",
