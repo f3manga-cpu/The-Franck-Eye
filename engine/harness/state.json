@@ -41,7 +41,7 @@
     {
       "id": "independent_demand_followup_20261110",
       "source": "independently verified public hiring demand; one relevant supplementary paid service proposed to existing recipient",
-      "state": "sent_not_delivered",
+      "state": "selected",
       "offer": "24-hour KPI definition and webanalytics diagnostic on a fixed agreed scope",
       "channel": "one_to_one_email_followup",
       "buyer_exposure_claims": {
@@ -58,9 +58,10 @@
       "attributable_net_eur": null,
       "bank_cash_verified": null,
       "fulfilment_ready": "fixed bounded service, contingent on agreement and usable input data",
-      "notes": "2026-11-10: single relevant follow-up to an existing genuinely posted demand. Gmail connector send failed; private pre-existing authenticated local SMTP service accepted message and Gmail Sent independently confirmed it. No recipient identity, email address, thread or message content stored in public state. No more follow-ups to this recipient. This is external outreach, NOT revenue.",
+      "notes": "2026-11-10: single relevant follow-up to an existing genuinely posted demand. Gmail connector send failed; private pre-existing authenticated local SMTP service accepted message and Gmail Sent independently confirmed it. No recipient identity, email address, thread or message content stored in public state. No more follow-ups to this recipient. This is external outreach, NOT revenue. Stage intentionally remains selected under contract v2 because SMTP/Gmail SENT does not establish that the buyer was actually reached; contact_stage captures sent event.",
       "next_gate": "Respond only to genuine inbound buyer engagement; verify exact scope, delivery capacity and payment at delivery, then execute if agreed.",
-      "stop_rule": "One follow-up maximum; close when rejected or after one reasonable response window with no engagement."
+      "stop_rule": "One follow-up maximum; close when rejected or after one reasonable response window with no engagement.",
+      "contact_stage": "sent_not_delivery_confirmed"
     }
   ],
   "historical_stripe_physical_payments": "EXCLUDED",
