@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T16:23:04+00:00",
+  "updated_at": "2026-11-10T14:54:44+00:00",
   "candidates": [
     {
       "id": "8da2fcbc970b410f",
@@ -93,6 +93,18 @@
       "title": "AMD CEO saying it's a \"data center first\" company and PC sales will plummet",
       "url": "https://www.techradar.com/computing/gpu/amd-ceo-enrages-gamers-by-saying-its-now-a-data-center-first-company-and-predicts-pc-sales-will-plummet-by-a-double-digit-percentage-in-2027",
       "score": 2,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "faee3fbc0d8ffb2e",
+      "first_seen": "2026-11-10T14:54:43+00:00",
+      "date": "2026-11-10T03:13:42Z",
+      "theme": "payment platform",
+      "title": "Show HN: Kinsona – a hotel booking site that shows its cut on every booking",
+      "url": "https://kinsona.com/",
+      "score": 1,
       "status": "research_only",
       "evidence": "HN submission; commercial terms and revenue NOT verified",
       "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
