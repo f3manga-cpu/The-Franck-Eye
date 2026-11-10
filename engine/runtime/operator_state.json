@@ -1,0 +1,432 @@
+{
+  "last_run_date": "2026-11-10",
+  "leads": {
+    "0069fb56381beb14": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "LLM Provider Abstraction Layer $600",
+      "url": "https://github.com/Spectral-Finance/lux/issues/99"
+    },
+    "08671b1afc45525d": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Complete attributable round-2 premise/reflection acceptance for #3127",
+      "url": "https://github.com/WingedGuardian/GENesis-AGI/issues/4243"
+    },
+    "092dd114fa1b145c": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands",
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3"
+    },
+    "1491ec165d54944e": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Growth Lab: Founding 50 + autonomous multi-agent growth-loop registry",
+      "url": "https://github.com/JovieInc/Jovie/issues/23216"
+    },
+    "1a7af53af6ec9823": {
+      "checked_date": "2026-11-10",
+      "created": "2026-11-10",
+      "reason": "Excluded risky category",
+      "status": "excluded",
+      "title": "[Bounty $850] ci(workflow): synchronize contributor check job IDs across GitHub Actions workflows",
+      "url": "https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/21"
+    },
+    "1fc95b92e067eb2d": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[radar] SN open bounty 2026-10-27T10:25",
+      "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1343"
+    },
+    "252365b6f0f9a402": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "ZecHub bounty: Zcash Ecosystem Digest | November 14th (0.035 ZEC)",
+      "url": "https://github.com/panoskokmotos/panoskokmotos/issues/20"
+    },
+    "28c1e2bc46eb5b43": {
+      "checked_date": "2026-11-10",
+      "created": "2026-11-10",
+      "reason": "More than 30 comments",
+      "status": "crowded",
+      "title": "[BOUNTY $180] Base Infrastructure — Traefik + Portainer + Watchtower",
+      "url": "https://github.com/illbnm/homelab-stack/issues/1"
+    },
+    "30a5676d0d480aa5": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[radar] SN open bounty 2026-11-09T16:01",
+      "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1364"
+    },
+    "323ee903b3c969ed": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Implement a quota-enforced agent execution loop behind explicit opt-in",
+      "url": "https://github.com/ghith93/raawaa-autonomous-engine/issues/34"
+    },
+    "3ad9cc0d4cdb7c1e": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Bounty] Answer the 3 linked question(s)",
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/3726"
+    },
+    "4037d84c9638aef7": {
+      "checked_date": "2026-11-10",
+      "created": "2026-11-10",
+      "reason": "Open issue; advertised $50 is NOT verified funded payment",
+      "status": "payment_proof_needed",
+      "title": "[Bounty: $50] slugify() leaves double and trailing hyphens",
+      "url": "https://github.com/maaltarifi97-maker/aioa-playground/issues/1"
+    },
+    "417e2022e234aba5": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Use Case] A seller checks the paying agent's attested software and its user's spending authority before starting paid work",
+      "url": "https://github.com/fg-tida-wg0/use-cases/issues/35"
+    },
+    "45b312a9d5758f8b": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[agent] Implement the approved milestone in the full mission objective. Preserve all previous verified work. Run focused checks and satisfy the approv",
+      "url": "https://github.com/mfackrell/katie/issues/969"
+    },
+    "494157fdf7153f1f": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "🎯 Bounty Alert: 4 New Opportunityies found",
+      "url": "https://github.com/dev-kp-eloper/BountyScout/issues/1746"
+    },
+    "540f83f1c04769e0": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[BOUNTY: 35 RTC + 10/defect] Audit the payout pipeline for silent-success failures",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/16471"
+    },
+    "55df693c97e67332": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[BOUNTY $150] AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment",
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4"
+    },
+    "5af9b279f09ec185": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Bounty] Answer the 2 linked question(s)",
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/4642"
+    },
+    "5b01c3c50203662d": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "deliver-standard: an acceptance kind for orchestrator observations so planners stop building verify checks for them",
+      "url": "https://github.com/fagenorn/nix-config/issues/736"
+    },
+    "5cd6e5debb46f7bc": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Bounty $750] Fix remaining sharded scale_mask_softmax mask handling issues",
+      "url": "https://github.com/tenstorrent/tt-metal/issues/64647"
+    },
+    "5f7e433323022251": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[wildcard] Erase the Unsound managed(\"...\", \"...\") Escape Hatch: Compile-Time Synthesized Dynamic Leases (DynRef[T]/DynMut[T]) with Zero-Alloc Crash-F",
+      "url": "https://github.com/limitlessprojects/Go-Hybrid/issues/4269"
+    },
+    "622a05e06a74cb89": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[radar] SN open bounty 2026-11-09T16:05",
+      "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1365"
+    },
+    "63a51159bd5c51c8": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Grant Application - Mock lightwalletd for Zcash wallet testing",
+      "url": "https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/544"
+    },
+    "65ea506ddaba4c90": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Bug bounty]Swap getBestAmountOut quotes on 100% of the input while execution swaps 99% (origin is never passed on the quote path)",
+      "url": "https://github.com/paraspell/xcm-tools/issues/2238"
+    },
+    "6e67f166665de7a6": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[BOUNTY $200] WORKFLOW: n8n + Claude Code — automated weekly dev summary",
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5"
+    },
+    "6fb1e30963d480ec": {
+      "checked_date": "2026-11-10",
+      "created": "2026-11-10",
+      "reason": "Open issue; advertised $2000 is NOT verified funded payment",
+      "status": "payment_proof_needed",
+      "title": "Discord Core Prisms, Lenses and Beams Implementation ($2000)",
+      "url": "https://github.com/Spectral-Finance/lux/issues/57"
+    },
+    "70c95b995e189987": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[BOUNTY: 8 RTC] rustchain-mcp: document + test streaming/long-running tool behavior (answers rustchain-mcp#231)",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/16255"
+    },
+    "723762d19cb55a12": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[BOUNTY $75] TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project",
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2"
+    },
+    "75ec30833773080e": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Tasks page should show only Open tasks by default",
+      "url": "https://github.com/Godbrand0/Tasked/issues/27"
+    },
+    "805af8c5d1b762d3": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Bug bounty] verifyEdOnDestination returns false when the recipient would end up at exactly the existential deposit",
+      "url": "https://github.com/paraspell/xcm-tools/issues/2237"
+    },
+    "824d516ddf404a21": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[MICRO-BOUNTY: 0.1 RTC] Why did you choose to work on an Elyan Labs repo?",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/16863"
+    },
+    "858c44246604b8b8": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Bounty] Answer the 2 linked question(s)",
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/4132"
+    },
+    "8639c0b5b84eb4dc": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Add React Native support",
+      "url": "https://github.com/prasenjeet-symon/shipli-ai/issues/1"
+    },
+    "8a28122561f195b0": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Bounty] Answer the 2 linked question(s)",
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/4571"
+    },
+    "9006dad387ae2b97": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Research pipeline blocks before research: inventory deadlock, schema conflict and unsafe resume; simplify research-only flow",
+      "url": "https://github.com/IronbellyOrg/IronClaude/issues/470"
+    },
+    "907892d5c918a780": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[BOUNTY: 35 RTC] Harden x86 vintage-arch reward validation (anti-spoof)",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/16271"
+    },
+    "98de35d8becf395e": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "B1. Find an error, or suggest an improvement [25.6 ULT]",
+      "url": "https://github.com/ULCproject/ulcproject.github.io/issues/1"
+    },
+    "9b35c748a0742280": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "PREAPI-001 — Zero-cost readiness before funded AI API pilot",
+      "url": "https://github.com/nshaokiet/ai-ip-description-generator/issues/131"
+    },
+    "9b4a762955a522ec": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Slice D] Standards crosswalk: W3C PROV-O, QIF (ISO 23952), STEP AP242 (ISO 10303-242)",
+      "url": "https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/19"
+    },
+    "9ba2a0f3b15760c0": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "agent/paid-social-strategist: Fleet spawn test",
+      "url": "https://github.com/krisharyanagarwal-dev/agent-fleet-console/issues/266"
+    },
+    "a5c9b351d0e3ce47": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "agent/paid-media-auditor: Fleet spawn test",
+      "url": "https://github.com/krisharyanagarwal-dev/agent-fleet-console/issues/264"
+    },
+    "a95d1e5ec20ff1f9": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[T1] [REQUESTED] SALE1 — Codex mobile checkout and UTM Gate 1",
+      "url": "https://github.com/the1mburke-blip/Teamchat/issues/179"
+    },
+    "a9c3c3178afe86ae": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[BOUNTY: 12 RTC] Windows headless miner: stop infinite retry of rejected headers, surface server diagnostic (Rustchain#7368)",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/16252"
+    },
+    "ad55eb16e669aac0": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[radar] SN open bounty 2026-10-27T12:01",
+      "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1344"
+    },
+    "b625040f778eac07": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Feature] Let a business close a partially paid invoice",
+      "url": "https://github.com/Stellar-Finance-OS/Stellar-Finance-OS-Contracts/issues/5"
+    },
+    "ba658c17d8fbf0b8": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[EASY BOUNTY: 2 RTC] Add a RustChain Badge to Any Project README",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/13949"
+    },
+    "c28ed77f69c44e3c": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[$25 BOUNTY] [Python] Add independent log parser fixtures",
+      "url": "https://github.com/weilixiong/TentOfTrials/issues/5"
+    },
+    "c4bdc481825140c5": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Verify installed executor task base and draft target after #2529",
+      "url": "https://github.com/WingedGuardian/GENesis-AGI/issues/4226"
+    },
+    "c63bbd0aab9effee": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[$3 site credit] Replace the retired tasks --mission filter with --task in both CLIs",
+      "url": "https://github.com/andrewsiah/agentswarm-cli/issues/2"
+    },
+    "cbd69fab3391c1e7": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "🏭 Bounty T1: Getting Started Tutorial Blog Post",
+      "url": "https://github.com/SolFoundry/solfoundry/issues/830"
+    },
+    "cd535737dcd2b02f": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Bounty] Answer the 2 linked question(s)",
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/4487"
+    },
+    "cfd4d348c6bda1d5": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[Bug bounty] validateTransact returns the sender/recipient error instead of throwing, so the guard never runs",
+      "url": "https://github.com/paraspell/xcm-tools/issues/2277"
+    },
+    "dcd55254d67a9134": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history",
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1"
+    },
+    "dd2aa1571c2510d3": {
+      "checked_date": "2026-11-10",
+      "created": "2026-11-10",
+      "reason": "More than 30 comments",
+      "status": "crowded",
+      "title": "Low Handing Fruit Automation",
+      "url": "https://github.com/SecureBananaLabs/bug-bounty/issues/743"
+    },
+    "ede5f8c3638b15f4": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "[$1 site credit] initialize: validate capabilities/clientInfo shape (-32602)",
+      "url": "https://github.com/andrewsiah/agentswarm-mcp/issues/1"
+    },
+    "ef60699144bc011b": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "🏭 Bounty T2: Animated Landing Page Hero Background",
+      "url": "https://github.com/SolFoundry/solfoundry/issues/850"
+    },
+    "f1226fde948ea3c0": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Worker: `match-transaction` and `overdue-invoices` jobs",
+      "url": "https://github.com/Stellar-Finance-OS/Stellar-Finance-OS-Backend/issues/3"
+    },
+    "f48fca128011b525": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "CODEX READY REMEDIATION QUEUE",
+      "url": "https://github.com/Donh91/Investering-Framework-Archive-v1/issues/643"
+    },
+    "f774fd645c08e6da": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Automatic Xero credit notes for refunds on internet-banking organiser-paid group places (and the group cancel's note)",
+      "url": "https://github.com/thatskiff33/AlpineClubBookingsNZ/issues/4292"
+    },
+    "f7cd26019522d0fb": {
+      "created": "2026-11-10",
+      "reason": "Awaiting check",
+      "status": "queued",
+      "title": "Adding missing information to Release_notes_26.3 page.",
+      "url": "https://github.com/Reqrefusion/FreeCAD-Documentation-Project/issues/30"
+    }
+  },
+  "sales_verified_by_this_worker": null,
+  "schema": 1
+}
