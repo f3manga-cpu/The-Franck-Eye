@@ -1,0 +1,15 @@
+[Unit]
+Description=Franck Eye autonomous opportunity operator
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+WorkingDirectory=%h/The-Franck-Eye
+ExecStart=/usr/bin/python3 -m engine.runtime.operator forever --interval 300 --codex
+Restart=always
+RestartSec=15
+Environment=ENABLE_CHATGPT_CODEX=1
+Environment=PYTHONUNBUFFERED=1
+NoNewPrivileges=true
+[Install]
+WantedBy=default.target
