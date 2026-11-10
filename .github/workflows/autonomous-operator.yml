@@ -1,0 +1,38 @@
+name: Autonomous opportunity operator
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'engine/runtime/operator.py'
+      - 'engine/runtime/tests/**'
+      - '.github/workflows/autonomous-operator.yml'
+permissions:
+  contents: write
+concurrency:
+  group: autonomous-operator
+  cancel-in-progress: false
+jobs:
+  operate:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test agent safety and state
+        run: python -m unittest discover -s engine/runtime/tests -v
+      - name: Execute bounded independent operator cycle
+        run: python -m engine.runtime.operator once
+      - name: Persist state only if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add engine/runtime/operator_state.json engine/runtime/NEXT_ACTIONS.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Autonomous operator: progress public opportunity queue"
+            git push
+          fi
