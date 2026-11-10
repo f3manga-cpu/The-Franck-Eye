@@ -90,7 +90,9 @@ def cycle(queue=QUEUE, state_path=STATE, report_path=REPORT, get=fetch, now=None
                             "status":"queued", "reason":"Awaiting check", "created":now.date().isoformat()}
             new += 1
     count = 0
-    for item in leads.values():
+    # Prioritize unchecked leads; revisit checked leads only on the next day.
+    ordered = sorted(leads.values(), key=lambda item: (item.get("checked_date") == now.date().isoformat(), item.get("checked_date", ""), item.get("created", "")))
+    for item in ordered:
         if count >= max_checks:
             break
         if item.get("checked_date") == now.date().isoformat():
