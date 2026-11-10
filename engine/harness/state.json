@@ -47,11 +47,11 @@
     "Projected revenue is always omitted"
   ],
   "last_confirmed_attributable_net_cash_eur": 0,
-  "last_underwriting_report": "engine/harness/controller-2026-11-10.md",
+  "last_underwriting_report": "engine/harness/controller-2026-11-10-0804.md",
   "next_channel_candidate": {
-    "name": "Verified buyer-posted direct work or separate voluntary personal support",
-    "stage": "research_only",
-    "gate": "Buyer: verified identity, deliverable, free contact and payment terms. Support: verify actual PayPal receiving handle/link and withdrawal eligibility via authenticated login; no link established.",
+    "name": "Existing Outlier contributor account — Aether paid tasks (not current verified sale)",
+    "stage": "evidence_checked",
+    "gate": "Authenticated account login and onboarding; verify current active task, payout terms and identity. Last identified USD 37.20 mission expired Nov 7; conditional referral USD 93 requires real participant completing 20 tasks.",
     "qualified_buyer_exposures": 0
   },
   "support_lane": {
