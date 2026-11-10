@@ -24,7 +24,7 @@
       "attributable_gross_eur": 0,
       "attributable_net_eur": null,
       "net_unknown_reason": "No attributed Stripe fee, refund, payout reconciliation yet",
-      "notes": "2026-11-10 stop decision executed: 15 recorded targeted emails, 0 substantive qualified positive buyer replies, 0 attributed purchases. Two automated security challenges; other separate trial rejected. Historical Stripe payments excluded; live available -259.27 EUR, pending 0. No new sales fees/refunds/payouts. CSV tool and checkout retained as existing assets, but campaign closed and no new outreach authorized by this decision.",
+      "notes": "2026-11-10 stop decision executed: 15 recorded targeted emails, 0 substantive qualified positive buyer replies, 0 attributed purchases. Two automated security challenges; other separate trial rejected. Historical Stripe payments excluded; no current bank-accessible funds verified. No new sales fees/refunds/payouts. CSV tool and checkout retained as existing assets, but campaign closed and no new outreach authorized by this decision.",
       "next_gate": "Reopen only after verified buyer demand and a measurable distribution channel; no repeat follow-up to final-contacted prospects.",
       "decision_due": "2026-11-10"
     },
@@ -89,8 +89,6 @@
   "money_mission_audit": {
     "status": "execution_gate_advanced_no_cash",
     "evaluated_at_paris_date": "2026-11-10",
-    "live_stripe_available_balance_eur": -259.27,
-    "live_stripe_pending_balance_eur": 0,
     "stripe_legacy_activity_excluded": true,
     "new_sales_count": 0,
     "new_low_ticket_count": 0,
@@ -109,6 +107,7 @@
     },
     "blocker": "No buyer reply or order; no authenticated marketplace seller or direct bank feed; no approved fundraising campaign.",
     "corrective_discovery": "Local existing owner-private SMTP provides authenticated bounded sending; Gmail connector send returns forbidden. Dedupe via private marker and Gmail Sent.",
-    "next_gate": "Monitor for genuine buyer response; independently qualify a different actual funded paid-work route without duplicating closed leads."
+    "next_gate": "Monitor for genuine buyer response; independently qualify a different actual funded paid-work route without duplicating closed leads.",
+    "processor_balance_gate": "negative legacy-affected Stripe processor balance; no verified bank credit, exact amount deliberately kept outside public repository"
   }
 }
