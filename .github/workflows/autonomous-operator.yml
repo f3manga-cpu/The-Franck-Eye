@@ -27,12 +27,33 @@ jobs:
         run: python -m unittest discover -s engine/runtime/tests -v
       - name: Execute bounded independent operator cycle
         run: python -m engine.runtime.operator once
-      - name: Persist state only if changed
+      - name: Persist state with bounded race recovery
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add engine/runtime/operator_state.json engine/runtime/NEXT_ACTIONS.md
-          if ! git diff --cached --quiet; then
+          # Another authorized controller can update main between checkout and push.
+          # On a rejected push, discard only this ephemeral runner checkout,
+          # reload the new canonical state, and recompute instead of force-pushing.
+          for attempt in 1 2 3 4; do
+            git add -- engine/runtime/operator_state.json engine/runtime/NEXT_ACTIONS.md
+            if git diff --cached --quiet; then
+              echo "State is already current; no commit required."
+              exit 0
+            fi
             git commit -m "Autonomous operator: progress public opportunity queue"
-            git push
-          fi
+            if git push origin HEAD:main; then
+              echo "State checkpoint persisted on main."
+              exit 0
+            fi
+            if [ "$attempt" -ge 4 ]; then
+              echo "::error::Unable to persist state after four attempts."
+              exit 1
+            fi
+            echo "::warning::Push failed; refreshing main and rebuilding state (attempt $attempt)."
+            git fetch origin main
+            git reset --hard origin/main
+            python -m engine.runtime.operator once
+            sleep "$attempt"
+          done
