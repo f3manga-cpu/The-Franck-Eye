@@ -11,7 +11,7 @@ Environment=PYTHONUNBUFFERED=1
 UMask=0077
 NoNewPrivileges=true
 ExecStartPre=/usr/bin/python3 -m py_compile %h/outcome-operator/executive_runtime.py
-ExecStart=/usr/bin/python3 -u %h/outcome-operator/executive_runtime.py loop --interval 300 --send-replies --codex
+ExecStart=/usr/bin/python3 -u %h/outcome-operator/executive_runtime.py loop --interval 300 --codex
 Restart=always
 RestartSec=20
 TimeoutStopSec=18
