@@ -10,7 +10,8 @@ import sqlite3
 from cohort_analysis import report as cohort_report
 from screening import screen as screening_report
 from forward_validation import evaluate as forward_evaluate
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, parse_qs
+from evidence_report import report as evidence_report
 
 ROOT=Path(__file__).resolve().parent
 DB=ROOT/"observations.sqlite3"
@@ -72,12 +73,13 @@ th{{background:#edf2f7}}.scroll{{overflow-x:auto}}a{{color:#1250a1}}
 <p class="muted">Last cycle: {updated} UTC · State: {status} · Cycles: {data["cycles"]} · Stale: {data.get("stale",True)}</p>
 <p class="notice"><strong>Independent research, not a trading recommendation.</strong> This is a biased spotlight sample. DEX volume, token market capitalization and promotional boosts are not creator earnings. No trades, wallets, tokens, or payouts are involved. Risk flags are heuristics, not fraud findings.</p>
 <h2>Observed spotlight tokens ({len(data["assets"])})</h2><div class="scroll"><table><thead><tr><th>Symbol</th><th>Name</th><th>DEX</th><th>24h volume USD</th><th>Liquidity USD</th><th>Vol / liq</th><th>Caution flags</th><th>Data</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
-<p class="muted">Read-only public DEX Screener data. <a href="/api/summary">JSON API</a> · <a href="/api/cohorts">Longitudinal cohort analysis</a> · <a href="/api/screening">Historical caution screening</a> · <a href="/api/validation">Forward signal audit</a>. Last observation: {escape(str(data.get("latest_observation_utc","unknown")))}</p></body></html>"""
+<p class="muted">Read-only public DEX Screener data. <a href="/api/summary">JSON API</a> · <a href="/api/cohorts">Longitudinal cohort analysis</a> · <a href="/api/screening">Historical caution screening</a> · <a href="/api/validation">Forward signal audit</a> · <a href="/api/evidence?token=example">Token evidence report API</a>. Last observation: {escape(str(data.get("latest_observation_utc","unknown")))}</p></body></html>"""
 
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        path=self.path.split("?",1)[0]
-        if path not in ("/","/api/summary","/api/cohorts","/api/screening","/api/validation","/healthz"):
+        parsed=urlsplit(self.path)
+        path=parsed.path
+        if path not in ("/","/api/summary","/api/cohorts","/api/screening","/api/validation","/api/evidence","/healthz"):
             self.send_error(404);return
         data=snapshot()
         if path=="/healthz":
@@ -90,6 +92,16 @@ class Handler(BaseHTTPRequestHandler):
             code=200;payload=json.dumps(screening_report(),ensure_ascii=False).encode();typ="application/json"
         elif path=="/api/validation":
             code=200;payload=json.dumps(forward_evaluate(),ensure_ascii=False).encode();typ="application/json"
+        elif path=="/api/evidence":
+            params=parse_qs(parsed.query)
+            try:
+                token=params.get("token",[""])[0]
+                item=evidence_report(token,DB)
+                code=200 if item else 404
+                payload=json.dumps(item if item else {"error":"not-observed"},ensure_ascii=False).encode()
+            except ValueError:
+                code=400;payload=b'{"error":"invalid-token"}'
+            typ="application/json"
         elif path=="/api/summary":
             code=200;payload=json.dumps(data,ensure_ascii=False).encode();typ="application/json"
         else:
