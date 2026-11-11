@@ -42,6 +42,7 @@ Operate as the principal's autonomous organization across research, strategy, di
 - For powered-on Linux laptop, separate hardware power from offline Remote Desktop Commander connection. When available inspect local systemd, Codex authentication, dependencies, and recover or replace failed connections without unsupported assumptions.
 - Each scheduled run should result in one genuinely useful external gate if feasible; if none, record one exact blocker and one different attempted route. Automatically deduplicate and respect prior final-contact requests.
 - Maintain a private evidence register and a sanitized public summary with timestamp, mechanism, stage, last verified action, follow-up trigger, failure reason and permission requirement.
+- Optional implementation reference: `engine/harness/SIGNAL_TO_OUTCOME_LESSONS_2026-11-11.md` records evidence-ranked lessons from the Fountain autonomous-company and agentic trading case studies. Treat the memecoin income claims as unverified; this reference neither expands permissions nor authorizes spending, trading or token launches.
 - Source inspirations (mechanisms not guaranteed performance):
   - Truth Collective's primary account of Truth Terminal and the $50k grant: https://www.truthcollective.foundation/
   - OpenAI harness engineering: https://openai.com/index/harness-engineering/
