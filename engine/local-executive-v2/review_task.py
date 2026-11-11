@@ -8,6 +8,7 @@ from email.utils import parseaddr
 import json
 from pathlib import Path
 import re
+import time
 import executive_v2 as op
 
 def pending(c,limit=30):
@@ -70,17 +71,62 @@ def inspect(c,work_id,connect=op.connect):
         try:client.logout()
         except Exception:pass
 
+ALLOWED_HANDOFFS = frozenset({
+    'gmail_sent', 'employer_portal_confirmation',
+    'proposal_delivered', 'customer_replied', 'marketplace_listing_published',
+    'reviewed_no_action'
+})
+
+def acknowledge(c, work_id, handoff_kind, evidence_hash, now=None):
+    """Persist a separately observed external step, NOT a paid outcome.
+
+    The connected operator must verify the original receipt before calling.
+    This database preserves its attestation but cannot independently establish
+    Stripe or bank settlement, employer acceptance, or delivery.
+    """
+    if handoff_kind not in ALLOWED_HANDOFFS:
+        raise ValueError('not_an_authorized_handoff')
+    op.require_hash(work_id)
+    op.require_hash(evidence_hash)
+    now = time.time() if now is None else now
+    key = op.digest(work_id + ':' + handoff_kind + ':' + evidence_hash)
+    op.begin(c)
+    try:
+        prev = c.execute('SELECT id FROM handoffs WHERE id=?', (key,)).fetchone()
+        if prev:
+            c.commit()
+            return 'duplicate_attestation'
+        row = c.execute('SELECT * FROM work WHERE id=?', (work_id,)).fetchone()
+        if not row or row['state'] != 'NEEDS_HUMAN':
+            raise ValueError('not_pending_review')
+        c.execute('INSERT OR IGNORE INTO evidence VALUES(?,?)', (evidence_hash, now))
+        c.execute('INSERT INTO handoffs VALUES(?,?,?,?,?,?)',
+                  (key, work_id, handoff_kind, evidence_hash, now,
+                   'OPERATOR_ATTESTED_NOT_OUTCOME'))
+        op.transition(c, row, 'STAGED', now, 'operator_handoff_' + handoff_kind)
+        c.commit()
+        return 'operator_attested_not_financial_or_employment_outcome'
+    except Exception:
+        c.rollback()
+        raise
+
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument("command",choices=("pending","inspect"))
+    p.add_argument("command",choices=("pending","inspect","ack"))
     p.add_argument("--work-id")
     p.add_argument("--limit",type=int,default=30)
     p.add_argument("--reveal-private",action="store_true")
+    p.add_argument("--handoff-kind")
+    p.add_argument("--evidence-hash")
     args=p.parse_args()
     c=op.dbopen()
     try:
         if args.command=="pending":
             print(json.dumps({"work":pending(c,max(1,min(args.limit,100)))},sort_keys=True))
+        elif args.command=="ack":
+            if not args.work_id or not args.handoff_kind or not args.evidence_hash:
+                p.error("--work-id, --handoff-kind and --evidence-hash required")
+            print(json.dumps({"ack":acknowledge(c,args.work_id,args.handoff_kind,args.evidence_hash)}))
         else:
             if not args.work_id or not re.fullmatch("[a-f0-9]{64}",args.work_id):
                 p.error("valid --work-id required")

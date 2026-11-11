@@ -65,6 +65,21 @@ class ReviewTests(unittest.TestCase):
         fake=MailFake(self.raw,b"From: unknown@example.org\n\n")
         with self.assertRaises(RuntimeError): review.inspect(self.c,self.id,connect=lambda:fake)
         self.assertTrue(fake.closed)
+    def test_handoff_attested_but_not_money_or_job_outcome(self):
+        key=op.digest('real Gmail sent receipt after connector verification')
+        self.assertEqual(review.acknowledge(self.c,self.id,'gmail_sent',key,now=25),
+                         'operator_attested_not_financial_or_employment_outcome')
+        self.assertEqual(self.c.execute('SELECT state FROM work WHERE id=?',(self.id,)).fetchone()[0],'STAGED')
+        self.assertEqual(self.c.execute('SELECT verification_stage FROM handoffs').fetchone()[0],
+                         'OPERATOR_ATTESTED_NOT_OUTCOME')
+        self.assertEqual(self.c.execute('SELECT count(*) FROM outcomes').fetchone()[0],0)
+        self.assertEqual(review.acknowledge(self.c,self.id,'gmail_sent',key,now=26),'duplicate_attestation')
+
+    def test_handoff_rejects_fake_bank_credit_and_unverified_hash(self):
+        with self.assertRaises(ValueError):review.acknowledge(self.c,self.id,'bank_credit',op.digest('foo'))
+        with self.assertRaises(ValueError):review.acknowledge(self.c,self.id,'gmail_sent','raw private email')
+        self.assertEqual(self.c.execute('SELECT count(*) FROM handoffs').fetchone()[0],0)
+
     def test_blocked_row_cannot_reveal(self):
         self.c.execute("UPDATE work SET state='BLOCKED' WHERE id=?",(self.id,))
         with self.assertRaises(ValueError):review.inspect(self.c,self.id,connect=lambda:None)

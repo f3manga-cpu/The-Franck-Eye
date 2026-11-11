@@ -113,6 +113,14 @@ def dbopen(path=PRIVATE / 'state.sqlite3'):
       historical_end INTEGER NOT NULL, historical_uid INTEGER NOT NULL,
       fresh_uid INTEGER NOT NULL, fresh_end INTEGER NOT NULL DEFAULT 0,
       live_uid INTEGER NOT NULL DEFAULT 0);
+    CREATE TABLE IF NOT EXISTS handoffs(id TEXT PRIMARY KEY,
+      work_id TEXT NOT NULL REFERENCES work(id),
+      kind TEXT NOT NULL,
+      evidence_hash TEXT NOT NULL REFERENCES evidence(hash),
+      recorded_at REAL NOT NULL,
+      verification_stage TEXT NOT NULL DEFAULT 'OPERATOR_ATTESTED_NOT_OUTCOME');
+    CREATE TRIGGER IF NOT EXISTS handoff_update BEFORE UPDATE ON handoffs BEGIN SELECT RAISE(ABORT,'immutable'); END;
+    CREATE TRIGGER IF NOT EXISTS handoff_delete BEFORE DELETE ON handoffs BEGIN SELECT RAISE(ABORT,'immutable'); END;
     CREATE TABLE IF NOT EXISTS metrics(id INTEGER PRIMARY KEY CHECK(id=1), last_cycle REAL,
       last_scan REAL, scanned INTEGER NOT NULL DEFAULT 0, last_error TEXT);
     INSERT OR IGNORE INTO metrics(id) VALUES(1);
