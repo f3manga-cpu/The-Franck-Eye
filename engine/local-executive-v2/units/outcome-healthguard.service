@@ -1,0 +1,11 @@
+[Unit]
+Description=Outcome operator watchdog — stale heartbeat recovery
+After=default.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/outcome-operator
+Environment=HOME=%h
+UMask=0077
+NoNewPrivileges=true
+ExecStart=/usr/bin/python3 %h/outcome-operator/health_guard.py once

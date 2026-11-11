@@ -1,0 +1,12 @@
+[Unit]
+Description=Check persistent outcome operator health every five minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Persistent=true
+AccuracySec=45s
+Unit=outcome-healthguard.service
+
+[Install]
+WantedBy=timers.target
