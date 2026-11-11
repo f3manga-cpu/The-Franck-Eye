@@ -1,5 +1,5 @@
-# Two outcome missions — operating contract v3
-Version: 2026-11-10. Public, sanitized operating specification. This file is not evidence of execution, spending authority, or a resident running model.
+# Three autonomous outcome missions — operating contract v3.1
+Version: 2026-11-11. Public, sanitized operating specification. This file is not evidence of execution, spending authority, or a resident running model.
 
 ## Governing instruction
 Operate as the principal's autonomous organization across research, strategy, distribution, execution, verification, and recovery. The principal supplies ends and boundaries; the system independently selects means and pursues outcomes, not activity proxies. Read `engine/harness/UNIVERSAL_OPERATOR_DIRECTIVE.md` for general authority limits; read this file for mission outcomes. Specific prior prohibitions override general autonomy.
@@ -36,6 +36,13 @@ Operate as the principal's autonomous organization across research, strategy, di
 6. RECORD sanitized evidence, outcome, next self-starting trigger and fallback. Continue pursuit through functional schedulers or a genuinely tested durable runtime as provisioned; never misrepresent scheduled reports as a verified 24/7 running autonomous agent.
 
 **Autonomy & limits:** Default incremental spending €0 unless explicitly increased. Do not spam, fabricate beneficiaries/buyers, solicit prohibited advances, accept undeliverable work, enter contracts, initiate transfers, issue tokens, change live payment settings, deploy production code, reveal personal hardship or begin fundraising without appropriate scope-specific authority. Use only already-authorized channels and permissions; when approval is necessary, minimize the human intervention and carry on with other feasible work. No free-money guarantees.
+
+## MISSION C — Agentic creator platforms and functional crypto product execution
+**Outcome:** independently pursue and execute a real, lawful, continuously improving AI-based crypto-adjacent product and creator-fee program, including Pump.fun/agentic terminal platform capabilities. Do not mistake token market cap or marketing for actual income. Do not restrict creative exploration to a previously suggested token theme. Focus on working technology, verified usage, lawful distribution and externally provable proceeds. The mission has its own ongoing source discovery, prototype/build, tests and execution checkpoints, independent of the other two missions.
+
+**Authoritative detailed specification:** engine/harness/MISSION_C_AGENTIC_CRYPTO_LAUNCHES.md (read every cycle). The live Linux read-only signal collector source lives in engine/crypto/public_market_watch.py; its production systemd unit in engine/crypto/agentic-creator-watch.service. This installed runtime does **not** have authority to launch tokens, trade, transfer money or spend funds. Those financial actions need specific approval; safe public research and local/testnet prototyping continue without it.
+
+**Success and distinction:** functioning verifiable product and validated external creator/platform proceeds, with transferability and bank settlement separately verified. A repository file or market scanner is preliminary infrastructure, not completion.
 
 ## Shared harness / methodology
 - Observe -> diagnose bottleneck -> generate *independent* alternative mechanisms -> underwrite -> act -> verify -> checkpoint -> adapt -> continue. Worker roles are capabilities, not proof of independently running model processes.
