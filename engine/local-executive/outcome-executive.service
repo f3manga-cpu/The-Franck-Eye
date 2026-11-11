@@ -1,0 +1,21 @@
+[Unit]
+Description=Autonomous outcome executive — trusted inbox, guarded commercial actions, Codex strategy
+Wants=network-online.target outcome-operator.service
+After=network-online.target outcome-operator.service
+
+[Service]
+Type=simple
+WorkingDirectory=%h/outcome-operator
+Environment=HOME=%h
+Environment=PYTHONUNBUFFERED=1
+UMask=0077
+NoNewPrivileges=true
+ExecStartPre=/usr/bin/python3 -m py_compile %h/outcome-operator/executive_runtime.py
+ExecStart=/usr/bin/python3 -u %h/outcome-operator/executive_runtime.py loop --interval 300 --codex
+Restart=always
+RestartSec=20
+TimeoutStopSec=18
+MemoryMax=1500M
+
+[Install]
+WantedBy=default.target
