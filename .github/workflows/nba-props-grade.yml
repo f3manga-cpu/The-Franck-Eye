@@ -1,0 +1,42 @@
+name: NBA Picks Lab — grade frozen recommendations
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 12 * * *'
+  push:
+    paths:
+      - 'nba_lab/**'
+      - '.github/workflows/nba-props-grade.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nba-props-grade
+  cancel-in-progress: false
+
+jobs:
+  check-and-grade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run unit tests
+        run: python -m unittest discover -s nba_lab/tests -v
+      - name: Grade prior Eastern date
+        run: python nba_lab/grade.py
+      - name: Commit result ledger if changed
+        run: |
+          if ! git diff --quiet -- nba_lab/data/picks.jsonl; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add nba_lab/data/picks.jsonl
+            git commit -m 'nba: record independently fetched final results'
+            git push
+          else
+            echo 'No new final results to commit.'
+          fi
