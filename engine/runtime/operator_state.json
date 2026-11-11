@@ -82,9 +82,10 @@
       "url": "https://github.com/Luyi1235/RA-LSBO/issues/88"
     },
     "1f30a40f063c17b3": {
+      "checked_date": "2026-11-11",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "Implement bounty acceptance, alpha awards, fee refunds and accounting",
       "url": "https://github.com/ditto-assistant/ditto-subnet/issues/2046"
     },
@@ -97,9 +98,10 @@
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1343"
     },
     "252365b6f0f9a402": {
+      "checked_date": "2026-11-11",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "ZecHub bounty: Zcash Ecosystem Digest | November 14th (0.035 ZEC)",
       "url": "https://github.com/panoskokmotos/panoskokmotos/issues/20"
     },
@@ -112,23 +114,26 @@
       "url": "https://github.com/illbnm/homelab-stack/issues/1"
     },
     "2dfd55bc4516fffd": {
+      "checked_date": "2026-11-11",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No public paid-work wording",
+      "status": "unverified_demand",
       "title": "[P0] Autonomous agent confidence gates A1–A4 and Life Pilot completion roadmap",
       "url": "https://github.com/gregmoulton/LifePilot/issues/93"
     },
     "30a5676d0d480aa5": {
+      "checked_date": "2026-11-11",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[radar] SN open bounty 2026-11-09T16:01",
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1364"
     },
     "31e124bfd3eb8b37": {
+      "checked_date": "2026-11-11",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[$2 site credit] Add a Spanish README for agentswarm-pi",
       "url": "https://github.com/andrewsiah/agentswarm-pi/issues/1"
     },
