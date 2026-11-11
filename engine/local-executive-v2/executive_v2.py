@@ -88,6 +88,9 @@ def dbopen(path=PRIVATE / 'state.sqlite3'):
     CREATE TRIGGER IF NOT EXISTS evidence_delete BEFORE DELETE ON evidence BEGIN SELECT RAISE(ABORT,'immutable'); END;
     CREATE TABLE IF NOT EXISTS events(id TEXT PRIMARY KEY, fingerprint TEXT UNIQUE NOT NULL,
       evidence TEXT NOT NULL REFERENCES evidence(hash), classification TEXT NOT NULL, created REAL NOT NULL);
+    CREATE TABLE IF NOT EXISTS mail_refs(event_id TEXT PRIMARY KEY REFERENCES events(id),
+      source TEXT NOT NULL, validity TEXT NOT NULL, uid INTEGER NOT NULL CHECK(uid>0),
+      UNIQUE(source,validity,uid));
     CREATE TRIGGER IF NOT EXISTS event_update BEFORE UPDATE ON events BEGIN SELECT RAISE(ABORT,'immutable'); END;
     CREATE TRIGGER IF NOT EXISTS event_delete BEFORE DELETE ON events BEGIN SELECT RAISE(ABORT,'immutable'); END;
     CREATE TABLE IF NOT EXISTS work(id TEXT PRIMARY KEY, event_id TEXT NOT NULL REFERENCES events(id),
@@ -408,7 +411,15 @@ def scan_page(c, m, source, field, low, high, now):
             h = digest(raw)
             kind = classify(raw)
             if kind is not None:
-                stage(c, digest('gmail-header:' + h), h, kind, now=now)
+                fingerprint = digest('gmail-header:' + h)
+                stage(c, fingerprint, h, kind, now=now)
+                # Owner-private pointer to the ORIGINAL Gmail source. This
+                # makes stage actionable without storing any private mail text.
+                validity = c.execute('SELECT validity FROM cursors WHERE source=?',
+                                     (source,)).fetchone()[0]
+                c.execute('''INSERT OR REPLACE INTO mail_refs(event_id,source,validity,uid)
+                             VALUES(?,?,?,?)''',
+                          (digest('event:' + fingerprint), source, validity, uid))
         # field is internal, never supplied by an external caller.
         if field not in ('fresh_uid', 'historical_uid', 'live_uid'):
             raise ValueError('invalid_cursor')

@@ -19,4 +19,4 @@ jobs:
         working-directory: engine/local-executive-v2
         run: |
           python3 -m compileall -q executive_v2.py health_guard.py
-          python3 -m unittest -v test_executive_v2 test_health_guard
+          python3 -m unittest -v test_executive_v2 test_health_guard test_private_review

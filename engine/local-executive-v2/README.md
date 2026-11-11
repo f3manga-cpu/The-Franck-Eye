@@ -56,3 +56,21 @@ Owner linger is enabled, so user services continue after logout. Units use Resta
 - Two existing Beetween questionnaires require real personal remuneration/severance answers; do not invent or claim submission.
 - No production marketplace publication, financial transfer or fundraising campaign is authorized without explicit scoped approval.
 - Commercial distribution and employer acceptance must be advanced by the connected agents and authorized existing account workflows. A week of healthy green services but no external actions is an OUTCOME FAILURE, not success.
+
+## Private, traceable queue-to-message bridge
+
+The v2 state contains an owner-private mail_refs table storing a verified Gmail
+UID+UIDVALIDITY pointer for each relevant event. It does NOT persist the sender
+address, subject, body or private account identifiers in public source files.
+
+    cd ~/outcome-operator
+    python3 review_task.py pending --limit 20
+    python3 review_task.py inspect --work-id <opaque-64-character-ID> --reveal-private
+
+Inspection fetches the original Gmail message in IMAP read-only mode and must
+verify the original stored header hash and UIDVALIDITY before showing an excerpt
+to the authorized private operator. Never paste --reveal-private outputs into
+public GitHub issues, commits, logs or model prompts beyond the owner's trusted
+connected operational context. This is an evidence locator, NOT sender
+authentication, customer acceptance or payment proof. The executor must
+independently verify trust, lawful authority and every external action.
