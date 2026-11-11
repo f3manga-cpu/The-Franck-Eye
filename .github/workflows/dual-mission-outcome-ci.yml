@@ -1,0 +1,22 @@
+name: Dual-mission outcome operator regression
+on:
+  pull_request:
+    paths:
+      - 'engine/local-executive-v2/**'
+      - '.github/workflows/dual-mission-outcome-ci.yml'
+  push:
+    branches:
+      - 'feature/durable-dual-mission-operator-20261111'
+permissions:
+  contents: read
+jobs:
+  standard-library-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and test without credentials, network calls or paid APIs
+        working-directory: engine/local-executive-v2
+        run: |
+          python3 -m compileall -q executive_v2.py health_guard.py
+          python3 -m unittest -v test_executive_v2 test_health_guard

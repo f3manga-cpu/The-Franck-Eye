@@ -1,0 +1,23 @@
+[Unit]
+Description=Durable dual-mission outcome operator v2 — read-only mailbox, two execution queues
+Wants=network-online.target outcome-operator.service
+After=network-online.target outcome-operator.service
+
+[Service]
+Type=simple
+WorkingDirectory=%h/outcome-operator
+Environment=HOME=%h
+Environment=PYTHONUNBUFFERED=1
+UMask=0077
+NoNewPrivileges=true
+Nice=10
+CPUQuota=75%
+MemoryMax=480M
+ExecStartPre=/usr/bin/python3 -m unittest -q test_executive_v2 test_health_guard
+ExecStart=/usr/bin/python3 -u %h/outcome-operator/executive_v2.py loop --interval 180 --chunk 350
+Restart=always
+RestartSec=45
+TimeoutStopSec=25
+
+[Install]
+WantedBy=default.target
