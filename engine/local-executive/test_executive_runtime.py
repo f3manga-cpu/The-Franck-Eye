@@ -66,6 +66,27 @@ class ExecutiveTests(unittest.TestCase):
         r=x.allowed_inbound(mail(body="Please stop contacting us"),RULES)
         self.assertEqual(r["kind"],"classified_only")
 
+    def test_smtp_reply_is_real_idempotent_side_effect(self):
+        class FakeSMTP:
+            def __init__(self):self.messages=[]
+            def __enter__(self):return self
+            def __exit__(self,*args):return False
+            def login(self,*args):pass
+            def send_message(self,msg):
+                self.messages.append(msg)
+                return {}
+        fake=FakeSMTP()
+        item=x.allowed_inbound(mail(),RULES)
+        item["fingerprint"]="known_msg_digest"
+        with mock.patch.object(x,"credentials",return_value=("owner@example.org","valid-app-password")),\
+             mock.patch.object(x.smtplib,"SMTP_SSL",return_value=fake):
+            self.assertEqual(x.send_qualified_reply(self.c,item,live=True),"smtp_accepted")
+            self.assertEqual(x.send_qualified_reply(self.c,item,live=True),"duplicate_suppressed")
+        self.assertEqual(len(fake.messages),1)
+        self.assertEqual(fake.messages[0]["To"],"buyer@example.org")
+        self.assertNotIn("advance payment",fake.messages[0].get_content().lower())
+        self.assertEqual(self.c.execute("SELECT state FROM actions WHERE id=?",("reply:known_msg_digest",)).fetchone()[0],"SMTP_ACCEPTED")
+
     def test_no_unauthorized_job_sender(self):
         self.assertEqual(x.job_sender(self.c,False),"disabled")
 
