@@ -1,0 +1,19 @@
+[Unit]
+Description=Mission C - local read-only creator market dashboard
+After=agentic-creator-watch.service
+Wants=agentic-creator-watch.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/franck/agentic-creator-lab
+ExecStart=/usr/bin/python3 -u /home/franck/agentic-creator-lab/observatory.py --host 127.0.0.1 --port 18765
+Restart=always
+RestartSec=10
+MemoryMax=80M
+CPUQuota=10%
+Nice=12
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=default.target
