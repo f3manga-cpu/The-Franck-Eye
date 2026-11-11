@@ -128,7 +128,8 @@ def mail_body(msg) -> str:
     try: return str(msg.get_content())[:4500]
     except (ValueError,LookupError,TypeError): return ""
 
-def scan_inbox(rules: list[dict], maximum: int=350) -> tuple[int,list[dict]]:
+def scan_inbox(rules: list[dict], maximum: int=450) -> tuple[int,list[dict]]:
+    """Read recent headers in batches; fetch bodies only for authorized threads."""
     username,password=credentials()
     m=imaplib.IMAP4_SSL("imap.gmail.com",timeout=22)
     try:
@@ -139,25 +140,31 @@ def scan_inbox(rules: list[dict], maximum: int=350) -> tuple[int,list[dict]]:
         status,rows=m.uid("search",None,"SINCE",since)
         if status!="OK": raise RuntimeError("Cannot list inbox messages")
         uids=(rows[0].split() if rows and rows[0] else [])[-maximum:]
-        found=[]
-        # Fetch compact headers first. A full message is retrieved ONLY from
-        # an already-authorized sender on an already-authorized subject.
         trusted={(str(rule.get("email","")).lower(),str(rule.get("subject_key","")).lower())
                  for rule in rules if rule.get("enabled") is True}
-        for uid in uids:
-            status,data=m.uid("fetch",uid,"(BODY.PEEK[HEADER.FIELDS (FROM SUBJECT MESSAGE-ID IN-REPLY-TO REFERENCES)])")
-            if status!="OK":continue
-            chunks=[x[1] for x in data if isinstance(x,tuple) and isinstance(x[1],bytes)]
-            if not chunks: continue
-            head=BytesParser(policy=policy.default).parsebytes(chunks[0])
-            sender=parseaddr(head.get("From",""))[1].lower()
-            topic=str(head.get("Subject","")).lower()
-            if not any(sender==email and key in topic for email,key in trusted if email and key):
-                continue
+        matched=[]
+        header_command="(UID BODY.PEEK[HEADER.FIELDS (FROM SUBJECT MESSAGE-ID IN-REPLY-TO REFERENCES)])"
+        for i in range(0,len(uids),60):
+            batch=uids[i:i+60]
+            if not batch:continue
+            status,data=m.uid("fetch",b",".join(batch),header_command)
+            if status!="OK": continue
+            for entry in data:
+                if not isinstance(entry,tuple) or not isinstance(entry[1],bytes):
+                    continue
+                marker=re.search(rb"\bUID\s+(\d+)\b",entry[0])
+                if not marker: continue
+                head=BytesParser(policy=policy.default).parsebytes(entry[1])
+                sender=parseaddr(head.get("From",""))[1].lower()
+                subject=str(head.get("Subject","")).lower()
+                if any(sender==address and key in subject for address,key in trusted if address and key):
+                    matched.append(marker.group(1))
+        found=[]
+        for uid in matched:
             status,data=m.uid("fetch",uid,"(BODY.PEEK[])")
             if status!="OK":continue
             chunks=[x[1] for x in data if isinstance(x,tuple) and isinstance(x[1],bytes)]
-            if not chunks: continue
+            if not chunks:continue
             msg=BytesParser(policy=policy.default).parsebytes(chunks[0])
             relevant=allowed_inbound(msg,rules)
             if relevant:
