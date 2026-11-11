@@ -44,11 +44,11 @@ class IMAP:
             return 'OK', [b' '.join(str(i).encode() for i in sorted(self.messages) if low <= i <= high)]
         assert command == 'fetch'
         assert args[1] == '(UID BODY.PEEK[HEADER])'
-        uid = int(args[0])
-        self.fetches.append(uid)
-        if self.fail == uid:
+        uids = [int(i) for i in str(args[0]).split(',')]
+        self.fetches.extend(uids)
+        if self.fail in uids:
             raise OSError('secret address and bank number must never be logged')
-        return 'OK', [(f'1 (UID {uid} BODY[HEADER] {{100}}'.encode(), self.messages[uid]), b')']
+        return 'OK', [(f'1 (UID {uid} BODY[HEADER] {{100}}'.encode(), self.messages[uid]) for uid in uids] + [b')']
 
     def logout(self):
         self.closed = True
@@ -257,6 +257,32 @@ class V2Tests(unittest.TestCase):
         x.scan(self.c, m)
         self.assertEqual(self.c.execute('SELECT count(*) FROM work').fetchone()[0], 4)
         self.assertEqual(self.c.execute('SELECT validity FROM cursors').fetchone()[0], '2')
+
+    def test_partial_batch_fetch_rolls_back_cursor_and_tasks(self):
+        m=IMAP(60)
+        m.messages={i:header(i,subject='Questionnaire candidat') for i in range(1,61)}
+        original=m.uid
+        def incomplete(command,*args):
+            if command=='fetch':
+                status,items=original(command,*args)
+                return status,[item for item in items if not (isinstance(item,tuple) and b'UID 50 ' in item[0])]
+            return original(command,*args)
+        m.uid=incomplete
+        with self.assertRaises(RuntimeError):
+            x.scan(self.c,m,chunk=60)
+        self.assertEqual(self.c.execute('SELECT count(*) FROM work').fetchone()[0],0)
+        self.assertEqual(self.c.execute('SELECT fresh_uid FROM cursors').fetchone()[0],0)
+
+    def test_queue_mail_locator_is_private_and_idempotent(self):
+        m=IMAP(1)
+        m.messages[1]=header(1,subject='Questionnaire candidat')
+        x.scan(self.c,m)
+        locator=self.c.execute('SELECT uid,validity,source FROM mail_refs').fetchone()
+        self.assertEqual(locator['uid'],1)
+        self.assertTrue(locator['source'])
+        self.assertEqual(self.c.execute('SELECT count(*) FROM mail_refs').fetchone()[0],1)
+        x.scan(self.c,m)
+        self.assertEqual(self.c.execute('SELECT count(*) FROM mail_refs').fetchone()[0],1)
 
     def test_fetch_failure_preserves_page_cursor(self):
         m = IMAP(4)

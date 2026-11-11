@@ -400,26 +400,38 @@ def scan_page(c, m, source, field, low, high, now):
         raise RuntimeError('uid_outside_window')
     begin(c)
     try:
-        for uid in uids:
-            ok, data = m.uid('fetch', str(uid), '(UID BODY.PEEK[HEADER])')
+        # Bounded batch FETCH avoids one network round trip per message.
+        # A missing, duplicate or mismatched UID fails the entire transaction.
+        for start_idx in range(0, len(uids), 50):
+            group = uids[start_idx:start_idx+50]
+            selector = ','.join(str(uid) for uid in group)
+            ok, data = m.uid('fetch', selector, '(UID BODY.PEEK[HEADER])')
             if ok != 'OK':
                 raise RuntimeError('fetch_failed')
-            chunks = [x for x in data or [] if isinstance(x, tuple) and isinstance(x[1], bytes)]
-            if len(chunks) != 1 or not re.search(rb'\bUID\s+' + str(uid).encode() + rb'\b', chunks[0][0]):
+            fetched = {}
+            for entry in data or []:
+                if not isinstance(entry, tuple) or len(entry)<2 or not isinstance(entry[1],bytes):
+                    continue
+                match = re.search(rb'\bUID\s+(\d+)\b', entry[0])
+                if not match:
+                    raise RuntimeError('uid_missing_from_fetch')
+                uid = int(match.group(1))
+                if uid in fetched:
+                    raise RuntimeError('duplicate_uid_in_fetch')
+                fetched[uid] = entry[1]
+            if set(fetched) != set(group):
                 raise RuntimeError('fetch_incomplete')
-            raw = chunks[0][1]
-            h = digest(raw)
-            kind = classify(raw)
-            if kind is not None:
-                fingerprint = digest('gmail-header:' + h)
-                stage(c, fingerprint, h, kind, now=now)
-                # Owner-private pointer to the ORIGINAL Gmail source. This
-                # makes stage actionable without storing any private mail text.
-                validity = c.execute('SELECT validity FROM cursors WHERE source=?',
-                                     (source,)).fetchone()[0]
-                c.execute('''INSERT OR REPLACE INTO mail_refs(event_id,source,validity,uid)
-                             VALUES(?,?,?,?)''',
-                          (digest('event:' + fingerprint), source, validity, uid))
+            for uid in group:
+                raw = fetched[uid]
+                h = digest(raw)
+                kind = classify(raw)
+                if kind is not None:
+                    fingerprint = digest('gmail-header:' + h)
+                    stage(c, fingerprint, h, kind, now=now)
+                    validity = c.execute('SELECT validity FROM cursors WHERE source=?',
+                                         (source,)).fetchone()[0]
+                    c.execute('INSERT OR REPLACE INTO mail_refs(event_id,source,validity,uid) VALUES(?,?,?,?)',
+                              (digest('event:' + fingerprint), source, validity, uid))
         # field is internal, never supplied by an external caller.
         if field not in ('fresh_uid', 'historical_uid', 'live_uid'):
             raise ValueError('invalid_cursor')
