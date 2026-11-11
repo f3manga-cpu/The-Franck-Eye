@@ -29,6 +29,8 @@ jobs:
         run: python -m unittest discover -s nba_lab/tests -v
       - name: Grade prior Eastern date
         run: python nba_lab/grade.py
+      - name: Audit hit rate and probability calibration
+        run: python nba_lab/analytics.py
       - name: Commit result ledger if changed
         run: |
           if ! git diff --quiet -- nba_lab/data/picks.jsonl; then
