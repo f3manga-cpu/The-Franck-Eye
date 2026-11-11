@@ -138,23 +138,26 @@
       "url": "https://github.com/andrewsiah/agentswarm-pi/issues/1"
     },
     "323ee903b3c969ed": {
+      "checked_date": "2026-11-11",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "Implement a quota-enforced agent execution loop behind explicit opt-in",
       "url": "https://github.com/ghith93/raawaa-autonomous-engine/issues/34"
     },
     "347f505e869c0c84": {
+      "checked_date": "2026-11-11",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Excluded risky category",
+      "status": "excluded",
       "title": "[Bounty $1,450] perf(ledger): benchmark PR #66 bitwise mask vs PR #79 bitshift in compute_checkpoint_boundary",
       "url": "https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/86"
     },
     "3ad9cc0d4cdb7c1e": {
+      "checked_date": "2026-11-11",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[Bounty] Answer the 3 linked question(s)",
       "url": "https://github.com/Ikalus1988/MisakaNet/issues/3726"
     },
@@ -167,16 +170,18 @@
       "url": "https://github.com/maaltarifi97-maker/aioa-playground/issues/1"
     },
     "417e2022e234aba5": {
+      "checked_date": "2026-11-11",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No public paid-work wording",
+      "status": "unverified_demand",
       "title": "[Use Case] A seller checks the paying agent's attested software and its user's spending authority before starting paid work",
       "url": "https://github.com/fg-tida-wg0/use-cases/issues/35"
     },
     "45b312a9d5758f8b": {
+      "checked_date": "2026-11-11",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No public paid-work wording",
+      "status": "unverified_demand",
       "title": "[agent] Implement the approved milestone in the full mission objective. Preserve all previous verified work. Run focused checks and satisfy the approv",
       "url": "https://github.com/mfackrell/katie/issues/969"
     },

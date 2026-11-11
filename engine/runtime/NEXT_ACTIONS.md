@@ -21,9 +21,9 @@ Research-only output; no buyer assigned, no payment independently verified.
 | [P0 Autonomous agent confidence gates A1–A4 and Life Pilot completion roadmap](https://github.com/gregmoulton/LifePilot/issues/93) | unverified_demand | No public paid-work wording |
 | [radar SN open bounty 2026-11-09T16:01](https://github.com/relayhop/sn-monetization-runtime/issues/1364) | payment_unknown | No visible budget |
 | [$2 site credit Add a Spanish README for agentswarm-pi](https://github.com/andrewsiah/agentswarm-pi/issues/1) | payment_unknown | No visible budget |
-| [Implement a quota-enforced agent execution loop behind explicit opt-in](https://github.com/ghith93/raawaa-autonomous-engine/issues/34) | queued | Awaiting check |
-| [Bounty $1,450 perf(ledger): benchmark PR #66 bitwise mask vs PR #79 bitshift in compute_checkpoint_boundary](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/86) | queued | Awaiting check |
-| [Bounty Answer the 3 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/3726) | queued | Awaiting check |
+| [Implement a quota-enforced agent execution loop behind explicit opt-in](https://github.com/ghith93/raawaa-autonomous-engine/issues/34) | payment_unknown | No visible budget |
+| [Bounty $1,450 perf(ledger): benchmark PR #66 bitwise mask vs PR #79 bitshift in compute_checkpoint_boundary](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/86) | excluded | Excluded risky category |
+| [Bounty Answer the 3 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/3726) | payment_unknown | No visible budget |
 
 No Stripe/Gmail/Apollo account access is inherited by this worker.
 No automated messages, purchases, transfers, contracts, or deployments.
