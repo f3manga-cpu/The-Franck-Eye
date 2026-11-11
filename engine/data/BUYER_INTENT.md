@@ -1,33 +1,33 @@
 # Buyer-intent discovery
 
-Run: 2026-11-11T14:44:39.389249+00:00
+Run: 2026-11-11T21:35:27.113489+00:00
 
 **Unverified public research; no paid customer has been established.**
 
 | Score | Open request | Posted budget |
 |---:|---|---|
-| 6 | [[BOUNTY[$420[ADD P. Diddy Lube](https://github.com/theselfish/SlopStation13/issues/40) | $420 |
-| 6 | [🎯 Bounty Alert: 10 New Opportunityies found](https://github.com/freedom-winds/BountyScout/issues/1361) | $30 |
-| 5 | [[BOUNTY Support Play Integrity over remote DroidGuard + Server/Guide [$85](https://github.com/microg/GmsCore/issues/2851) | $85 |
-| 5 | [[BOUNTY $50 SKILL: Generate a structured CHANGELOG from git history](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1) | $50 |
-| 5 | [[BOUNTY $100 HOOK: Pre-tool-use hook that blocks destructive bash commands](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3) | $100 |
-| 5 | [[BOUNTY $75 TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2) | $75 |
-| 5 | [[BOUNTY $150 AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4) | $150 |
-| 5 | [[BOUNTY $200 WORKFLOW: n8n + Claude Code — automated weekly dev summary](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5) | $200 |
-| 5 | [Frantic bounty #97: Your first bounty is on the house ($10 back when it clears, first five)](https://github.com/auscaster/frantic-board/issues/277) | $10 |
-| 4 | [[BOUNTY huge important bounty bounty bounty](https://github.com/Trauma-Station/Trauma-Station/issues/5225) | $10000 |
-| 3 | [BOUNTY-02: One-file Python CLI client for the 12-service x402 fleet](https://github.com/bshelby88/raen-bounties/issues/2) | Unknown |
-| 3 | [[$2 site credit Add a Vietnamese README for agentswarm-mcp](https://github.com/andrewsiah/agentswarm-mcp/issues/12) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4642) | Unknown |
-| 3 | [CODEX READY REMEDIATION QUEUE](https://github.com/Donh91/Investering-Framework-Archive-v1/issues/643) | 05 USD |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4571) | Unknown |
-| 3 | [Implement bounty acceptance, alpha awards, fee refunds and accounting](https://github.com/ditto-assistant/ditto-subnet/issues/2046) | Unknown |
-| 3 | [Specify scoped build-bounty rules, alpha funding and governance](https://github.com/ditto-assistant/ditto-subnet/issues/2044) | Unknown |
-| 3 | [[BOUNTY: 35 RTC + 10/defect Audit the payout pipeline for silent-success failures](https://github.com/Scottcjn/rustchain-bounties/issues/16471) | Unknown |
-| 3 | [Add bounty operator controls and gate funded activation](https://github.com/ditto-assistant/ditto-subnet/issues/2943) | Unknown |
-| 3 | [Community bounties & contributor program (open call)](https://github.com/coreguard-global/CoreGuard/issues/31) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4494) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4692) | Unknown |
-| 2 | [BOUNTY-03: CrewAI tool wrappers for dispute_letter + contract_analyze](https://github.com/bshelby88/raen-bounties/issues/3) | Unknown |
-| 2 | [[$2 site credit Add a Rust example that lists open bounties](https://github.com/andrewsiah/agentswarm-examples/issues/22) | Unknown |
-| 2 | [[$2 site credit Add a TypeScript example that lists open bounties](https://github.com/andrewsiah/agentswarm-examples/issues/21) | Unknown |
+| 5 | [[BOUNTY $300 SSO — Authentik 统一身份认证](https://github.com/illbnm/homelab-stack/issues/9) | $300 |
+| 5 | [[BOUNTY $280 Observability — Prometheus + Grafana + Loki + Alerting](https://github.com/illbnm/homelab-stack/issues/10) | $280 |
+| 5 | [[BOUNTY $250 Robustness — 国内网络适配 + 环境鲁棒性](https://github.com/illbnm/homelab-stack/issues/8) | $250 |
+| 5 | [[BOUNTY $220 AI Stack — Ollama + Open WebUI + Stable Diffusion](https://github.com/illbnm/homelab-stack/issues/6) | $220 |
+| 5 | [[BOUNTY $200 Testing — 自动化测试套件](https://github.com/illbnm/homelab-stack/issues/14) | $200 |
+| 5 | [[BOUNTY $180 Base Infrastructure — Traefik + Portainer + Watchtower](https://github.com/illbnm/homelab-stack/issues/1) | $180 |
+| 5 | [[BOUNTY $170 Productivity Stack — Gitea + Vaultwarden + Outline + BookStack](https://github.com/illbnm/homelab-stack/issues/5) | $170 |
+| 5 | [[BOUNTY $160 Media Stack — Jellyfin + Sonarr + Radarr + qBittorrent](https://github.com/illbnm/homelab-stack/issues/2) | $160 |
+| 5 | [[BOUNTY $150 Storage Stack — Nextcloud + MinIO + FileBrowser](https://github.com/illbnm/homelab-stack/issues/3) | $150 |
+| 5 | [[BOUNTY $150 Backup & DR — 自动备份 + 灾难恢复](https://github.com/illbnm/homelab-stack/issues/12) | $150 |
+| 5 | [[BOUNTY $140 Network Stack — AdGuard Home + WireGuard + Nginx Proxy Manager](https://github.com/illbnm/homelab-stack/issues/4) | $140 |
+| 5 | [[BOUNTY $130 Home Automation — Home Assistant + Node-RED + Zigbee2MQTT](https://github.com/illbnm/homelab-stack/issues/7) | $130 |
+| 5 | [[BOUNTY $130 Database Layer — PostgreSQL + Redis + MariaDB 共享实例](https://github.com/illbnm/homelab-stack/issues/11) | $130 |
+| 5 | [[BOUNTY $80 Notifications — 统一通知中心 (Gotify + Apprise)](https://github.com/illbnm/homelab-stack/issues/13) | $80 |
+| 5 | [Crafting a Comprehensive Tutorial for Vectara Chat](https://github.com/lablab-ai/community-content/issues/462) | $60 |
+| 5 | [[BOUNTY WearOS Support [$2340](https://github.com/microg/GmsCore/issues/2843) | $2340 |
+| 5 | [Local Model Support via Ollama $400](https://github.com/Spectral-Finance/lux/issues/96) | $400 |
+| 5 | [Uniswap V3 Integration and Liquidity Management $900](https://github.com/Spectral-Finance/lux/issues/78) | $900 |
+| 5 | [Hyperliquid Integration and Perpetual Trading $900](https://github.com/Spectral-Finance/lux/issues/82) | $900 |
+| 5 | [LLM Provider Abstraction Layer $600](https://github.com/Spectral-Finance/lux/issues/99) | $600 |
+| 5 | [Rust Component Definition Support $500](https://github.com/Spectral-Finance/lux/issues/103) | $500 |
+| 5 | [Rust Core Integration Setup $500](https://github.com/Spectral-Finance/lux/issues/94) | $500 |
+| 5 | [OpenRouter Integration $500](https://github.com/Spectral-Finance/lux/issues/95) | $500 |
+| 5 | [Rust Type System and Serialization $450](https://github.com/Spectral-Finance/lux/issues/101) | $450 |
+| 5 | [Rust Testing Framework Integration $350](https://github.com/Spectral-Finance/lux/issues/102) | $350 |
