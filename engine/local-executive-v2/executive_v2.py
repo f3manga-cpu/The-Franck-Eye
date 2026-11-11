@@ -319,11 +319,11 @@ def classify(raw):
     try:
         msg = BytesParser(policy=policy.default).parsebytes(raw, headersonly=True)
         if msg.defects or not msg.get('From') or not msg.get('Subject'):
-            return 'mail_review'
+            return None
         subj = str(msg.get('Subject', '')).lower()
         if re.search(r'questionnaire|compl[eé]tez votre dossier|formulaire candidat|application questionnaire', subj):
             return 'questionnaire'
-        if re.search(r'\b(candidature|application received|application status|recruiter|entretien|interview|screening|offer letter|assessment|poste)\b', subj):
+        if re.search(r'\b(candidature|application received|application status|recruiter|entretien|interview|screening|offer letter|assessment)\b', subj):
             return 'recruiter_correspondence'
         if re.search(r'\b(facture|invoice|virement|paiement|payment received|payout|r[eè]glement|remittance)\b', subj):
             return 'receivable_notice'
@@ -331,7 +331,7 @@ def classify(raw):
             return 'commercial_correspondence'
         return None
     except (ValueError, TypeError, LookupError):
-        return 'mail_review'
+        return None
 
 
 def existing_credentials():

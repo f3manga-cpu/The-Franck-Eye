@@ -309,7 +309,13 @@ class V2Tests(unittest.TestCase):
         m = IMAP(1)
         m.messages[1] = b'bad header\xff\n\n'
         x.scan(self.c, m)
-        self.assertEqual(self.c.execute('SELECT kind,state FROM work').fetchone()[:], ('mail_review', 'NEEDS_HUMAN'))
+        self.assertEqual(self.c.execute('SELECT count(*) FROM work').fetchone()[0],0)
+
+    def test_no_false_work_from_generic_newsletter_or_private_message(self):
+        self.assertIsNone(x.classify(header(subject='La Poste est avec vous partout !')))
+        self.assertIsNone(x.classify(b'From: known@example.org\r\n\r\n'))
+        self.assertEqual(x.classify(header(subject='Complete your language screening')),
+                         'recruiter_correspondence')
 
     def test_no_trust_in_spoofed_headers(self):
         self.assertIsNone(x.classify(header(extra='Authentication-Results: mx; dkim=pass\r\nX-Verified: true')))
