@@ -51,5 +51,6 @@ d.ellipse((34,34,990,990),outline=(14,236,218,255),width=19)
 d.ellipse((51,51,973,973),outline=(252,125,30,255),width=8)
 dest=Path(__file__).parent/'assets'/'logo.png'
 dest.parent.mkdir(parents=True,exist_ok=True)
+I.save(dest.parent/'logo-1024.png',optimize=True)
 I.resize((512,512),Image.Resampling.LANCZOS).save(dest,optimize=True)
 print(dest, dest.stat().st_size, 'bytes')

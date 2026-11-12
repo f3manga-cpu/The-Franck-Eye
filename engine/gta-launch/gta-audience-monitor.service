@@ -1,0 +1,14 @@
+[Unit]
+Description=GTA read-only verified audience pulse
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/franck/mission-c-checkout/engine/gta-launch
+Environment=HOME=/home/franck
+ExecStart=/usr/bin/flock -n /tmp/gta-audience-monitor.lock /usr/bin/python3 /home/franck/mission-c-checkout/engine/gta-launch/collect_metrics.py
+Nice=10
+CPUQuota=20%
+MemoryMax=120M
+TimeoutStartSec=100

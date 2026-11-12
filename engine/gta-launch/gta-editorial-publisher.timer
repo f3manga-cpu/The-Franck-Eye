@@ -1,0 +1,11 @@
+[Unit]
+Description=Publish queued GTA fictional dispatches daily
+
+[Timer]
+OnCalendar=*-*-* 12:05:00
+Persistent=true
+RandomizedDelaySec=0
+Unit=gta-editorial-publisher.service
+
+[Install]
+WantedBy=timers.target

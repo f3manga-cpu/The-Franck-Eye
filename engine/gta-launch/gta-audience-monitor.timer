@@ -1,0 +1,10 @@
+[Unit]
+Description=Check GTA public uptime and genuine community signals 4 times daily
+
+[Timer]
+OnCalendar=*-*-* 00,06,12,18:25:00
+Persistent=true
+Unit=gta-audience-monitor.service
+
+[Install]
+WantedBy=timers.target

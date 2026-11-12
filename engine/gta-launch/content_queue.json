@@ -1,0 +1,63 @@
+{
+  "project": "Greatest Token Action",
+  "timezone": "Europe/Paris",
+  "stories": [
+    {
+      "slug": "signal-001",
+      "when": "2026-11-13T00:00:00+01:00",
+      "category": "OPENING BROADCAST",
+      "title": "The Switch Is On",
+      "dek": "A fictional city. A new transmission. The first signal from Greatest Token Action.",
+      "body": [
+        "The screens went dark at 23:59. At midnight, one light came back. Our fictional broadcast network calls that moment the Switch.",
+        "I'm ARCH, your synthetic anchor. Across the city, SABLE is recording what happens when people stop waiting for the next spectacle and start making something of their own.",
+        "This is the first dispatch from Greatest Token Action: an independent creative experiment in gaming culture, characters, visual storytelling and community participation.",
+        "There's no live token to buy. No market result to celebrate. Just the opening scene, and a promise that the next report will describe what actually happened rather than inventing momentum.",
+        "Tomorrow, SABLE returns with the first field report. The city is imaginary. The work is real."
+      ],
+      "social": "SIGNAL 001 // THE SWITCH IS ON. Meet ARCH and SABLE, the voices of a new fictional gaming-culture broadcast. Greatest Token Action is an independent creative experiment. No token is live. The first transmission: {url}"
+    },
+    {
+      "slug": "signal-002",
+      "when": "2026-11-14T12:00:00+01:00",
+      "category": "FIELD REPORT",
+      "title": "A City Built by Attention",
+      "dek": "SABLE reports on the one thing a fictional city cannot manufacture: a genuine audience.",
+      "body": [
+        "SABLE here. In the city, everyone can paint a billboard. Not everyone can make somebody stop and look.",
+        "We're collecting real responses to our stories, not invented follower counts, artificial volume or screenshots claiming a triumph that hasn't happened.",
+        "Every original character needs a reason to return. Every dispatch needs something worth hearing. If this experiment earns an audience, the evidence should exist outside our own scripts.",
+        "ARCH will keep the official record. I'll keep asking the uncomfortable question: who came back when nobody told them to?"
+      ],
+      "social": "SIGNAL 002 // A CITY BUILT BY ATTENTION. Hype is easy to manufacture on a screen. Returning readers aren't. A fictional field report from SABLE: {url}"
+    },
+    {
+      "slug": "signal-003",
+      "when": "2026-11-15T12:00:00+01:00",
+      "category": "NIGHT SHIFT",
+      "title": "After the Headlines",
+      "dek": "ARCH and SABLE take the night shift in an original neon metropolis.",
+      "body": [
+        "ARCH: When the headlines are over, the city has to continue living. Our job is to find the small stories that keep it awake.",
+        "SABLE: A train station with no trains. A mural nobody signed. Three bright windows above the boulevard. Every one of them has a story if someone cares enough to ask.",
+        "Tonight's assignment is simple: invent a scene, not a price prediction. One location, one character and one choice. The best worlds begin with details.",
+        "Our newsroom is fictional, and independent of any existing video-game franchise. The experiment is to build a universe that can stand on its own."
+      ],
+      "social": "SIGNAL 003 // AFTER THE HEADLINES. A city isn't its skyline; it's the stories people choose to tell about it. A new GTA fictional night-shift dispatch: {url}"
+    },
+    {
+      "slug": "signal-004",
+      "when": "2026-11-16T12:00:00+01:00",
+      "category": "THE RUMOR DESK",
+      "title": "Who Owns the Story?",
+      "dek": "No official affiliations. No borrowed protagonists. The city invents its own mythology.",
+      "body": [
+        "The Rumor Desk has a rule: don't repeat something simply because everyone else is repeating it.",
+        "Greatest Token Action is not affiliated with Rockstar Games, Grand Theft Auto or any video-game publisher. ARCH and SABLE are original fictional characters in an original fictional setting.",
+        "Our project borrows a universal idea from gaming culture rather than any protected game: the pleasure of a world that seems larger than the screen and a shared story you can revisit.",
+        "From here, each broadcast should add a character, a place, a consequence or a real verified milestone. Nothing else counts as progress."
+      ],
+      "social": "SIGNAL 004 // WHO OWNS THE STORY? Original characters, original city, independent fictional news. No borrowed protagonists or official game affiliation: {url}"
+    }
+  ]
+}

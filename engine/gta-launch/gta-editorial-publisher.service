@@ -1,0 +1,14 @@
+[Unit]
+Description=GTA original editorial publisher (GitHub Pages, no token operations)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/franck/mission-c-checkout/engine/gta-launch
+Environment=HOME=/home/franck
+ExecStart=/usr/bin/flock -n /tmp/gta-editorial-publish.lock /usr/bin/python3 /home/franck/mission-c-checkout/engine/gta-launch/publish.py --publish --push
+Nice=10
+CPUQuota=20%
+MemoryMax=150M
+TimeoutStartSec=120

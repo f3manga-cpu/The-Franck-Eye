@@ -25,3 +25,11 @@ Token name: Greatest Token Action. Proposed ticker: GTA (nonunique). Default SOL
 For official create_v2 API see https://github.com/pump-fun/pump-public-docs/blob/main/docs/instructions/COIN_CREATION.md and https://pump.fun/docs/fees.
 
 **No live token is created by these commands.**
+
+## Ongoing independent editorial and audience processes
+- `publish.py --publish --push`: one story becomes public when its queued date arrives; auto-publish does not create financial offers, send social posts or mint a coin. See `content_queue.json`.
+- `gta-editorial-publisher.timer`: scheduled daily 12:05 Europe/Paris, with persistent catch-up after reboot.
+- `collect_metrics.py`: independent community issue #9 and site availability checks, storing timestamped snapshots locally under `data/`. GitHub repository view counts are not the website pageview metric.
+- `gta-audience-monitor.timer`: runs four times a day. No fake site traffic claims or unknown wallet earnings.
+- Public community-feedback issue: https://github.com/f3manga-cpu/The-Franck-Eye/issues/9 (requires GitHub sign-in).
+- Publishing to pump.fun or social networks remains blocked pending account session and connected network; the hosted stories are separate.
