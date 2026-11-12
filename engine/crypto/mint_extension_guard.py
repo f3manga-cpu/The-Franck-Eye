@@ -49,10 +49,21 @@ def decode_mint(account):
                 raise ValueError("Truncated extension payload")
             extensions.append(typ)
             offset += length
-    # Extension IDs must be evaluated against the installed canonical Token-2022 spec
-    # before interpreting displayed balances or transferability.
+    # Conservative risk triage, not proof of active configuration or fee entitlement.
+    # Token-2022 ExtensionType IDs: TransferFeeConfig=1,
+    # NonTransferable=9, PermanentDelegate=12. Unknown types also block valuation.
+    risk_flags = []
+    for extension_id, warning in ((1, "TRANSFER_FEE_CONFIG_REVIEW"),
+                                  (9, "NON_TRANSFERABLE_REVIEW"),
+                                  (12, "PERMANENT_DELEGATE_REVIEW")):
+        if extension_id in extensions:
+            risk_flags.append(warning)
+    if extensions:
+        risk_flags.append("EXTENSION_AWARE_VALUATION_REQUIRED")
+    # Flags are deliberately advisory; no token is asserted to be transferable.
     return {"status":"MINT_LAYOUT_VERIFIED", "token_program":account["owner"],
             "decimals":decimals, "extension_type_ids":extensions,
+            "risk_flags":risk_flags,
             "economic_value_verified":False,"transferability_verified":False,
             "fee_receipt_verified":False}
 

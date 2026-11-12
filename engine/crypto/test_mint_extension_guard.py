@@ -48,6 +48,16 @@ class Tests(unittest.TestCase):
         a["data"][0]=base64.b64encode(blob).decode()
         with self.assertRaisesRegex(ValueError,"authority option tag"):
             decode_mint(a)
+    def test_extension_risk_triage(self):
+        ext=b"".join(struct.pack("<HH",t,0) for t in (1,9,12,18))
+        result=decode_mint(make(TOKEN_2022,ext))
+        self.assertEqual(result["risk_flags"],[
+            "TRANSFER_FEE_CONFIG_REVIEW","NON_TRANSFERABLE_REVIEW",
+            "PERMANENT_DELEGATE_REVIEW","EXTENSION_AWARE_VALUATION_REQUIRED"])
+        self.assertFalse(result["transferability_verified"])
+        self.assertFalse(result["economic_value_verified"])
+    def test_no_extension_risk_flags(self):
+        self.assertEqual(decode_mint(make())["risk_flags"],[])
     def test_wrong_owner(self):
         with self.assertRaises(ValueError):decode_mint(make("invalid"))
     def test_invalid_mint_before_network(self):
