@@ -13,7 +13,7 @@ node launch.mjs --dry-run --creator YOUR_PUBLIC_SOLANA_ADDRESS --metadata-uri ht
 
 The preview intentionally generates an ephemeral mint keypair and discards the secret. The printed preview mint address is **not a launched coin** and cannot later be used as a real mint. There is no signing, key handling, RPC broadcast, private-key import, account access, or trade capability. No secrets belong in this repository.
 
-Token name: Greatest Token Action. Proposed ticker: GTA (nonunique). Default SOL pair, creator fee mode on, holder rewards off, mayhem mode off. No initial buy proposed or authorized. Metadata template in `token.json` includes an independent/no-affiliation statement. Image is generated via `make_logo.py` in `assets/logo.png`; public permanent metadata/image pinning is outstanding.
+Token name: Greatest Token Action. Proposed ticker: GTA (nonunique). Default SOL pair, creator fee mode on, holder rewards off, mayhem mode off. No initial buy proposed or authorized. Staging metadata and original image are now publicly served at `https://f3manga-cpu.github.io/The-Franck-Eye/gta-staging/metadata.json` and `/logo.png` (both HTTP 200 verified on 2026-11-12). This is an editable staging endpoint and **not a permanent IPFS URI for a live coin**. Metadata template in `token.json` includes an independent/no-affiliation statement. Image is generated via `make_logo.py` in `assets/logo.png`; public permanent metadata/image pinning is outstanding.
 
 ## Honest launch gating
 1. Confirm the identity/rights and uniqueness (other GTA ticker coins already exist), artwork and social links. Keep independent from Rockstar IP and make no official affiliation claims.

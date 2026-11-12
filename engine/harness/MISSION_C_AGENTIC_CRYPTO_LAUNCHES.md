@@ -33,6 +33,13 @@ Read `engine/harness/PUMPFUN_RESEARCH_2026-11-12.md` before choosing launch or d
 5. Re-run on an ongoing schedule with deduplication, crash restart, stale-source detection and exception-only reports.
 6. Verify outcome stages separately: researched, built, tested, deployed, used, fees earned, transferable balance, actual bank credit.
 
+## Verifiable launch-preparation deliverable — 2026-11-12
+- **Actual project:** `engine/gta-launch/`, using official `@pump-fun/pump-sdk@4.1.0` and Solana web3.js on the online laptop. `npm test` passed three tests; real SDK `createV2Instruction` produced a nonbroadcasting 16-account instruction with 157 bytes when given the verified staging metadata URL.
+- **Original artwork + metadata:** `docs/gta-staging/logo.png` (512×512) and `metadata.json`; both were verified HTTP 200 via GitHub Pages. No token issued. This GitHub Pages staging URI is mutable, not final immutable IPFS metadata.
+- **No wallet credentials/signing:** no Solana CLI wallet or detected browser wallet extension in common laptop profile paths. The script generates an ephemeral unsigned preview mint key; its address is not a live coin and no secret is retained.
+- **Irreducible live gates:** owner-controlled creator/payer wallet and enough SOL for actual account rent/fees; immutable verified metadata; applicable France/EU token offering/admission/marketing compliance determination; explicit per-transaction authorization. The default additional spending authorization remains €0.
+- Do not represent the preparation as a launch or keep expanding generic dashboards in place of identifying/removing the exact gate. Next cycle should address legitimate safe gating steps and real creator distribution mechanisms with independent evidence.
+
 ## Required honesty
 This document itself is only a documented mission. An automation schedule is not a resident autonomous agent. A local research daemon is not proof of token deployment, usage, real fees or bank-settled cash.
 
