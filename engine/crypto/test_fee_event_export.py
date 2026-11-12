@@ -30,5 +30,3 @@ class ExportTests(unittest.TestCase):
             con.close()
             self.assertEqual(len(export(db).splitlines()),1)
 if __name__=='__main__':unittest.main()
-
-[executed on device: franck-pc-portable (f33e61fa-10ff-4a7f-845b-7dbff80d0f4f)]

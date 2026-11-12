@@ -41,4 +41,3 @@ if __name__=='__main__':
     if a.output:a.output.write_text(content)
     else:print(content,end='')
 
-[executed on device: franck-pc-portable (f33e61fa-10ff-4a7f-845b-7dbff80d0f4f)]

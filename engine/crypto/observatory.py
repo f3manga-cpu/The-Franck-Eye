@@ -18,13 +18,13 @@ DB=ROOT/"observations.sqlite3"
 
 def snapshot(db=DB):
     if not Path(db).is_file():
-        return {"status":"no_data","cycles":0,"assets":[]}
+        return {"status":"no_data","cycles":0,"assets":[],"revenue_verified":False,"financial_transactions":0}
     con=sqlite3.connect(f"file:{Path(db).resolve()}?mode=ro",uri=True,timeout=4)
     con.row_factory=sqlite3.Row
     try:
         last=con.execute("SELECT observed_at,status,error FROM cycles ORDER BY id DESC LIMIT 1").fetchone()
         if not last:
-            return {"status":"no_data","cycles":0,"assets":[]}
+            return {"status":"no_data","cycles":0,"assets":[],"revenue_verified":False,"financial_transactions":0}
         count=con.execute("SELECT COUNT(*) FROM cycles").fetchone()[0]
         latest=con.execute("SELECT MAX(observed_at) FROM observations").fetchone()[0]
         rows=con.execute("""SELECT token_address,symbol,name,dex,pair_url,volume24_usd,liquidity_usd,
