@@ -22,6 +22,12 @@ def candidate_quote_assets(tx):
                 mint=item['mint']; decimals=item['uiTokenAmount'].get('decimals')
                 if len(mint)>=32 and isinstance(decimals,int) and not isinstance(decimals,bool) and 0<=decimals<=18:
                     seen[(mint,decimals)]+=1
-    candidates=[{'mint':mint,'decimals':decimals,'source':'TRANSACTION_TOKEN_BALANCE_METADATA'} for mint,decimals in sorted(seen)]
-    return {'status':'CANDIDATES_ONLY_NOT_ATTRIBUTED' if candidates else 'NO_TOKEN_BALANCE_CANDIDATES',
+    # Conflicting decimals for one mint make monetary interpretation unsafe.
+    by_mint = {}
+    for mint, decimals in seen:
+        by_mint.setdefault(mint, set()).add(decimals)
+    conflicts = sorted(mint for mint, decimals in by_mint.items() if len(decimals) > 1)
+    candidates=[{'mint':mint,'decimals':decimals,'source':'TRANSACTION_TOKEN_BALANCE_METADATA'} for mint,decimals in sorted(seen) if mint not in conflicts]
+    return {'status':'CONFLICTING_MINT_DECIMALS' if conflicts else ('CANDIDATES_ONLY_NOT_ATTRIBUTED' if candidates else 'NO_TOKEN_BALANCE_CANDIDATES'),
+            'conflicting_mints': conflicts,
             'candidates':candidates,'quote_mint_verified':False,'fee_entitlement_verified':False}
