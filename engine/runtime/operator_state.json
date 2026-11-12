@@ -266,30 +266,34 @@
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1365"
     },
     "63a51159bd5c51c8": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Open issue; advertised $50,00 is NOT verified funded payment",
+      "status": "payment_proof_needed",
       "title": "Grant Application - Mock lightwalletd for Zcash wallet testing",
       "url": "https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/544"
     },
     "65ea506ddaba4c90": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[Bug bounty]Swap getBestAmountOut quotes on 100% of the input while execution swaps 99% (origin is never passed on the quote path)",
       "url": "https://github.com/paraspell/xcm-tools/issues/2238"
     },
     "6e4b7e0b80d4bd8c": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[$2 site credit] Add a Spanish README for agentswarm-cli",
       "url": "https://github.com/andrewsiah/agentswarm-cli/issues/7"
     },
     "6e67f166665de7a6": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "More than 30 comments",
+      "status": "crowded",
       "title": "[BOUNTY $200] WORKFLOW: n8n + Claude Code — automated weekly dev summary",
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5"
     },
@@ -302,9 +306,10 @@
       "url": "https://github.com/Spectral-Finance/lux/issues/57"
     },
     "6fdeed0c7302b32d": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Open issue; advertised $400 is NOT verified funded payment",
+      "status": "payment_proof_needed",
       "title": "Local Model Support via Ollama $400",
       "url": "https://github.com/Spectral-Finance/lux/issues/96"
     },
