@@ -1,0 +1,15 @@
+{
+  "name": "greatest-token-action-launch",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Offline audited pump.fun create_v2 instruction preparation; no signing or broadcasts.",
+  "scripts": {
+    "test": "node --test",
+    "preview": "node launch.mjs --dry-run"
+  },
+  "dependencies": {
+    "@pump-fun/pump-sdk": "4.1.0",
+    "@solana/web3.js": "1.98.4"
+  }
+}
