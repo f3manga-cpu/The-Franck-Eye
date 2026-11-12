@@ -41,5 +41,12 @@ class ReceiptTests(unittest.TestCase):
         self.assertIsNone(fetch_transaction(SIG,transport=lambda p: {"result":None}))
     def test_rpc_transaction(self):
         self.assertEqual(fetch_transaction(SIG,transport=lambda p: {"result":tx()})["slot"],321)
+    def test_version_one_supported(self):
+        calls=[]
+        def transport(payload):
+            calls.append(payload)
+            return {"result":tx()}
+        self.assertEqual(fetch_transaction(SIG, transport=transport)["slot"],321)
+        self.assertEqual(calls[0]["params"][1]["maxSupportedTransactionVersion"],1)
 
 if __name__=="__main__":unittest.main()
