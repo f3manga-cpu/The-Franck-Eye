@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T14:25:21+00:00",
+  "updated_at": "2026-11-12T15:17:33+00:00",
   "candidates": [
     {
       "id": "8da2fcbc970b410f",
@@ -57,6 +57,18 @@
       "title": "Show HN: Kiosk, a first-class AI assistants' intefrace to online services",
       "url": "https://kiosk.tech/",
       "score": 4,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "04f1f74e8fe83520",
+      "first_seen": "2026-11-12T15:17:33+00:00",
+      "date": "2026-11-11T17:11:56Z",
+      "theme": "marketplace launch",
+      "title": "Launch HN: Pomerado (YC F26) – Turn any website into an MCP for agents",
+      "url": "https://news.ycombinator.com/item?id=50455811",
+      "score": 3,
       "status": "research_only",
       "evidence": "HN submission; commercial terms and revenue NOT verified",
       "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
