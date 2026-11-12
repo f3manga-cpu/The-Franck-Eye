@@ -19,7 +19,7 @@ def decode_mint(account):
     if not isinstance(data, list) or len(data) != 2 or data[1] != "base64":
         raise ValueError("Invalid encoding")
     blob = base64.b64decode(data[0], validate=True)
-    if len(blob) < 82 or blob[45] not in (0,1):
+    if len(blob) < 82 or blob[45] != 1:
         raise ValueError("Invalid mint layout")
     decimals = blob[44]
     extensions = []
@@ -30,11 +30,15 @@ def decode_mint(account):
         if len(blob) < 166 or blob[165] != 1:
             raise ValueError("Invalid Token-2022 mint extension header")
         offset = 166
+        seen_types = set()
         while offset < len(blob):
             if len(blob) - offset < 4:
                 raise ValueError("Truncated extension header")
             typ, length = struct.unpack_from("<HH", blob, offset)
             offset += 4
+            if typ in seen_types:
+                raise ValueError("Duplicate Token-2022 extension type")
+            seen_types.add(typ)
             if length > len(blob) - offset:
                 raise ValueError("Truncated extension payload")
             extensions.append(typ)

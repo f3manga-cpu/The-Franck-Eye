@@ -23,6 +23,17 @@ class Tests(unittest.TestCase):
         self.assertFalse(result["economic_value_verified"])
     def test_truncated_extension(self):
         with self.assertRaises(ValueError):decode_mint(make(TOKEN_2022,struct.pack("<HH",18,5)+b"ab"))
+    def test_uninitialized_mint_rejected(self):
+        a=make()
+        blob=bytearray(base64.b64decode(a["data"][0]))
+        blob[45]=0
+        a["data"][0]=base64.b64encode(blob).decode()
+        with self.assertRaisesRegex(ValueError,"Invalid mint layout"):
+            decode_mint(a)
+    def test_duplicate_extension_rejected(self):
+        ext=struct.pack("<HH",18,2)+b"ab"
+        with self.assertRaisesRegex(ValueError,"Duplicate"):
+            decode_mint(make(TOKEN_2022,ext+ext))
     def test_wrong_owner(self):
         with self.assertRaises(ValueError):decode_mint(make("invalid"))
     def test_invalid_mint_before_network(self):
