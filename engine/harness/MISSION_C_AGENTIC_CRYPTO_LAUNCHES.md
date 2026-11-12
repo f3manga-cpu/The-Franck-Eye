@@ -19,6 +19,9 @@ COLLECT public/legal platform and category signals -> SCORE evidence and next fe
 Use scripts/events for deterministic steps; only invoke models where reasoning is needed. Keep incremental cost at EUR 0 unless explicitly authorized.
 Measure executable builds, passing tests, user adoption and bank-settled funds; **do not** count GitHub notes, fake volume, paper profits, speculative market cap or anecdotes as commercial outcomes.
 
+## Current verified Pump.fun market research
+Read `engine/harness/PUMPFUN_RESEARCH_2026-11-12.md` before choosing launch or distribution work. It records primary-source fee rules as of October 2026, documented creator case studies, cohort failure rates, official tokenized-agent limitations, France/EU compliance checks and an evidence-based launch readiness gate. Treat it as research, not a transaction authorization. Validate changing platform terms again before any live action.
+
 ## Implementation checkpoints
 1. Audit existing Pump.fun/GTO assets, repositories, installed runtimes and connectivity.
 2. Create a genuinely running zero-cost public-information/creator-economics scanner with versioned stored snapshots and hard error handling.
