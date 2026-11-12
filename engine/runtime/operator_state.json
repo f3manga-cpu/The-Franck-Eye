@@ -314,37 +314,42 @@
       "url": "https://github.com/Spectral-Finance/lux/issues/96"
     },
     "70c95b995e189987": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[BOUNTY: 8 RTC] rustchain-mcp: document + test streaming/long-running tool behavior (answers rustchain-mcp#231)",
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/16255"
     },
     "723762d19cb55a12": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "More than 30 comments",
+      "status": "crowded",
       "title": "[BOUNTY $75] TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project",
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2"
     },
     "742f068ae7099186": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "AUTO-12 — Bounded Claude agentic loop and resumable issue lifecycle",
       "url": "https://github.com/tonygward/audio-plugins/issues/180"
     },
     "75ec30833773080e": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "Tasks page should show only Open tasks by default",
       "url": "https://github.com/Godbrand0/Tasked/issues/27"
     },
     "7ac534a3e7eef60b": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "More than 30 comments",
+      "status": "crowded",
       "title": "[PAID BOUNTY - $330] Email Inbox Classic View Page UI",
       "url": "https://github.com/warpspeedopen-source/warpspeed-bounties/issues/2"
     },
