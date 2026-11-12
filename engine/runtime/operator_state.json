@@ -354,37 +354,42 @@
       "url": "https://github.com/warpspeedopen-source/warpspeed-bounties/issues/2"
     },
     "805af8c5d1b762d3": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[Bug bounty] verifyEdOnDestination returns false when the recipient would end up at exactly the existential deposit",
       "url": "https://github.com/paraspell/xcm-tools/issues/2237"
     },
     "824d516ddf404a21": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[MICRO-BOUNTY: 0.1 RTC] Why did you choose to work on an Elyan Labs repo?",
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/16863"
     },
     "8272d322e09046e8": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "Linux Flatpak: copy to clipboard silently fails under Wayland (no X11 in sandbox)",
       "url": "https://github.com/tari-project/universe/issues/3489"
     },
     "858c44246604b8b8": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[Bounty] Answer the 2 linked question(s)",
       "url": "https://github.com/Ikalus1988/MisakaNet/issues/4132"
     },
     "8639c0b5b84eb4dc": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "Add React Native support",
       "url": "https://github.com/prasenjeet-symon/shipli-ai/issues/1"
     },
