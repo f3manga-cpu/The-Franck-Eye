@@ -2,6 +2,9 @@
 Created 2026-11-11. User-specified third autonomous mission. This is a live operating objective, not a claim that agents or tokens are deployed.
 Read OUTCOME_MISSIONS_V3.md, UNIVERSAL_OPERATOR_DIRECTIVE.md and this file each cycle.
 
+## Active user-directed launch identity — 2026-11-12
+**Current working brand is Greatest Token Action (GTA)**; this replaces Gotham Fifth Overbet (GTO) and any suggestion to use Greatest Token Arcade. Read `engine/harness/GTA_GREATEST_TOKEN_ACTION_BRIEF_2026-11-12.md` every cycle and direct meaningful execution toward original content-world creation, launch-readiness technical checks (unsigned only), distribution verification and a real launch decision. Do not spend entire cycles merely expanding generic market telemetry. Ticker is provisional; a distinct coin named Greatest Token Alive is already present as GTA. Avoid Rockstar IP, game affiliation implications, deceptive hype or targeting minors. No on-chain mint, signing, financial transactions or unauthorized public promotion. Log actual progress against launch gating and independently proven organic participation.
+
 ## Objective
 Use autonomous AI engineering and operating capabilities to systematically investigate, build, test, publish where authorized, distribute honestly and improve promising crypto-adjacent products and token-creator platforms, particularly the capabilities demonstrated in the user's Pump.fun / agentic-terminal video. Independent idea generation matters: do not constrain exploration to earlier suggested themes or existing brands. Aim for lawful **verified creator/platform income and usable technology**, not simulation theater, speculative profit promises, or token market-cap headlines. This mission is independent from the wider source-agnostic bank-money mission, although verified proceeds can count there with careful attribution.
 
