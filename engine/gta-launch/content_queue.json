@@ -58,6 +58,111 @@
         "From here, each broadcast should add a character, a place, a consequence or a real verified milestone. Nothing else counts as progress."
       ],
       "social": "SIGNAL 004 // WHO OWNS THE STORY? Original characters, original city, independent fictional news. No borrowed protagonists or official game affiliation: {url}"
+    },
+    {
+      "slug": "signal-005",
+      "when": "2026-11-17T12:00:00+01:00",
+      "category": "THE CITY AFTER DARK",
+      "title": "The Last Quiet Hour",
+      "dek": "In the fictional city, ARCH hears a broadcast no station claims to have sent.",
+      "body": [
+        "ARCH: At 03:17 the transmission came through a dead frequency. No music. No voice. Just the sound of footsteps and a door unlocking.",
+        "SABLE: I followed it to a rooftop greenhouse above the expressway. Someone had painted a map of the city on the glass, then crossed out every road leading toward the center.",
+        "ARCH: We don't know who made it. We do know the map changed one detail overnight: a small orange circle now sits exactly where the old radio tower used to stand.",
+        "SABLE: Our question for the audience isn't what the orange mark means. It's what you would do if an unknown map appeared where you lived. Ignore it, photograph it, or follow it?",
+        "This is fiction. The city, its streets and its characters belong to this original story, not to an existing game."
+      ],
+      "social": "TRANSMISSION 005 // THE LAST QUIET HOUR. An abandoned frequency. An orange circle. One impossible map. What would you do? Follow our original fictional city: {url}"
+    },
+    {
+      "slug": "signal-006",
+      "when": "2026-11-18T12:00:00+01:00",
+      "category": "PREMIERE EVE",
+      "title": "Nobody Can Own Midnight",
+      "dek": "The newsroom looks for the smallest story on the eve of an enormous cultural weekend.",
+      "body": [
+        "SABLE: Everybody's watching a clock tonight. Every screen has a countdown, every street seems to be waiting for something else.",
+        "ARCH: The headlines belong to the world outside. Our job is to give this fictional city something that belongs only to it.",
+        "SABLE: I found a projectionist in a theatre with no film. Instead of showing a movie, she turns the lights on empty seats and invites strangers to tell one-minute stories about the city they wish existed.",
+        "ARCH: She calls the event Midnight Commons. The admission price is one original idea, no money required. Someone offered a lighthouse on a moving train. Someone else invented a bridge that only appears when it rains.",
+        "Tomorrow the world will be looking outward. Tonight, the story starts with what we make."
+      ],
+      "social": "TRANSMISSION 006 // NOBODY CAN OWN MIDNIGHT. The world's clocks are counting down. Our fictional city holds an original story night. What should its next landmark be? {url}"
+    },
+    {
+      "slug": "signal-007",
+      "when": "2026-11-19T12:00:00+01:00",
+      "category": "MIDNIGHT EDITION",
+      "title": "Everybody Is Awake",
+      "dek": "ARCH and SABLE take over the fictional newsroom during a worldwide gaming weekend.",
+      "body": [
+        "ARCH: The city is awake. So are millions of players everywhere, stepping into stories designed by others and imagining the ones they might create themselves.",
+        "SABLE: Our original city has its own emergency: the radio tower has begun transmitting a list of places that don't exist, but everybody remembers visiting.",
+        "ARCH: The first place is the Hotel Tomorrow. It has 17 floors and no doors. The second is a railway line marked Return Only. The third is a street named after someone no archive can identify.",
+        "SABLE: We have decided to investigate one location first. The choice is left to the readers of this fictional broadcast: hotel, railway or street?",
+        "Our creative experiment is independently produced and unrelated to any game's publishers, characters or official releases. No cryptocurrency is live unless separately announced with a verified mint address."
+      ],
+      "social": "TRANSMISSION 007 // EVERYBODY IS AWAKE. A midnight edition from our entirely original fictional city. Hotel Tomorrow, Return Only railway, or the nameless street? Vote with your story idea: {url}"
+    },
+    {
+      "slug": "signal-008",
+      "when": "2026-11-20T12:00:00+01:00",
+      "category": "AFTER THE WAVE",
+      "title": "A Story Needs a Second Day",
+      "dek": "SABLE follows up on the day after everyone else has moved on.",
+      "body": [
+        "SABLE: An opening night can fill a street. The next morning tells you whether anybody wanted to stay.",
+        "ARCH: That principle applies to everything we build here. A flashy title or headline is not evidence of community. The real test is whether independent readers return for the next story.",
+        "SABLE: In our fictional city, the Hotel Tomorrow still has no doors. The projectionist says the building is simply waiting for someone to ask the right question.",
+        "ARCH: Today's question: which single rule would make a fictional world irresistible to revisit?",
+        "Whatever the answer, we'll distinguish creative responses from invented engagement and actual participation from impressions. That is how a continuing story earns its audience."
+      ],
+      "social": "TRANSMISSION 008 // A STORY NEEDS A SECOND DAY. Opening nights are easy to count. Return visits matter more. Our original fictional newsroom continues: {url}"
+    },
+    {
+      "slug": "signal-009",
+      "when": "2026-11-21T12:00:00+01:00",
+      "category": "NIGHT CITY",
+      "title": "The Doorless Hotel",
+      "dek": "The Hotel Tomorrow gets its first real scene.",
+      "body": [
+        "ARCH: The Hotel Tomorrow stands between two buildings that don't agree on where the property line is. Every night its top floor changes color.",
+        "SABLE: I found the concierge seated on the pavement with an inventory of guests who had never checked in. He didn't ask for a name. He asked which year I wanted to remember.",
+        "ARCH: No official document lists the place, and that makes it a perfect subject for fiction. A world becomes compelling when its rules are specific enough to believe and strange enough to explore.",
+        "SABLE: For our next field report, the question is whether the concierge is lying, mistaken or asking a question we don't yet understand.",
+        "All places and people in this bulletin are invented for Greatest Token Action."
+      ],
+      "social": "TRANSMISSION 009 // THE DOORLESS HOTEL. A concierge who asks for a year instead of a name. Our original story continues: {url}"
+    },
+    {
+      "slug": "signal-010",
+      "when": "2026-11-22T12:00:00+01:00",
+      "category": "THE RED DESK",
+      "title": "What We Can Actually Prove",
+      "dek": "ARCH reports the difference between a published story and a community.",
+      "body": [
+        "ARCH: The Red Desk maintains two ledgers. The first records the stories we published. The second records the people who chose to participate.",
+        "SABLE: The first can be filled by us alone. The second cannot. That's the whole point.",
+        "ARCH: Our editorial files and website releases are visible. Independent readers, comments and return visits must be measured through real external evidence. Anonymous site availability is not an audience metric.",
+        "SABLE: In the city, our colleagues still argue over the Hotel Tomorrow. In the real project, we count verified work and refuse to invent traction.",
+        "Transparency is part of the story. No coin trading, creator revenue or wallet ownership is implied by this fictional bulletin."
+      ],
+      "social": "TRANSMISSION 010 // WHAT WE CAN ACTUALLY PROVE. Two ledgers: stories we ship, people who voluntarily return. Original editorial transparency from GTA: {url}"
+    },
+    {
+      "slug": "signal-011",
+      "when": "2026-11-23T12:00:00+01:00",
+      "category": "FIELD NOTES",
+      "title": "A Message From The Tower",
+      "dek": "The radio tower transmits a new mystery for SABLE.",
+      "body": [
+        "SABLE: At dawn, the orange circle on the rooftop map vanished. In its place was an instruction in a language no one in the city could read.",
+        "ARCH: Three independent translators offered three different meanings. One said 'Enter.' One said 'Remember.' The third said 'Do not confuse a map with the place.'",
+        "SABLE: We can't solve the message without inventing more evidence. Instead we are taking the mystery into the next episode, where every assumption will have consequences.",
+        "ARCH: That's our editorial rule too: uncertainty belongs in the broadcast. So does the distinction between a fictional scene and a real-world outcome.",
+        "The broadcast is an original fictional narrative, independent of the video-game industry and financial promotion."
+      ],
+      "social": "TRANSMISSION 011 // A MESSAGE FROM THE TOWER. Three translations, one rooftop map, and no reliable answer. Original GTA fiction: {url}"
     }
   ]
 }
