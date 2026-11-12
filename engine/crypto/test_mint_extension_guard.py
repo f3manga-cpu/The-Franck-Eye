@@ -58,6 +58,22 @@ class Tests(unittest.TestCase):
         self.assertFalse(result["economic_value_verified"])
     def test_no_extension_risk_flags(self):
         self.assertEqual(decode_mint(make())["risk_flags"],[])
+    def test_freeze_authority_is_disclosed(self):
+        a=make()
+        blob=bytearray(base64.b64decode(a["data"][0]))
+        struct.pack_into("<I",blob,46,1)
+        a["data"][0]=base64.b64encode(blob).decode()
+        result=decode_mint(a)
+        self.assertIn("FREEZE_AUTHORITY_PRESENT_REVIEW",result["risk_flags"])
+        self.assertFalse(result["transferability_verified"])
+    def test_mint_authority_is_disclosed(self):
+        a=make()
+        blob=bytearray(base64.b64decode(a["data"][0]))
+        struct.pack_into("<I",blob,0,1)
+        a["data"][0]=base64.b64encode(blob).decode()
+        result=decode_mint(a)
+        self.assertIn("MINT_AUTHORITY_PRESENT_REVIEW",result["risk_flags"])
+        self.assertFalse(result["economic_value_verified"])
     def test_wrong_owner(self):
         with self.assertRaises(ValueError):decode_mint(make("invalid"))
     def test_invalid_mint_before_network(self):

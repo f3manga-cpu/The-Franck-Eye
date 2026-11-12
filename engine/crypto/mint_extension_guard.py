@@ -53,6 +53,10 @@ def decode_mint(account):
     # Token-2022 ExtensionType IDs: TransferFeeConfig=1,
     # NonTransferable=9, PermanentDelegate=12. Unknown types also block valuation.
     risk_flags = []
+    if freeze_authority_tag == 1:
+        risk_flags.append("FREEZE_AUTHORITY_PRESENT_REVIEW")
+    if mint_authority_tag == 1:
+        risk_flags.append("MINT_AUTHORITY_PRESENT_REVIEW")
     for extension_id, warning in ((1, "TRANSFER_FEE_CONFIG_REVIEW"),
                                   (9, "NON_TRANSFERABLE_REVIEW"),
                                   (12, "PERMANENT_DELEGATE_REVIEW")):
