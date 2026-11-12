@@ -1,0 +1,11 @@
+[Unit]
+Description=Mission C - hourly finalized Solana fee evidence check
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+RandomizedDelaySec=30s
+Unit=agentic-creator-fee-probe.service
+
+[Install]
+WantedBy=timers.target
