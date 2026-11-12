@@ -1,5 +1,5 @@
 {
-  "last_run_date": "2026-11-11",
+  "last_run_date": "2026-11-12",
   "leads": {
     "0069fb56381beb14": {
       "checked_date": "2026-11-10",
@@ -226,37 +226,42 @@
       "url": "https://github.com/andrewsiah/agentswarm-pi/issues/3"
     },
     "5af9b279f09ec185": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[Bounty] Answer the 2 linked question(s)",
       "url": "https://github.com/Ikalus1988/MisakaNet/issues/4642"
     },
     "5b01c3c50203662d": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "deliver-standard: an acceptance kind for orchestrator observations so planners stop building verify checks for them",
       "url": "https://github.com/fagenorn/nix-config/issues/736"
     },
     "5cd6e5debb46f7bc": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Open issue; advertised $750 is NOT verified funded payment",
+      "status": "payment_proof_needed",
       "title": "[Bounty $750] Fix remaining sharded scale_mask_softmax mask handling issues",
       "url": "https://github.com/tenstorrent/tt-metal/issues/64647"
     },
     "5f7e433323022251": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[wildcard] Erase the Unsound managed(\"...\", \"...\") Escape Hatch: Compile-Time Synthesized Dynamic Leases (DynRef[T]/DynMut[T]) with Zero-Alloc Crash-F",
       "url": "https://github.com/limitlessprojects/Go-Hybrid/issues/4269"
     },
     "622a05e06a74cb89": {
+      "checked_date": "2026-11-12",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[radar] SN open bounty 2026-11-09T16:05",
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1365"
     },
