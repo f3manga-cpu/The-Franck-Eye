@@ -11,6 +11,7 @@ from pathlib import Path
 import urllib.request
 
 from onchain_receipt_verify import RPC, valid_base58
+from quote_asset_candidates import valid_solana_pubkey
 from pump_fee_event_audit import audit, get_idls
 
 ROOT=Path(__file__).resolve().parent
@@ -28,11 +29,11 @@ def latest_mints(db=MARKET):
           FROM observations WHERE observed_at=(SELECT MAX(observed_at) FROM observations)
           AND dex IN ('pumpswap','pumpfun') GROUP BY token_address
           ORDER BY vol DESC LIMIT 12""").fetchall()
-        return [r[0] for r in rows if valid_base58(r[0],32,44)]
+        return [r[0] for r in rows if valid_solana_pubkey(r[0])]
     finally: con.close()
 
 def signatures_for(mint):
-    if not valid_base58(mint,32,44):
+    if not valid_solana_pubkey(mint):
         raise ValueError("Invalid mint public key")
     payload=json.dumps({"jsonrpc":"2.0","id":1,"method":"getSignaturesForAddress",
                         "params":[mint,{"limit":3,"commitment":"finalized"}]}).encode()

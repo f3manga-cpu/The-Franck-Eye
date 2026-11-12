@@ -5,7 +5,7 @@ from datetime import datetime,timezone
 from pathlib import Path
 from onchain_fee_probe import collect,latest_mints,signatures_for
 
-MINT="4"*43
+MINT="So11111111111111111111111111111111111111112"
 SIG="3"*87
 class ProbeTests(unittest.TestCase):
     def setUp(self):
@@ -34,6 +34,13 @@ class ProbeTests(unittest.TestCase):
         c=sqlite3.connect(self.market);c.execute("DELETE FROM observations");c.commit();c.close()
         with self.assertRaisesRegex(RuntimeError,"No recent"):
             collect(market=self.market,evidence=self.evidence)
+    def test_bad_length_valid_alphabet_mint_excluded(self):
+        c=sqlite3.connect(self.market)
+        c.execute("INSERT INTO observations VALUES (?,?,?,?)",("2026-11-12T02:00:00Z","4"*43,"pumpswap",999))
+        c.commit();c.close()
+        self.assertEqual(latest_mints(self.market),[MINT])
+        with self.assertRaises(ValueError):
+            signatures_for("4"*43)
     def test_bad_mint_no_network(self):
         with self.assertRaises(ValueError):
             signatures_for("private-key-text")
