@@ -21,6 +21,12 @@ def decode_mint(account):
     blob = base64.b64decode(data[0], validate=True)
     if len(blob) < 82 or blob[45] != 1:
         raise ValueError("Invalid mint layout")
+    # SPL Mint COption<Pubkey> discriminants are little-endian u32 at
+    # offsets 0 and 46. Invalid tags mean the account is not a valid mint.
+    mint_authority_tag = struct.unpack_from("<I", blob, 0)[0]
+    freeze_authority_tag = struct.unpack_from("<I", blob, 46)[0]
+    if mint_authority_tag not in (0, 1) or freeze_authority_tag not in (0, 1):
+        raise ValueError("Invalid mint authority option tag")
     decimals = blob[44]
     extensions = []
     if account["owner"] == TOKEN:

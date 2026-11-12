@@ -34,6 +34,20 @@ class Tests(unittest.TestCase):
         ext=struct.pack("<HH",18,2)+b"ab"
         with self.assertRaisesRegex(ValueError,"Duplicate"):
             decode_mint(make(TOKEN_2022,ext+ext))
+    def test_invalid_mint_authority_tag(self):
+        a=make()
+        blob=bytearray(base64.b64decode(a["data"][0]))
+        struct.pack_into("<I",blob,0,2)
+        a["data"][0]=base64.b64encode(blob).decode()
+        with self.assertRaisesRegex(ValueError,"authority option tag"):
+            decode_mint(a)
+    def test_invalid_freeze_authority_tag(self):
+        a=make(TOKEN_2022)
+        blob=bytearray(base64.b64decode(a["data"][0]))
+        struct.pack_into("<I",blob,46,0xFFFFFFFF)
+        a["data"][0]=base64.b64encode(blob).decode()
+        with self.assertRaisesRegex(ValueError,"authority option tag"):
+            decode_mint(a)
     def test_wrong_owner(self):
         with self.assertRaises(ValueError):decode_mint(make("invalid"))
     def test_invalid_mint_before_network(self):
