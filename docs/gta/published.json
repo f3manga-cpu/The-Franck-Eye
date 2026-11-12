@@ -1,0 +1,13 @@
+{
+  "project": "Greatest Token Action",
+  "source": "site publisher",
+  "coin_launched": false,
+  "stories": [
+    {
+      "slug": "signal-001",
+      "title": "The Switch Is On",
+      "date": "2026-11-13T00:00:00+01:00",
+      "url": "https://f3manga-cpu.github.io/The-Franck-Eye/gta/signal-001.html"
+    }
+  ]
+}
