@@ -24,7 +24,7 @@ def fetch_transaction(signature, transport=None):
         raise ValueError("Invalid Solana signature")
     payload = {"jsonrpc":"2.0","id":1,"method":"getTransaction",
                "params":[signature,{"encoding":"jsonParsed","commitment":"finalized",
-                                    "maxSupportedTransactionVersion":0}]}
+                                    "maxSupportedTransactionVersion":1}]}
     if transport is not None:
         result = transport(payload)
     else:
