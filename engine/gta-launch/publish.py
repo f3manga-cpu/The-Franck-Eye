@@ -77,10 +77,12 @@ COMMUNITY = "https://github.com/f3manga-cpu/The-Franck-Eye/issues/9"
 def footer():
     return '<footer>Greatest Token Action is an independent fictional editorial project. Not affiliated with Rockstar Games, Grand Theft Auto, or any game publisher. No live coin has been issued. No investment solicitation, financial advice or promised returns.</footer></div></body></html>'
 
+VIDEO = '<section class="card" style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin:20px auto 45px"><div style="flex:1;min-width:200px"><div class="meta">VISUAL DISPATCH // 001</div><h2>Meet the newsroom</h2><p>Our first 11-second silent, original fictional news teaser. No coin launch or gaming-company affiliation is claimed.</p></div><video controls playsinline preload="metadata" poster="../gta-staging/logo.png" width="245" height="435" style="max-width:100%;border-radius:8px;background:#071521" aria-label="Original Greatest Token Action animated news teaser"><source src="broadcast-001.mp4" type="video/mp4">Your browser does not support video.</video></section>'
+
 def article_page(e):
     dt=datetime.fromisoformat(e["when"]).astimezone(CET)
     para="".join(f"<p>{x(p)}</p>" for p in e["body"])
-    return shell(e["title"]+" — Greatest Token Action")+f'<main class="article"><div class="meta">{x(e["category"])} · {dt:%d %b %Y} · {x(e["slug"].upper())}</div><h1>{x(e["title"])}</h1><div class="dek">{x(e["dek"])}</div><div class="line" style="margin:33px 0"></div>{para}<div class="callout">Fictional characters ARCH and SABLE. Independent original story. The token has not been launched.</div><p><a href="{COMMUNITY}">Suggest an original scene (GitHub account required)</a></p><p><a href="{PUBLIC}">← All transmissions</a></p></main>'+footer()
+    return shell(e["title"]+" — Greatest Token Action")+f'<main class="article"><div class="meta">{x(e["category"])} · {dt:%d %b %Y} · {x(e["slug"].upper())}</div><h1>{x(e["title"])}</h1><div class="dek">{x(e["dek"])}</div><div class="line" style="margin:33px 0"></div>{para}{VIDEO}<div class="callout">Fictional characters ARCH and SABLE. Independent original story. The token has not been launched.</div><p><a href="{COMMUNITY}">Suggest an original scene (GitHub account required)</a></p><p><a href="{PUBLIC}">← All transmissions</a></p></main>'+footer()
 
 def index_page(stories):
     entries=''.join('<article class="card"><div class="meta">'+x(e["category"])+' · '+x(e["when"][:10])+'</div><h3>'+x(e["title"])+'</h3><p>'+x(e["dek"])+'</p><a href="'+x(e["slug"])+'.html">Read transmission</a></article>' for e in reversed(stories))
@@ -116,7 +118,7 @@ def main():
         status=run_git(["diff","--cached","--name-only"]).stdout
         if not status.strip():
             print("ALREADY_PUBLISHED_NO_CHANGES"); return
-        expected={f"docs/gta/{e['slug']}.html" for e in stories}|{"docs/gta/index.html","docs/gta/published.json"}
+        expected={f"docs/gta/{e['slug']}.html" for e in stories}|{"docs/gta/index.html","docs/gta/published.json","docs/gta/broadcast-001.mp4"}
         if not all(row in expected for row in status.strip().splitlines()):
             raise RuntimeError("Unexpected staged file: refusing to push")
         run_git(["commit","-m",f"gta-editorial: publish {len(stories)} due original dispatches"])
