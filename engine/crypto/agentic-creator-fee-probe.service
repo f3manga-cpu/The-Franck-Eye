@@ -1,0 +1,14 @@
+[Unit]
+Description=Mission C - sampled on-chain creator-fee event probe (read-only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/franck/agentic-creator-lab
+ExecStart=/usr/bin/python3 -u /home/franck/agentic-creator-lab/onchain_fee_probe.py
+MemoryMax=128M
+CPUQuota=20%
+Nice=12
+NoNewPrivileges=true
+PrivateTmp=true
