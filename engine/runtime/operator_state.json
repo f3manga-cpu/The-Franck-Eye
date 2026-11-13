@@ -1,5 +1,5 @@
 {
-  "last_run_date": "2026-11-12",
+  "last_run_date": "2026-11-13",
   "leads": {
     "0069fb56381beb14": {
       "checked_date": "2026-11-10",
@@ -394,37 +394,42 @@
       "url": "https://github.com/prasenjeet-symon/shipli-ai/issues/1"
     },
     "88654ef7289c32ce": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No public paid-work wording",
+      "status": "unverified_demand",
       "title": "[Coordinator] ArbiVault agentic task inventory and blockers",
       "url": "https://github.com/d85rcrcy27-creator/ArbiVault/issues/84"
     },
     "8a28122561f195b0": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[Bounty] Answer the 2 linked question(s)",
       "url": "https://github.com/Ikalus1988/MisakaNet/issues/4571"
     },
     "8e600e647d3255bf": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "Bug: vista deploy still breaks static hosts and platform adapters",
       "url": "https://github.com/Mantitup-Org/vista/issues/62"
     },
     "8e611a6942edf941": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[radar] SN open bounty 2026-10-22T19:11",
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1326"
     },
     "8fbe5fb3b919512e": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "L2 menu opens PIN setup while L1 wallet is loading, even when a PIN is already set",
       "url": "https://github.com/tari-project/universe/issues/3518"
     },
