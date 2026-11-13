@@ -474,37 +474,42 @@
       "url": "https://github.com/andrewsiah/agentswarm-pi/issues/7"
     },
     "98de35d8becf395e": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "B1. Find an error, or suggest an improvement [25.6 ULT]",
       "url": "https://github.com/ULCproject/ulcproject.github.io/issues/1"
     },
     "9b35c748a0742280": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "PREAPI-001 — Zero-cost readiness before funded AI API pilot",
       "url": "https://github.com/nshaokiet/ai-ip-description-generator/issues/131"
     },
     "9b4a762955a522ec": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[Slice D] Standards crosswalk: W3C PROV-O, QIF (ISO 23952), STEP AP242 (ISO 10303-242)",
       "url": "https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/19"
     },
     "9ba2a0f3b15760c0": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "agent/paid-social-strategist: Fleet spawn test",
       "url": "https://github.com/krisharyanagarwal-dev/agent-fleet-console/issues/266"
     },
     "a50210af2ca2e89d": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "Make the agent counts in README.md match the files",
       "url": "https://github.com/hanzoai/agents/issues/8"
     },
