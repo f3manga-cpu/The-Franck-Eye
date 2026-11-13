@@ -47,7 +47,7 @@ export async function buildPreview({creatorAddress, metadataUri} = {}) {
     accountCount: instruction.keys.length,
     instructionBytes: instruction.data.length,
     signerAddresses: instruction.keys.filter(k=>k.isSigner).map(k=>k.pubkey.toBase58()),
-    pendingGates: ['Appropriate creator wallet and owner-controlled signing', 'Permanent verified metadata/image URI', 'Network and rent funding', 'Applicable French/EU issuance and communications review', 'Explicit transaction-level authorization'],
+    pendingGates: ['User-provided creator address must be confirmed inside authenticated pump.fun account', 'Owner-controlled transaction signing', 'Final hosted immutable metadata/image URI', 'SOL for network/account costs and optional initial purchase', 'US federal / Texas offering, marketing and issuer-compliance assessment (plus any actual cross-border ties)', 'Explicit transaction-specific cost and signing authorization'],
   };
 }
 

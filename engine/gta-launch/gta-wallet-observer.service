@@ -1,0 +1,14 @@
+[Unit]
+Description=GTA public creator wallet balance probe (read-only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/franck/mission-c-checkout/engine/gta-launch
+Environment=HOME=/home/franck
+ExecStart=/usr/bin/flock -n /tmp/gta-wallet-observer.lock /usr/bin/python3 /home/franck/mission-c-checkout/engine/gta-launch/wallet_probe.py
+Nice=10
+CPUQuota=15%
+MemoryMax=80M
+TimeoutStartSec=40

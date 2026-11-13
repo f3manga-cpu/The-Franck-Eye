@@ -17,7 +17,7 @@ Token name: Greatest Token Action. Proposed ticker: GTA (nonunique). Default SOL
 
 ## Honest launch gating
 1. Confirm the identity/rights and uniqueness (other GTA ticker coins already exist), artwork and social links. Keep independent from Rockstar IP and make no official affiliation claims.
-2. Assess EU/French MiCA obligations for intended public launch and marketing; do not infer an automatic exemption.
+2. Review US federal and Texas laws for the reported Austin-based launch; confirm actual issuer structure and any cross-border exposure. Do not infer a blanket memecoin exemption.
 3. Publish immutable metadata/image URI on a suitable host (IPFS preferred) after authorized scope check. The older pump.fun/api/ipfs upload endpoint is deprecated.
 4. User-owned wallet public key and controlled Solana signing required. Confirm remaining SOL for account rent, tx fees and optional initial buy.
 5. Rebuild and inspect instruction with final owner and metadata, simulate/estimate fees on Solana, obtain explicit authorization for the exact live transaction.
@@ -33,3 +33,6 @@ For official create_v2 API see https://github.com/pump-fun/pump-public-docs/blob
 - `gta-audience-monitor.timer`: runs four times a day. No fake site traffic claims or unknown wallet earnings.
 - Public community-feedback issue: https://github.com/f3manga-cpu/The-Franck-Eye/issues/9 (requires GitHub sign-in).
 - Publishing to pump.fun or social networks remains blocked pending account session and connected network; the hosted stories are separate.
+
+## Current owner-wallet binding (local, not published)
+The user-provided creator address and self-reported current Austin, Texas location are stored in a chmod-600 local record: `/home/franck/.config/gta-creator/owner.json`. That record contains only a public address and non-secret preferences. It is not ownership verification and never authorizes signing. Local hourly `gta-wallet-observer.timer` records read-only finalized SOL balance; no transfers or automated launch. To run owner-bound preview, use `--creator` with the public key. The repo does not include that key as an address-to-user identity binding. At the first check the address was unfunded (0 SOL).

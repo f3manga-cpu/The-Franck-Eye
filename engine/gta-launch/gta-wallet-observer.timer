@@ -1,0 +1,10 @@
+[Unit]
+Description=Observe GTA creator wallet for funding, read-only
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+Unit=gta-wallet-observer.service
+
+[Install]
+WantedBy=timers.target
