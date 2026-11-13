@@ -434,37 +434,42 @@
       "url": "https://github.com/tari-project/universe/issues/3518"
     },
     "9006dad387ae2b97": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No public paid-work wording",
+      "status": "unverified_demand",
       "title": "Research pipeline blocks before research: inventory deadlock, schema conflict and unsafe resume; simplify research-only flow",
       "url": "https://github.com/IronbellyOrg/IronClaude/issues/470"
     },
     "907892d5c918a780": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[BOUNTY: 35 RTC] Harden x86 vintage-arch reward validation (anti-spoof)",
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/16271"
     },
     "908c20f0a420cee1": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[$2 site credit] Add a German README for agentswarm-mcp",
       "url": "https://github.com/andrewsiah/agentswarm-mcp/issues/9"
     },
     "92674dabd7ac22c0": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "[$2 site credit] Add a French README for agentswarm-mcp",
       "url": "https://github.com/andrewsiah/agentswarm-mcp/issues/8"
     },
     "96050e64d53fb984": {
+      "checked_date": "2026-11-13",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "[$2 site credit] Add a Vietnamese README for agentswarm-pi",
       "url": "https://github.com/andrewsiah/agentswarm-pi/issues/7"
     },
