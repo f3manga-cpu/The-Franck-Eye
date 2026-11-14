@@ -594,37 +594,42 @@
       "url": "https://github.com/Conxian/conxius-enclave-sdk/issues/726"
     },
     "ba658c17d8fbf0b8": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[EASY BOUNTY: 2 RTC] Add a RustChain Badge to Any Project README",
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/13949"
     },
     "c28ed77f69c44e3c": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "More than 30 comments",
+      "status": "crowded",
       "title": "[$25 BOUNTY] [Python] Add independent log parser fixtures",
       "url": "https://github.com/weilixiong/TentOfTrials/issues/5"
     },
     "c4bdc481825140c5": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "Verify installed executor task base and draft target after #2529",
       "url": "https://github.com/WingedGuardian/GENesis-AGI/issues/4226"
     },
     "c63bbd0aab9effee": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "[$3 site credit] Replace the retired tasks --mission filter with --task in both CLIs",
       "url": "https://github.com/andrewsiah/agentswarm-cli/issues/2"
     },
     "cbd69fab3391c1e7": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "🏭 Bounty T1: Getting Started Tutorial Blog Post",
       "url": "https://github.com/SolFoundry/solfoundry/issues/830"
     },
