@@ -82,7 +82,7 @@ VIDEO = '<section class="card" style="display:flex;align-items:center;gap:28px;f
 def article_page(e):
     dt=datetime.fromisoformat(e["when"]).astimezone(CET)
     para="".join(f"<p>{x(p)}</p>" for p in e["body"])
-    return shell(e["title"]+" — Greatest Token Action")+f'<main class="article"><div class="meta">{x(e["category"])} · {dt:%d %b %Y} · {x(e["slug"].upper())}</div><h1>{x(e["title"])}</h1><div class="dek">{x(e["dek"])}</div><div class="line" style="margin:33px 0"></div>{para}{VIDEO}<div class="callout">Fictional characters ARCH and SABLE. Independent original story. The token has not been launched.</div><p><a href="{COMMUNITY}">Suggest an original scene (GitHub account required)</a></p><p><a href="{PUBLIC}">← All transmissions</a></p></main>'+footer()
+    return shell(e["title"]+" — Greatest Token Action")+f'<main class="article"><div class="meta">{x(e["category"])} · {dt:%d %b %Y} · {x(e["slug"].upper())}</div><h1>{x(e["title"])}</h1><div class="dek">{x(e["dek"])}</div><div class="line" style="margin:33px 0"></div>{para}{VIDEO if e["slug"] == "signal-001" else ""}<div class="callout">Fictional characters ARCH and SABLE. Independent original story. The token has not been launched.</div><p><a href="{COMMUNITY}">Suggest an original scene (GitHub account required)</a></p><p><a href="{PUBLIC}">← All transmissions</a></p></main>'+footer()
 
 def index_page(stories):
     entries=''.join('<article class="card"><div class="meta">'+x(e["category"])+' · '+x(e["when"][:10])+'</div><h3>'+x(e["title"])+'</h3><p>'+x(e["dek"])+'</p><a href="'+x(e["slug"])+'.html">Read transmission</a></article>' for e in reversed(stories))
