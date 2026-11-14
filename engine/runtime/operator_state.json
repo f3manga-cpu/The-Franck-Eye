@@ -554,37 +554,42 @@
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/16252"
     },
     "ab32303536bf0903": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "Specify scoped build-bounty rules, alpha funding and governance",
       "url": "https://github.com/ditto-assistant/ditto-subnet/issues/2044"
     },
     "ad55eb16e669aac0": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[radar] SN open bounty 2026-10-27T12:01",
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1344"
     },
     "b529eb5613f7550c": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "[$2 site credit] Add a Brazilian Portuguese README for agentswarm-mcp",
       "url": "https://github.com/andrewsiah/agentswarm-mcp/issues/10"
     },
     "b625040f778eac07": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "[Feature] Let a business close a partially paid invoice",
       "url": "https://github.com/Stellar-Finance-OS/Stellar-Finance-OS-Contracts/issues/5"
     },
     "b7996d26700866fe": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "[Challenge] Independently review the release-signing design and the ceremony invite",
       "url": "https://github.com/Conxian/conxius-enclave-sdk/issues/726"
     },
