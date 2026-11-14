@@ -634,23 +634,26 @@
       "url": "https://github.com/SolFoundry/solfoundry/issues/830"
     },
     "cd535737dcd2b02f": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[Bounty] Answer the 2 linked question(s)",
       "url": "https://github.com/Ikalus1988/MisakaNet/issues/4487"
     },
     "cfd4d348c6bda1d5": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "[Bug bounty] validateTransact returns the sender/recipient error instead of throwing, so the guard never runs",
       "url": "https://github.com/paraspell/xcm-tools/issues/2277"
     },
     "dcd55254d67a9134": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "More than 30 comments",
+      "status": "crowded",
       "title": "[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history",
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1"
     },
@@ -663,16 +666,18 @@
       "url": "https://github.com/SecureBananaLabs/bug-bounty/issues/743"
     },
     "ede5f8c3638b15f4": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "Issue no longer open",
+      "status": "closed",
       "title": "[$1 site credit] initialize: validate capabilities/clientInfo shape (-32602)",
       "url": "https://github.com/andrewsiah/agentswarm-mcp/issues/1"
     },
     "ef60699144bc011b": {
+      "checked_date": "2026-11-14",
       "created": "2026-11-10",
-      "reason": "Awaiting check",
-      "status": "queued",
+      "reason": "No visible budget",
+      "status": "payment_unknown",
       "title": "🏭 Bounty T2: Animated Landing Page Hero Background",
       "url": "https://github.com/SolFoundry/solfoundry/issues/850"
     },
