@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime
 from html import escape
+from email.utils import format_datetime
 import json
 import os
 from pathlib import Path
@@ -70,7 +71,7 @@ def due_stories(now: datetime):
     return sorted([e for e in entries if datetime.fromisoformat(e["when"]) <= now], key=lambda e:e["when"])
 
 def shell(content: str):
-    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071521"><title>{x(content[:78])}</title><meta name="description" content="Original fictional dispatches from Greatest Token Action. Independent of every game publisher."><style>{STYLE}</style></head><body><div class="wrap"><nav><a class="brand" href="{PUBLIC}">GTA // GREATEST TOKEN ACTION</a><span class="navtag">INDEPENDENT FICTION · NO LIVE TOKEN</span></nav>'
+    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071521"><title>{x(content[:78])}</title><link rel="alternate" type="application/rss+xml" title="Greatest Token Action dispatches" href="{PUBLIC}feed.xml"><meta name="description" content="Original fictional dispatches from Greatest Token Action. Independent of every game publisher."><style>{STYLE}</style></head><body><div class="wrap"><nav><a class="brand" href="{PUBLIC}">GTA // GREATEST TOKEN ACTION</a><span class="navtag">INDEPENDENT FICTION · NO LIVE TOKEN</span></nav>'
 
 COMMUNITY = "https://github.com/f3manga-cpu/The-Franck-Eye/issues/9"
 
@@ -92,6 +93,16 @@ def write(stories):
     OUT.mkdir(parents=True,exist_ok=True)
     for e in stories: (OUT/(e["slug"]+".html")).write_text(article_page(e),encoding="utf8")
     (OUT/"index.html").write_text(index_page(stories),encoding="utf8")
+    # Public RSS only includes already-due stories; never leak the future editorial queue.
+    items = "".join(
+        "<item><title>" + x(e["title"]) + "</title><link>" + PUBLIC + e["slug"] + ".html</link>"
+        + "<guid isPermaLink=\"true\">" + PUBLIC + e["slug"] + ".html</guid>"
+        + "<description>" + x(e["dek"]) + "</description><pubDate>"
+        + format_datetime(datetime.fromisoformat(e["when"])) + "</pubDate></item>"
+        for e in reversed(stories)
+    )
+    rss = '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Greatest Token Action — Original Fiction</title><link>' + PUBLIC + '</link><description>Independent fictional broadcasts. No live token. Not affiliated with game publishers.</description>' + items + '</channel></rss>'
+    (OUT/"feed.xml").write_text(rss,encoding="utf8")
     (OUT/"published.json").write_text(json.dumps({"project":"Greatest Token Action","source":"site publisher","coin_launched":False,"stories":[{"slug":e["slug"],"title":e["title"],"date":e["when"],"url":PUBLIC+e["slug"]+".html"} for e in stories]},indent=2)+"\n",encoding="utf8")
 
 def run_git(command):
@@ -118,7 +129,7 @@ def main():
         status=run_git(["diff","--cached","--name-only"]).stdout
         if not status.strip():
             print("ALREADY_PUBLISHED_NO_CHANGES"); return
-        expected={f"docs/gta/{e['slug']}.html" for e in stories}|{"docs/gta/index.html","docs/gta/published.json","docs/gta/broadcast-001.mp4"}
+        expected={f"docs/gta/{e['slug']}.html" for e in stories}|{"docs/gta/index.html","docs/gta/published.json","docs/gta/feed.xml","docs/gta/broadcast-001.mp4"}
         if not all(row in expected for row in status.strip().splitlines()):
             raise RuntimeError("Unexpected staged file: refusing to push")
         run_git(["commit","-m",f"gta-editorial: publish {len(stories)} due original dispatches"])
