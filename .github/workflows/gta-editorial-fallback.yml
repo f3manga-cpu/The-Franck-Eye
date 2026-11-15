@@ -1,0 +1,60 @@
+name: GTA editorial independent publisher
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: gta-editorial-main
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate only due, pre-approved original dispatches
+        run: python engine/gta-launch/publish.py --publish
+      - name: Validate and publish idempotently
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python engine/gta-launch/publish.py --publish
+            git add docs/gta/index.html docs/gta/feed.xml docs/gta/published.json
+            while IFS= read -r slug; do
+              [ -z "$slug" ] || git add "docs/gta/$slug.html"
+            done < <(python - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          now = datetime.now(ZoneInfo("Europe/Paris"))
+          for story in json.loads(Path("engine/gta-launch/content_queue.json").read_text())["stories"]:
+              if datetime.fromisoformat(story["when"]) <= now:
+                  print(story["slug"])
+          PY
+            )
+            if git diff --cached --quiet; then
+              echo "ALREADY_PUBLISHED_NO_CHANGES"
+              exit 0
+            fi
+            git commit -m "gta-editorial: recover due fictional dispatches"
+            if git push origin HEAD:main; then
+              echo "GITHUB_PUSH_CONFIRMED"
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "PUSH_FAILED_AFTER_RETRIES" >&2
+          exit 1
