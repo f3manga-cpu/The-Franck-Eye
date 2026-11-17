@@ -40,6 +40,14 @@ class EditorialReleaseTests(unittest.TestCase):
         self.assertIn("target=\"_blank\"", html)
         self.assertNotIn("<script", html)
 
+    def test_social_preview_metadata_is_canonical_and_escaped(self):
+        story = publisher.due_stories(datetime.fromisoformat("2026-11-17T13:00:00+01:00"))[-1]
+        html = publisher.article_page(story)
+        self.assertIn('property="og:url" content="https://f3manga-cpu.github.io/The-Franck-Eye/gta/signal-005.html"', html)
+        self.assertIn('name="twitter:card" content="summary_large_image"', html)
+        self.assertIn('rel="canonical"', html)
+        self.assertIn('Independent fiction; no live token.', html)
+
     def test_reject_duplicate_slugs(self):
         with tempfile.TemporaryDirectory() as tmp:
             queue = Path(tmp) / "queue.json"
