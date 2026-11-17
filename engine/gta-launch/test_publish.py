@@ -46,6 +46,8 @@ class EditorialReleaseTests(unittest.TestCase):
         self.assertIn('property="og:url" content="https://f3manga-cpu.github.io/The-Franck-Eye/gta/signal-005.html"', html)
         self.assertIn('name="twitter:card" content="summary_large_image"', html)
         self.assertIn('rel="canonical"', html)
+        self.assertIn('property="og:image" content="https://f3manga-cpu.github.io/The-Franck-Eye/gta-staging/logo-1024.png"', html)
+        self.assertNotIn("/../", html)
         self.assertIn('Independent fiction; no live token.', html)
 
     def test_reject_duplicate_slugs(self):
