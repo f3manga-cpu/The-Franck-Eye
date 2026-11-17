@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime
 from html import escape
+from urllib.parse import urlencode
 from email.utils import format_datetime
 import json
 import os
@@ -75,6 +76,14 @@ def shell(content: str):
 
 COMMUNITY = "https://github.com/f3manga-cpu/The-Franck-Eye/issues/9"
 
+def share_links(url: str, title: str):
+    """Explicit user-initiated sharing; no API credentials or automatic promotion."""
+    message = f"{title} — an original fictional GTA dispatch (independent of game publishers). {url}"
+    bluesky = "https://bsky.app/intent/compose?" + urlencode({"text": message})
+    reddit = "https://www.reddit.com/submit?" + urlencode({"url": url, "title": title})
+    return (f'<p class="share"><a rel="noopener noreferrer" target="_blank" href="{x(bluesky)}">Share on Bluesky</a>'
+            f' · <a rel="noopener noreferrer" target="_blank" href="{x(reddit)}">Share on Reddit</a></p>')
+
 def footer():
     return '<footer>Greatest Token Action is an independent fictional editorial project. Not affiliated with Rockstar Games, Grand Theft Auto, or any game publisher. No live coin has been issued. No investment solicitation, financial advice or promised returns.</footer></div></body></html>'
 
@@ -83,7 +92,7 @@ VIDEO = '<section class="card" style="display:flex;align-items:center;gap:28px;f
 def article_page(e):
     dt=datetime.fromisoformat(e["when"]).astimezone(CET)
     para="".join(f"<p>{x(p)}</p>" for p in e["body"])
-    return shell(e["title"]+" — Greatest Token Action")+f'<main class="article"><div class="meta">{x(e["category"])} · {dt:%d %b %Y} · {x(e["slug"].upper())}</div><h1>{x(e["title"])}</h1><div class="dek">{x(e["dek"])}</div><div class="line" style="margin:33px 0"></div>{para}{VIDEO if e["slug"] == "signal-001" else ""}<div class="callout">Fictional characters ARCH and SABLE. Independent original story. The token has not been launched.</div><p><a href="{COMMUNITY}">Suggest an original scene (GitHub account required)</a></p><p><a href="{PUBLIC}">← All transmissions</a></p></main>'+footer()
+    return shell(e["title"]+" — Greatest Token Action")+f'<main class="article"><div class="meta">{x(e["category"])} · {dt:%d %b %Y} · {x(e["slug"].upper())}</div><h1>{x(e["title"])}</h1><div class="dek">{x(e["dek"])}</div><div class="line" style="margin:33px 0"></div>{para}{VIDEO if e["slug"] == "signal-001" else ""}<div class="callout">Fictional characters ARCH and SABLE. Independent original story. The token has not been launched.</div>{share_links(PUBLIC + e["slug"] + ".html", e["title"])}<p><a href="{COMMUNITY}">Suggest an original scene (GitHub account required)</a></p><p><a href="{PUBLIC}">← All transmissions</a></p></main>'+footer()
 
 def index_page(stories):
     entries=''.join('<article class="card"><div class="meta">'+x(e["category"])+' · '+x(e["when"][:10])+'</div><h3>'+x(e["title"])+'</h3><p>'+x(e["dek"])+'</p><a href="'+x(e["slug"])+'.html">Read transmission</a></article>' for e in reversed(stories))

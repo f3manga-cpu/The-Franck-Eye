@@ -32,6 +32,14 @@ class EditorialReleaseTests(unittest.TestCase):
             state = json.loads((Path(tmp) / "published.json").read_text())
             self.assertIs(state["coin_launched"], False)
 
+    def test_share_links_are_opt_in_and_encoded(self):
+        html = publisher.share_links("https://example.org/story?a=1&b=2", "A & B")
+        self.assertIn("bsky.app/intent/compose?", html)
+        self.assertIn("reddit.com/submit?", html)
+        self.assertIn("A+%26+B", html)
+        self.assertIn("target=\"_blank\"", html)
+        self.assertNotIn("<script", html)
+
     def test_reject_duplicate_slugs(self):
         with tempfile.TemporaryDirectory() as tmp:
             queue = Path(tmp) / "queue.json"
