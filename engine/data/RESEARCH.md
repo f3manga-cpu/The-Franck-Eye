@@ -1,6 +1,6 @@
 # Opportunity research queue
 
-Updated (UTC): 2026-11-16T15:49:16+00:00
+Updated (UTC): 2026-11-17T16:02:29+00:00
 
 **These are leads for research, not verified opportunities, income claims or recommendations.**
 
