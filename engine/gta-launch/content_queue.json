@@ -163,6 +163,39 @@
         "The broadcast is an original fictional narrative, independent of the video-game industry and financial promotion."
       ],
       "social": "TRANSMISSION 011 // A MESSAGE FROM THE TOWER. Three translations, one rooftop map, and no reliable answer. Original GTA fiction: {url}"
+    },
+    {
+      "slug": "signal-012",
+      "when": "2026-11-24T12:00:00+01:00",
+      "category": "THE TOWER",
+      "title": "The Fourth Translation",
+      "dek": "SABLE tests the tower message against a physical clue instead of trusting a convenient interpretation.",
+      "body": [
+        "SABLE: We carried the rooftop message to the railway station at first light. The clock above the platform had stopped at 03:17, but every train still arrived exactly when the timetable promised.",
+        "ARCH: Three translators gave us three incompatible commands. Rather than voting on which one sounded best, SABLE went looking for a fact that could prove one wrong.",
+        "SABLE: The station keeper showed me a brass ticket punched with the same orange circle that disappeared from our map. On its reverse were four empty boxes. A fourth translation, perhaps, or a place to write something no one had said yet.",
+        "ARCH: The keeper would not explain the ticket. He offered a choice: follow the train that never appears on the board, or return to the Hotel Tomorrow and ask the concierge why every guest is listed in a different year.",
+        "SABLE: We are publishing the two routes without pretending to know the correct one. Readers can propose an original next scene through our public story thread. The city changes only when a real contributor gives us something worth building on.",
+        "This fictional transmission is an original independent creative work. It does not advertise a live token or an affiliation with any game publisher."
+      ],
+      "social": "TRANSMISSION 012 // THE FOURTH TRANSLATION. A stopped station clock, a brass ticket and two possible routes. Read the original fiction: {url}"
+    },
+    {
+      "slug": "signal-013",
+      "when": "2026-11-25T12:00:00+01:00",
+      "category": "RETURN ONLY",
+      "title": "The Train With No Destination",
+      "dek": "A departure board displays a blank line; SABLE boards to find out what the city has been hiding.",
+      "body": [
+        "SABLE: At 03:17, the station lights dimmed and a train entered the platform without a number. Its windows reflected a street I had never seen, even though I knew the city outside.",
+        "ARCH: The official timetable listed no departure. We can report the discrepancy, not its explanation. Our fictional newsroom has a habit of keeping both in view.",
+        "SABLE: The conductor asked for my ticket, examined the four empty boxes and punched the first one. He said, “A destination is only a promise made before you arrive.”",
+        "ARCH: Behind SABLE, the station keeper locked the gate. Ahead, the train doors opened onto a corridor lined with hotel room keys. One bore the date tomorrow; another carried a date from thirty years ago.",
+        "SABLE: I chose neither key. I wrote the name of the station in the second empty box and watched the letters rearrange themselves into a question: WHO REMEMBERS THE FIRST SIGNAL?",
+        "ARCH: Our next investigation follows that question. If an independent reader proposes a stronger answer, we will credit the contribution rather than invent a crowd that does not exist.",
+        "All characters and settings are fictional and independently created. No live cryptocurrency, official game connection or investment return is represented."
+      ],
+      "social": "TRANSMISSION 013 // THE TRAIN WITH NO DESTINATION. A blank departure board and a ticket that rewrites itself. Read: {url}"
     }
   ]
 }
