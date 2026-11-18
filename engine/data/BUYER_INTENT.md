@@ -1,33 +1,33 @@
 # Buyer-intent discovery
 
-Run: 2026-11-17T16:29:50.201487+00:00
+Run: 2026-11-18T15:58:48.126378+00:00
 
 **Unverified public research; no paid customer has been established.**
 
 | Score | Open request | Posted budget |
 |---:|---|---|
-| 6 | [Bounty $150: capture adapter for Front](https://github.com/overturn-ai/overturn/issues/20) | $150 |
-| 5 | [[BOUNTY $220 AI Stack — Ollama + Open WebUI + Stable Diffusion](https://github.com/illbnm/homelab-stack/issues/6) | $220 |
+| 5 | [[BOUNTY $100 HOOK: Pre-tool-use hook that blocks destructive bash commands](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3) | $100 |
+| 5 | [[BOUNTY $200 WORKFLOW: n8n + Claude Code — automated weekly dev summary](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5) | $200 |
 | 5 | [[BOUNTY $150 AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4) | $150 |
 | 5 | [[BOUNTY $50 SKILL: Generate a structured CHANGELOG from git history](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1) | $50 |
-| 5 | [Discord Core Prisms, Lenses and Beams Implementation ($2000)](https://github.com/Spectral-Finance/lux/issues/57) | $2000 |
-| 5 | [Bug bounty 100 usd to whoever makes my landing page responsive for mobile](https://github.com/iii123iii/Crystal-PDF/issues/3) | 100 usd |
+| 5 | [[BOUNTY $75 TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2) | $75 |
+| 5 | [[BOUNTY WearOS Support [$2340](https://github.com/microg/GmsCore/issues/2843) | $2340 |
+| 5 | [Frantic bounty #97: Your first bounty is on the house ($10 back when it clears, first five)](https://github.com/auscaster/frantic-board/issues/277) | $10 |
+| 4 | [feat(ai98): provider-enforced bounded Gemini 3 retrieval and campaign cost envelope](https://github.com/pikkst/SnapyCall-Pilot-Outreach/issues/128) | $822 |
 | 4 | [💰 Toyol Paid Tasks — kerja ejen, bukan iklan jawatan kosong](https://github.com/ilhamraduanbis-source/toyol-digital/issues/4) | 200 USD |
-| 4 | [A club moving in cannot bring across future bookings that are already paid: add a previewed, reversible import that records them as settled outside the app](https://github.com/thatskiff33/AlpineClubBookingsNZ/issues/5005) | $24,60 |
-| 4 | [T53 · Add an optional OpenRouter adapter with explicit routing](https://github.com/han33-dotcom/TechScout/issues/89) | $500 |
-| 4 | [Growth Lab: Founding 50 + autonomous multi-agent growth-loop registry](https://github.com/JovieInc/Jovie/issues/23216) | $10 |
+| 4 | [feat: meter shared weekly usage and prepaid credits](https://github.com/WoojinAhn/CursorMeter/issues/147) | $20 |
+| 4 | [bench: SWE-bench quality baseline and learning off/on evaluation](https://github.com/strf0x1/construct/issues/236) | $20 |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5191) | Unknown |
 | 3 | [CODEX READY REMEDIATION QUEUE](https://github.com/Donh91/Investering-Framework-Archive-v1/issues/643) | 05 USD |
-| 3 | [[Bug bounty SDK (PJS): getDryRunCall reads resultJson.ok.local_xcm, but polkadot.js toJSON() emits localXcm — XcmPaymentApi fee path is dead, feeAsset fees reported in the native token but labelled a](https://github.com/paraspell/xcm-tools/issues/2377) | Unknown |
-| 3 | [Voided refund-request Xero notes follow #4162's 'undo, then ask once' rule (replaces #4214's button)](https://github.com/thatskiff33/AlpineClubBookingsNZ/issues/4391) | $350 |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4801) | Unknown |
-| 3 | [[Bounty Answer the 5 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5118) | Unknown |
-| 3 | [[Bounty Answer the 3 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5120) | Unknown |
-| 3 | [[Bounty Answer the 3 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5121) | Unknown |
-| 3 | [[Bounty Answer the 3 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5190) | Unknown |
-| 2 | [Proof of AI: CPU-verifiable GPU work](https://github.com/zoo-apps/papers/issues/13) | Unknown |
-| 2 | [Attested vs challenged inference verification](https://github.com/zoo-apps/papers/issues/14) | Unknown |
-| 2 | [Useful-work receipts and contribution settlement](https://github.com/zoo-apps/papers/issues/15) | Unknown |
-| 2 | [Full sovereignty and network exit test](https://github.com/hanzoai/cloud/issues/20) | Unknown |
-| 2 | [Open protocol governance, treasury and forkability](https://github.com/hanzoai/cloud/issues/19) | Unknown |
-| 2 | [Open ResearchDAO operating system](https://github.com/zoo-apps/papers/issues/2) | Unknown |
-| 2 | [Decentralized agent identity and delegation](https://github.com/zoo-apps/papers/issues/3) | Unknown |
+| 3 | [[P1-OPS Prepare deployment, monitoring, backup/restore and rollback](https://github.com/saeed-alorm/mawid-pro/issues/11) | $20 |
+| 3 | [Grant Application - MORE-ZEC: Shielded Settlement Rails for the Agent Economy](https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/574) | $50,00 |
+| 3 | [[Bug Undefined correlations hide the strongest measured pair](https://github.com/Ayush441-python/AUREN/issues/89) | $10,00 |
+| 2 | [feat(ui): add search and memo filter in ScheduledPaymentsList](https://github.com/OphirPay/OphirPay/issues/1895) | Unknown |
+| 2 | [[Bounty Add RustChain to Your GitHub Profile README - 2 RTC](https://github.com/Scottcjn/rustchain-bounties/issues/515) | Unknown |
+| 2 | [POST /api/reviews endpoint missing authentication middleware (reissue via #743)](https://github.com/SecureBananaLabs/bug-bounty/issues/2776) | Unknown |
+| 2 | [eBPF runtime enforcement for agent sandboxes (Tetragon)](https://github.com/hanzoai/cloud/issues/33) | Unknown |
+| 2 | [Dual-control business-agent benchmark (tau2-bench)](https://github.com/hanzoai/cloud/issues/30) | Unknown |
+| 2 | [[radar SN open bounty 2026-11-17T23:59](https://github.com/relayhop/sn-monetization-runtime/issues/1409) | Unknown |
+| 2 | [ci(typescript): add GitHub Actions step to verify TypeScript types without emitting JS](https://github.com/OphirPay/OphirPay/issues/1979) | Unknown |
+| 2 | [[Bounty #49 Verifiable agent-produced artifacts · cloud / Forge (SLSA v1.2 + Cosign)](https://github.com/hanzoai/cloud/issues/39) | Unknown |
+| 2 | [[Bounty[$0[i18n 多语言 README：新增 한국어 / Español / Français / Deutsch / Português(BR) / Русский（一门语言一个 PR）](https://github.com/Ikalus1988/MisakaNet/issues/4751) | Unknown |
