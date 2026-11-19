@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T15:41:03+00:00",
+  "updated_at": "2026-11-19T15:46:13+00:00",
   "candidates": [
     {
       "id": "8da2fcbc970b410f",
@@ -68,6 +68,18 @@
       "theme": "marketplace launch",
       "title": "Launch HN: Pomerado (YC F26) – Turn any website into an MCP for agents",
       "url": "https://news.ycombinator.com/item?id=50455811",
+      "score": 3,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "89bdb709a2edcf80",
+      "first_seen": "2026-11-19T15:46:12+00:00",
+      "date": "2026-11-19T08:01:05Z",
+      "theme": "payment platform",
+      "title": "SlashCollect",
+      "url": "https://news.ycombinator.com/item?id=50557273",
       "score": 3,
       "status": "research_only",
       "evidence": "HN submission; commercial terms and revenue NOT verified",

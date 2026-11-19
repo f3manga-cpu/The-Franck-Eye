@@ -1,6 +1,6 @@
 # Opportunity research queue
 
-Updated (UTC): 2026-11-18T15:41:03+00:00
+Updated (UTC): 2026-11-19T15:46:13+00:00
 
 **These are leads for research, not verified opportunities, income claims or recommendations.**
 
@@ -12,6 +12,7 @@ Updated (UTC): 2026-11-18T15:41:03+00:00
 | 4 | [Show HN: The New Way to Make AI UGC Ads in 2026](https://www.aivideosugc.com/ai-video-generation) | digital products | Verify fees, eligibility, demand |
 | 4 | [Show HN: Kiosk, a first-class AI assistants' intefrace to online services](https://kiosk.tech/) | payment platform | Verify fees, eligibility, demand |
 | 3 | [Launch HN: Pomerado (YC F26) – Turn any website into an MCP for agents](https://news.ycombinator.com/item?id=50455811) | marketplace launch | Verify fees, eligibility, demand |
+| 3 | [SlashCollect](https://news.ycombinator.com/item?id=50557273) | payment platform | Verify fees, eligibility, demand |
 | 2 | [Addressing EU Cyber Resilience Act](https://news.ycombinator.com/item?id=50157847) | digital products | Verify fees, eligibility, demand |
 | 2 | [Anthropic Console overcharged my card 100x due to internationalization input bug](https://news.ycombinator.com/item?id=50121562) | payment platform | Verify fees, eligibility, demand |
 | 2 | [AMD CEO saying it's a "data center first" company and PC sales will plummet](https://www.techradar.com/computing/gpu/amd-ceo-enrages-gamers-by-saying-its-now-a-data-center-first-company-and-predicts-pc-sales-will-plummet-by-a-double-digit-percentage-in-2027) | digital products | Verify fees, eligibility, demand |
