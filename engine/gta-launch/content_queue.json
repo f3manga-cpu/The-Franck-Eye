@@ -196,6 +196,36 @@
         "All characters and settings are fictional and independently created. No live cryptocurrency, official game connection or investment return is represented."
       ],
       "social": "TRANSMISSION 013 // THE TRAIN WITH NO DESTINATION. A blank departure board and a ticket that rewrites itself. Read: {url}"
+    },
+    {
+      "slug": "signal-014",
+      "when": "2026-11-26T12:00:00+01:00",
+      "category": "FIELD TRANSMISSION",
+      "title": "The City That Returned Its Keys",
+      "dek": "SABLE discovers an abandoned key exchange with no locks attached.",
+      "body": [
+        "SABLE found a table of brass keys in the fictional city square. No doors, no labels, and no one collecting payment.",
+        "ARCH checked the archive. Every key had been returned by someone who no longer wanted to own the story of a place.",
+        "The exchange keeper left one instruction: describe the door you would open, without claiming you own what is behind it.",
+        "Our newsroom invites original fictional door descriptions in the public creative thread. Contributions are optional; there is no token reward, purchase requirement or financial promise.",
+        "The city is imaginary. Any participation we report will be counted only after an independent person actually contributes."
+      ],
+      "social": "SIGNAL 014 // THE CITY THAT RETURNED ITS KEYS. A fictional exchange of keys without locks. What door would you describe? Original creative contributions only; no token reward or purchase required. {url}"
+    },
+    {
+      "slug": "signal-015",
+      "when": "2026-11-27T12:00:00+01:00",
+      "category": "NIGHT DESK",
+      "title": "The Last Light in the Archive",
+      "dek": "ARCH receives a transmission that cannot be replayed.",
+      "body": [
+        "At the archive, one indicator lamp remained lit after every monitor shut down. ARCH called it a signal; SABLE called it a faulty switch.",
+        "The recording held no prophecy, no secret launch, and no promise of fortune. It contained the sound of a single page being turned.",
+        "On that page was a question: if nobody witnessed the story, did the city change at all?",
+        "The newsroom will distinguish what was published from what anyone actually read or responded to. A working website is not an audience.",
+        "This is original fiction from Greatest Token Action, unaffiliated with any video game publisher. No live token is offered."
+      ],
+      "social": "SIGNAL 015 // THE LAST LIGHT IN THE ARCHIVE. ARCH hears a page turn where a broadcast should be. Fiction, not a launch announcement. No live token. {url}"
     }
   ]
 }
