@@ -1,0 +1,3 @@
+# GTA production QA — 2026-11-19 evening (Europe/Paris)
+
+Read-only QA on user Linux PC. `python3 -m unittest test_publish -v`: 4/4 passed. `node --test launch.test.mjs`: 3/3 passed. `python3 video_qa.py production_private/signal-002-motion-review.mp4 production_private/signal-002-review.mp4`: both files decoded successfully with bundled imageio-ffmpeg binary; each 1080x1920 and audio stream present. Both fail-closed on creative review: `creative_review_passed=false`, `production_ready=false`. No videos or private paths beyond generic filenames committed. No publication, token issuance, spending, trading, or revenue evidenced. Next trigger: independent human/visual creative QA, then approved distribution channel; retain videos private until quality gate.
