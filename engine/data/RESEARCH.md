@@ -1,6 +1,6 @@
 # Opportunity research queue
 
-Updated (UTC): 2026-11-19T15:46:13+00:00
+Updated (UTC): 2026-11-20T15:28:50+00:00
 
 **These are leads for research, not verified opportunities, income claims or recommendations.**
 
@@ -16,4 +16,5 @@ Updated (UTC): 2026-11-19T15:46:13+00:00
 | 2 | [Addressing EU Cyber Resilience Act](https://news.ycombinator.com/item?id=50157847) | digital products | Verify fees, eligibility, demand |
 | 2 | [Anthropic Console overcharged my card 100x due to internationalization input bug](https://news.ycombinator.com/item?id=50121562) | payment platform | Verify fees, eligibility, demand |
 | 2 | [AMD CEO saying it's a "data center first" company and PC sales will plummet](https://www.techradar.com/computing/gpu/amd-ceo-enrages-gamers-by-saying-its-now-a-data-center-first-company-and-predicts-pc-sales-will-plummet-by-a-double-digit-percentage-in-2027) | digital products | Verify fees, eligibility, demand |
+| 2 | [CA Sales and Use Tax Applies to Digital Products Beginning January 1, 2027 pdf](https://cdtfa.ca.gov/formspubs/L1036.pdf) | digital products | Verify fees, eligibility, demand |
 | 1 | [Show HN: Kinsona – a hotel booking site that shows its cut on every booking](https://kinsona.com/) | payment platform | Verify fees, eligibility, demand |

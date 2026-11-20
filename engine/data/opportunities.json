@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T15:46:13+00:00",
+  "updated_at": "2026-11-20T15:28:50+00:00",
   "candidates": [
     {
       "id": "8da2fcbc970b410f",
@@ -116,6 +116,18 @@
       "theme": "digital products",
       "title": "AMD CEO saying it's a \"data center first\" company and PC sales will plummet",
       "url": "https://www.techradar.com/computing/gpu/amd-ceo-enrages-gamers-by-saying-its-now-a-data-center-first-company-and-predicts-pc-sales-will-plummet-by-a-double-digit-percentage-in-2027",
+      "score": 2,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "861ebddb482f9f13",
+      "first_seen": "2026-11-20T15:28:50+00:00",
+      "date": "2026-11-19T20:23:31Z",
+      "theme": "digital products",
+      "title": "CA Sales and Use Tax Applies to Digital Products Beginning January 1, 2027 [pdf]",
+      "url": "https://cdtfa.ca.gov/formspubs/L1036.pdf",
       "score": 2,
       "status": "research_only",
       "evidence": "HN submission; commercial terms and revenue NOT verified",
