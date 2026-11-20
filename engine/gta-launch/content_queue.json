@@ -226,6 +226,21 @@
         "This is original fiction from Greatest Token Action, unaffiliated with any video game publisher. No live token is offered."
       ],
       "social": "SIGNAL 015 // THE LAST LIGHT IN THE ARCHIVE. ARCH hears a page turn where a broadcast should be. Fiction, not a launch announcement. No live token. {url}"
+    },
+    {
+      "slug": "signal-016",
+      "when": "2026-11-28T12:00:00+01:00",
+      "category": "AFTER HOURS / THE PUBLIC RECORD",
+      "title": "The Witness Who Refused the Camera",
+      "dek": "SABLE finds the one witness who will speak only if the newsroom leaves the lens capped.",
+      "body": [
+        "The street cameras had captured the same empty intersection from six angles. Every screen agreed on the timestamp. None could say why the crossing bell rang when no one was there.",
+        "SABLE found a witness in the night kiosk. The witness agreed to describe the sound, but asked that the camera remain covered. ARCH objected: an unseen speaker could not be verified by a picture.",
+        "So the newsroom recorded the interview as testimony, not footage. The witness remembered two bell strikes. The traffic log recorded three. Neither account was quietly rewritten to match the other.",
+        "At dawn, the editor published both counts and the gap between them. The city's most useful bulletin was not a revelation; it was an honest disagreement preserved for whoever came next.",
+        "This is an original fictional broadcast from Greatest Token Action, independent of game publishers. It describes no real event, no live token, and no financial opportunity."
+      ],
+      "social": "SIGNAL 016 // THE WITNESS WHO REFUSED THE CAMERA. SABLE preserves a discrepancy instead of manufacturing certainty. Original fiction; no live token. {url}"
     }
   ]
 }
