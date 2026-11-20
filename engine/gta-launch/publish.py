@@ -112,6 +112,10 @@ def write(stories):
     )
     rss = '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Greatest Token Action — Original Fiction</title><link>' + PUBLIC + '</link><description>Independent fictional broadcasts. No live token. Not affiliated with game publishers.</description>' + items + '</channel></rss>'
     (OUT/"feed.xml").write_text(rss,encoding="utf8")
+    # Search-engine discovery of *published* original stories only.
+    urls = [PUBLIC] + [PUBLIC + e["slug"] + ".html" for e in stories]
+    sitemap = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join("<url><loc>" + x(url) + "</loc></url>" for url in urls) + "</urlset>"
+    (OUT/"sitemap.xml").write_text(sitemap, encoding="utf8")
     (OUT/"published.json").write_text(json.dumps({"project":"Greatest Token Action","source":"site publisher","coin_launched":False,"stories":[{"slug":e["slug"],"title":e["title"],"date":e["when"],"url":PUBLIC+e["slug"]+".html"} for e in stories]},indent=2)+"\n",encoding="utf8")
 
 def run_git(command):
@@ -138,7 +142,7 @@ def main():
         status=run_git(["diff","--cached","--name-only"]).stdout
         if not status.strip():
             print("ALREADY_PUBLISHED_NO_CHANGES"); return
-        expected={f"docs/gta/{e['slug']}.html" for e in stories}|{"docs/gta/index.html","docs/gta/published.json","docs/gta/feed.xml","docs/gta/broadcast-001.mp4"}
+        expected={f"docs/gta/{e['slug']}.html" for e in stories}|{"docs/gta/index.html","docs/gta/published.json","docs/gta/feed.xml","docs/gta/sitemap.xml","docs/gta/broadcast-001.mp4"}
         if not all(row in expected for row in status.strip().splitlines()):
             raise RuntimeError("Unexpected staged file: refusing to push")
         run_git(["commit","-m",f"gta-editorial: publish {len(stories)} due original dispatches"])

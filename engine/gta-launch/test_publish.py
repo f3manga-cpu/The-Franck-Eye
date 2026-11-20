@@ -23,6 +23,9 @@ class EditorialReleaseTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp, patch.object(publisher, "OUT", Path(tmp)):
             publisher.write(publisher.due_stories(before))
             self.assertFalse((Path(tmp) / "signal-004.html").exists())
+            sm = ElementTree.parse(Path(tmp) / "sitemap.xml").getroot()
+            self.assertFalse(any("signal-004" in (v.text or "") for v in sm.iter()))
+            self.assertTrue(any("signal-003" in (v.text or "") for v in sm.iter()))
             self.assertNotIn("signal-004", (Path(tmp) / "feed.xml").read_text())
             publisher.write(publisher.due_stories(after))
             self.assertTrue((Path(tmp) / "signal-004.html").exists())
