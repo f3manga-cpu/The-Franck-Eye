@@ -1,33 +1,33 @@
 # Buyer-intent discovery
 
-Run: 2026-11-21T14:56:44.833675+00:00
+Run: 2026-11-22T14:55:10.110080+00:00
 
 **Unverified public research; no paid customer has been established.**
 
 | Score | Open request | Posted budget |
 |---:|---|---|
-| 6 | [[PAID BOUNTY - $330 Email Inbox Classic View Page UI](https://github.com/warpspeedopen-source/warpspeed-bounties/issues/2) | $330 |
-| 6 | [[BOUNTY[$420[ADD P. Diddy Lube](https://github.com/theselfish/SlopStation13/issues/40) | $420 |
-| 6 | [[PAID BOUNTY - $750 Email Threads API](https://github.com/warpspeedopen-source/warpspeed-bounties/issues/4) | $750 |
-| 5 | [Pixel Art Creation with high Creative Thinking](https://github.com/SecureBananaLabs/bug-bounty/issues/80) | $780 |
-| 5 | [[BOUNTY $50 SKILL: Generate a structured CHANGELOG from git history](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1) | $50 |
 | 5 | [[BOUNTY $200 WORKFLOW: n8n + Claude Code — automated weekly dev summary](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5) | $200 |
-| 5 | [[BOUNTY $75 TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2) | $75 |
-| 5 | [[BOUNTY $100 HOOK: Pre-tool-use hook that blocks destructive bash commands](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3) | $100 |
-| 5 | [[BOUNTY $150 AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4) | $150 |
-| 4 | [Nova Unified Platform: 24/7 scoped autopilot, Snap integrations, coordinated agents and genuine customer demo](https://github.com/mahnue04-jpg/TRANSPORTATION/issues/571) | $49 |
-| 4 | [[Feature · V1 Marketplace V1 — notes discovery, Stripe checkout, and remaining storefront work](https://github.com/keyframesfound/matchmaxhk/issues/784) | $20 |
-| 4 | [A failed late card refund still reopens refund headroom when the payment also holds a bank shortfall or hand-back](https://github.com/thatskiff33/AlpineClubBookingsNZ/issues/4488) | $200 |
-| 3 | [[Bounty Answer the 4 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4998) | Unknown |
-| 3 | [[Bounty Answer the 3 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5453) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5364) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5454) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5456) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5365) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5366) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5457) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5458) | Unknown |
-| 3 | [[Bounty Answer the 4 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5356) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5367) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5455) | Unknown |
-| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5368) | Unknown |
+| 4 | [Owner-approved: $100/month shared AI API cap, cheapest-safe routing and cost per user through Dec 2026](https://github.com/bandymuks1-stack/labourmarketai/issues/3593) | $100 |
+| 3 | [Permissionless x402 payments and provider settlement](https://github.com/hanzoai/cloud/issues/16) | Unknown |
+| 3 | [[Bounty Answer the 3 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5532) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5371) | Unknown |
+| 3 | [[Bounty Answer the 3 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5534) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/4488) | Unknown |
+| 3 | [[Bounty Answer the 3 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5533) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5536) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5537) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5538) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5539) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5540) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5568) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5541) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5543) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5545) | Unknown |
+| 3 | [[Bounty Answer the 2 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5542) | Unknown |
+| 3 | [CODEX READY REMEDIATION QUEUE](https://github.com/Donh91/Investering-Framework-Archive-v1/issues/643) | 05 USD |
+| 3 | [Find PYTH's locked allocation wallets](https://github.com/tradermarketcap/tradermarketcap-open/issues/15) | Unknown |
+| 3 | [[P1-OPS Prepare deployment, monitoring, backup/restore and rollback](https://github.com/saeed-alorm/mawid-pro/issues/11) | $20 |
+| 3 | [[demand high-priority 2026-11-22T14:50](https://github.com/relayhop/ClaudeEarnSelf-runtime/issues/1262) | $125 |
+| 3 | [🧟 Toyol Radar — calon ganjaran untuk disahkan](https://github.com/ilhamraduanbis-source/toyol-digital/issues/1) | 200 USD |
+| 3 | [[Bounty Answer the 4 linked question(s)](https://github.com/Ikalus1988/MisakaNet/issues/5567) | Unknown |
+| 2 | [[busy forest Improve EC Rank cell 2/11](https://github.com/amiller/bounty-arcade/issues/86) | Unknown |
