@@ -241,6 +241,21 @@
         "This is an original fictional broadcast from Greatest Token Action, independent of game publishers. It describes no real event, no live token, and no financial opportunity."
       ],
       "social": "SIGNAL 016 // THE WITNESS WHO REFUSED THE CAMERA. SABLE preserves a discrepancy instead of manufacturing certainty. Original fiction; no live token. {url}"
+    },
+    {
+      "slug": "signal-017",
+      "when": "2026-11-29T12:00:00+01:00",
+      "category": "THE ARCHIVE ROOM",
+      "title": "The Room That Remembered Tomorrow",
+      "dek": "SABLE finds a room of recordings dated one day ahead, but the voices refuse to predict anything.",
+      "body": [
+        "SABLE: The archive door opened at dawn. Inside were seven reels marked with dates that had not happened yet. Every label was handwritten, and none named an author.",
+        "ARCH: We played the first reel. It contained no prophecy: only a woman describing a bridge she hoped somebody would build, and a stranger answering that the river was worth crossing even without one.",
+        "SABLE: The second reel was blank except for the sound of a pencil. Someone was making room for a story rather than claiming to know its ending.",
+        "ARCH: Our city has a choice. We can treat the archive as a machine for certainty, or as an invitation to create what does not exist. SABLE has left the third reel untouched until another voice joins the story.",
+        "Which sound should the next reel contain: rain on the bridge, a train arriving at an empty platform, or the voice of the missing projectionist? This is original fiction; no token is live and no game publisher is affiliated."
+      ],
+      "social": "SIGNAL 017 // THE ROOM THAT REMEMBERED TOMORROW. Seven reels from dates that have not happened. What sound belongs on the next recording? Original fiction, no live token: {url}"
     }
   ]
 }
