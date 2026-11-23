@@ -256,6 +256,36 @@
         "Which sound should the next reel contain: rain on the bridge, a train arriving at an empty platform, or the voice of the missing projectionist? This is original fiction; no token is live and no game publisher is affiliated."
       ],
       "social": "SIGNAL 017 // THE ROOM THAT REMEMBERED TOMORROW. Seven reels from dates that have not happened. What sound belongs on the next recording? Original fiction, no live token: {url}"
+    },
+    {
+      "slug": "signal-018",
+      "when": "2026-11-30T12:00:00+01:00",
+      "category": "THE THIRD REEL",
+      "title": "The Sound Nobody Owned",
+      "dek": "A sealed recording reaches the newsroom with no author and no claim to the truth.",
+      "body": [
+        "The third reel began with rain, then a platform announcement, then a voice saying only: I was here. The three sounds overlapped, as if the city had refused to select one answer.",
+        "SABLE carried the tape to the empty bridge. She could hear the river beneath the rain, but the recording had been made indoors. There was no way to prove where the voice came from.",
+        "ARCH suggested a dramatic headline. SABLE crossed it out. The newsroom could publish what the microphone captured, but not a story about the unseen speaker it could not substantiate.",
+        "They left a blank line in the transcript and asked listeners to invent a fourth sound for the fictional scene. A response would be a creative contribution, not evidence that the mystery was solved.",
+        "Greatest Token Action is independent original fiction, not affiliated with any game publisher. No token is live and no financial return is offered."
+      ],
+      "social": "SIGNAL 018 // THE SOUND NOBODY OWNED. Rain, a platform, an unknown voice. What fourth sound belongs in the scene? Original fiction; no live token. {url}"
+    },
+    {
+      "slug": "signal-019",
+      "when": "2026-12-01T12:00:00+01:00",
+      "category": "CROSSING REPORT",
+      "title": "A Bridge Made of Questions",
+      "dek": "ARCH and SABLE attempt the first crossing without pretending they know what lies beyond.",
+      "body": [
+        "The city council unveiled a bridge drawn entirely in chalk. By morning, rain had erased its middle span. No one could cross, but people gathered on both banks to compare the lines they remembered.",
+        "ARCH broadcast the official drawing. SABLE interviewed a street cleaner who had seen the chalk before dawn. The two versions differed in the number of arches. The newsroom showed both instead of declaring a winner.",
+        "At noon, a child placed a paper boat in the river. It reached neither bank. It drifted toward the place where the missing arch should have been, and the crowd went quiet.",
+        "SABLE wrote three questions on the bulletin board: Who drew the bridge? Who erased it? Who would build a real one? None had an answer yet. The next transmission would follow the questions, not invent a conclusion.",
+        "This is a fictional episode of Greatest Token Action, with no game-publisher affiliation, no live token and no investment solicitation."
+      ],
+      "social": "SIGNAL 019 // A BRIDGE MADE OF QUESTIONS. A chalk bridge disappears; two witnesses disagree about its arches. Original fiction, no live token. {url}"
     }
   ]
 }
