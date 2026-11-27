@@ -1,6 +1,6 @@
 # Opportunity research queue
 
-Updated (UTC): 2026-11-26T16:55:30+00:00
+Updated (UTC): 2026-11-27T16:41:28+00:00
 
 **These are leads for research, not verified opportunities, income claims or recommendations.**
 
@@ -11,6 +11,7 @@ Updated (UTC): 2026-11-26T16:55:30+00:00
 | 5 | [IKEA launches UK and Ireland marketplace to buy and sell second-hand furniture](https://www.dezeen.com/2026/10/07/ikea-uk-ireland-marketplace-buy-sell-second-hand-furniture/) | marketplace launch | Verify fees, eligibility, demand |
 | 4 | [Show HN: The New Way to Make AI UGC Ads in 2026](https://www.aivideosugc.com/ai-video-generation) | digital products | Verify fees, eligibility, demand |
 | 4 | [Show HN: Kiosk, a first-class AI assistants' intefrace to online services](https://kiosk.tech/) | payment platform | Verify fees, eligibility, demand |
+| 4 | [Why Stripe is not what you need to charge for your AI product (kind of)](https://news.ycombinator.com/item?id=50664246) | payment platform | Verify fees, eligibility, demand |
 | 3 | [Launch HN: Pomerado (YC F26) – Turn any website into an MCP for agents](https://news.ycombinator.com/item?id=50455811) | marketplace launch | Verify fees, eligibility, demand |
 | 3 | [SlashCollect](https://news.ycombinator.com/item?id=50557273) | payment platform | Verify fees, eligibility, demand |
 | 2 | [Addressing EU Cyber Resilience Act](https://news.ycombinator.com/item?id=50157847) | digital products | Verify fees, eligibility, demand |

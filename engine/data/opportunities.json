@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T16:55:30+00:00",
+  "updated_at": "2026-11-27T16:41:28+00:00",
   "candidates": [
     {
       "id": "8da2fcbc970b410f",
@@ -56,6 +56,18 @@
       "theme": "payment platform",
       "title": "Show HN: Kiosk, a first-class AI assistants' intefrace to online services",
       "url": "https://kiosk.tech/",
+      "score": 4,
+      "status": "research_only",
+      "evidence": "HN submission; commercial terms and revenue NOT verified",
+      "next_validation": "Check actual payment mechanics, fees, eligibility, unit economics and acquisition source"
+    },
+    {
+      "id": "63ef09a0f8596a73",
+      "first_seen": "2026-11-27T16:41:27+00:00",
+      "date": "2026-11-27T08:18:39Z",
+      "theme": "payment platform",
+      "title": "Why Stripe is not what you need to charge for your AI product (kind of)",
+      "url": "https://news.ycombinator.com/item?id=50664246",
       "score": 4,
       "status": "research_only",
       "evidence": "HN submission; commercial terms and revenue NOT verified",
