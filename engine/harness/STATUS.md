@@ -1,6 +1,6 @@
 # Revenue harness — independent validation report
 
-Audit run (UTC): 2026-11-27T18:18:50+00:00
+Audit run (UTC): 2026-11-28T17:01:23+00:00
 
 > This is a **public, manually updated operations state**. It has no direct
 > access to Stripe, Gmail, bank balances or delivery confirmations.
